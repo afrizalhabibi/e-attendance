@@ -1,0 +1,12 @@
+CRITICAL - 2022-05-18 08:26:33 --> Undefined variable: config
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_auth/_login.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 17, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_auth/_login', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(13): view('_auth/_login')
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}

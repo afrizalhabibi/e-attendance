@@ -1,0 +1,116 @@
+CRITICAL - 2022-06-06 16:16:07 --> Undefined property: stdClass::$pgw_id
+#0 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(167): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Aplikasi\\e-p...', 167, Array)
+#1 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(87): App\Controllers\Home->App\Controllers\{closure}(Object(stdClass))
+#2 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(210): Hermawan\DataTables\DataTable->toJson(true)
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#9 {main}
+CRITICAL - 2022-06-06 16:18:34 --> syntax error, unexpected 'if' (T_IF), expecting ';'
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\Aplikasi\\e-p...')
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#9 {main}
+ERROR - 2022-06-06 16:21:13 --> Column 'pgw_id' in where clause is ambiguous
+CRITICAL - 2022-06-06 16:21:13 --> Column 'pgw_id' in where clause is ambiguous
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(171): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(210): Hermawan\DataTables\DataTable->toJson(true)
+#7 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#12 {main}
+ERROR - 2022-06-06 16:21:27 --> Column 'pgw_id' in where clause is ambiguous
+CRITICAL - 2022-06-06 16:21:27 --> Column 'pgw_id' in where clause is ambiguous
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(171): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(210): Hermawan\DataTables\DataTable->toJson(true)
+#7 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#12 {main}
+ERROR - 2022-06-06 16:21:55 --> Column 'pgw_id' in where clause is ambiguous
+CRITICAL - 2022-06-06 16:21:55 --> Column 'pgw_id' in where clause is ambiguous
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(171): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(210): Hermawan\DataTables\DataTable->toJson(true)
+#7 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#12 {main}
+CRITICAL - 2022-06-06 16:22:50 --> Undefined property: stdClass::$nama
+#0 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(162): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Aplikasi\\e-p...', 162, Array)
+#1 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(87): App\Controllers\Home->App\Controllers\{closure}(Object(stdClass))
+#2 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(210): Hermawan\DataTables\DataTable->toJson(true)
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#9 {main}
+CRITICAL - 2022-06-06 16:23:08 --> Undefined property: stdClass::$pegawai
+#0 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(162): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Aplikasi\\e-p...', 162, Array)
+#1 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(87): App\Controllers\Home->App\Controllers\{closure}(Object(stdClass))
+#2 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(210): Hermawan\DataTables\DataTable->toJson(true)
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#9 {main}
+CRITICAL - 2022-06-06 16:24:25 --> Undefined property: stdClass::$pegawai
+#0 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(162): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Aplikasi\\e-p...', 162, Array)
+#1 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(87): App\Controllers\Home->App\Controllers\{closure}(Object(stdClass))
+#2 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(210): Hermawan\DataTables\DataTable->toJson(true)
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#9 {main}
+ERROR - 2022-06-06 16:28:12 --> Column 'pgw_id' in field list is ambiguous
+CRITICAL - 2022-06-06 16:28:12 --> Column 'pgw_id' in field list is ambiguous
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `pgw_id`...', 0)
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pgw_id`...')
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pgw_id`...')
+#3 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `pgw_id`...', Array, false)
+#4 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(215): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(210): Hermawan\DataTables\DataTable->toJson(true)
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#9 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#13 {main}

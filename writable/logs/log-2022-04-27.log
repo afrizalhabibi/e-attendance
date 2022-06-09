@@ -1,0 +1,623 @@
+CRITICAL - 2022-04-27 08:54:11 --> Trying to get property 'abs_status' of non-object
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_user/_index.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', '/Users/habibi/D...', 56, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_user/_index', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(23): view('_user/_index', Array)
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->home()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+CRITICAL - 2022-04-27 08:54:33 --> Trying to get property 'abs_status' of non-object
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_user/_index.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', '/Users/habibi/D...', 56, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_user/_index', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(23): view('_user/_index', Array)
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->home()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+CRITICAL - 2022-04-27 08:54:34 --> Undefined variable: config
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_auth/_login.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 17, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_auth/_login', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(13): view('_auth/_login')
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+CRITICAL - 2022-04-27 09:00:13 --> Trying to get property 'abs_status' of non-object
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_user/_index.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', '/Users/habibi/D...', 56, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_user/_index', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(23): view('_user/_index', Array)
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->home()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+CRITICAL - 2022-04-27 09:00:13 --> Undefined variable: config
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_auth/_login.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 17, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_auth/_login', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(13): view('_auth/_login')
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+CRITICAL - 2022-04-27 09:20:41 --> Undefined variable: config
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_auth/_login.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 17, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_auth/_login', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(13): view('_auth/_login')
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+ERROR - 2022-04-27 10:01:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%2%' ESCAPE '!'
+OR  `abs_datang` LIKE '%2%' ESCAPE '!'
+OR  `abs_pulang`...' at line 5
+CRITICAL - 2022-04-27 10:01:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%2%' ESCAPE '!'
+OR  `abs_datang` LIKE '%2%' ESCAPE '!'
+OR  `abs_pulang`...' at line 5
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTableQuery.php(63): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTable.php(172): Hermawan\DataTables\DataTableQuery->countFiltered()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(122): Hermawan\DataTables\DataTable->toJson(true)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#12 {main}
+ERROR - 2022-04-27 10:01:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%22%' ESCAPE '!'
+OR  `abs_datang` LIKE '%22%' ESCAPE '!'
+OR  `abs_pulan...' at line 5
+CRITICAL - 2022-04-27 10:01:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%22%' ESCAPE '!'
+OR  `abs_datang` LIKE '%22%' ESCAPE '!'
+OR  `abs_pulan...' at line 5
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTableQuery.php(63): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTable.php(172): Hermawan\DataTables\DataTableQuery->countFiltered()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(122): Hermawan\DataTables\DataTable->toJson(true)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#12 {main}
+ERROR - 2022-04-27 10:01:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%2%' ESCAPE '!'
+OR  `abs_datang` LIKE '%2%' ESCAPE '!'
+OR  `abs_pulang`...' at line 5
+CRITICAL - 2022-04-27 10:01:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%2%' ESCAPE '!'
+OR  `abs_datang` LIKE '%2%' ESCAPE '!'
+OR  `abs_pulang`...' at line 5
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTableQuery.php(63): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTable.php(172): Hermawan\DataTables\DataTableQuery->countFiltered()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(122): Hermawan\DataTables\DataTable->toJson(true)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#12 {main}
+ERROR - 2022-04-27 10:01:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%s%' ESCAPE '!'
+OR  `abs_datang` LIKE '%s%' ESCAPE '!'
+OR  `abs_pulang`...' at line 5
+CRITICAL - 2022-04-27 10:01:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%s%' ESCAPE '!'
+OR  `abs_datang` LIKE '%s%' ESCAPE '!'
+OR  `abs_pulang`...' at line 5
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTableQuery.php(63): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTable.php(172): Hermawan\DataTables\DataTableQuery->countFiltered()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(122): Hermawan\DataTables\DataTable->toJson(true)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#12 {main}
+ERROR - 2022-04-27 10:01:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%2%' ESCAPE '!'
+OR  `abs_datang` LIKE '%2%' ESCAPE '!'
+OR  `abs_pulang`...' at line 5
+CRITICAL - 2022-04-27 10:01:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%2%' ESCAPE '!'
+OR  `abs_datang` LIKE '%2%' ESCAPE '!'
+OR  `abs_pulang`...' at line 5
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTableQuery.php(63): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTable.php(172): Hermawan\DataTables\DataTableQuery->countFiltered()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(122): Hermawan\DataTables\DataTable->toJson(true)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#12 {main}
+ERROR - 2022-04-27 10:08:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%2%' ESCAPE '!'' at line 4
+CRITICAL - 2022-04-27 10:08:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%2%' ESCAPE '!'' at line 4
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTableQuery.php(63): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTable.php(172): Hermawan\DataTables\DataTableQuery->countFiltered()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(122): Hermawan\DataTables\DataTable->toJson(true)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#12 {main}
+ERROR - 2022-04-27 10:09:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%s%' ESCAPE '!'' at line 4
+CRITICAL - 2022-04-27 10:09:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%s%' ESCAPE '!'' at line 4
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTableQuery.php(63): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTable.php(172): Hermawan\DataTables\DataTableQuery->countFiltered()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(122): Hermawan\DataTables\DataTable->toJson(true)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#12 {main}
+ERROR - 2022-04-27 10:13:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%s%' ESCAPE '!'' at line 4
+CRITICAL - 2022-04-27 10:13:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%s%' ESCAPE '!'' at line 4
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTableQuery.php(63): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTable.php(172): Hermawan\DataTables\DataTableQuery->countFiltered()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(122): Hermawan\DataTables\DataTable->toJson(true)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#12 {main}
+ERROR - 2022-04-27 10:18:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%s%' ESCAPE '!'' at line 4
+CRITICAL - 2022-04-27 10:18:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%s%' ESCAPE '!'' at line 4
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTableQuery.php(63): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/hermawan/codeigniter4-datatables/src/DataTable.php(172): Hermawan\DataTables\DataTableQuery->countFiltered()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(122): Hermawan\DataTables\DataTable->toJson(true)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#12 {main}
+CRITICAL - 2022-04-27 10:46:30 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(NULL, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update(NULL, Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->JamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 10:49:25 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(NULL, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update(NULL, Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateJamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 10:56:18 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(NULL, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update(NULL, Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateJamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 10:58:11 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(NULL, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update(NULL, Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateJamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 11:01:00 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update('227', Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateJamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 11:02:16 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update('227', Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateJamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 11:04:26 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update('227', Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateJamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 11:05:52 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update('227', Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateJamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 11:12:15 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update('227', Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateJamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 11:15:40 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update('227', Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateJamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 11:18:57 --> There is no data to update.
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(111): CodeIgniter\Model->update('227', Array)
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateJamKerja()
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#8 {main}
+CRITICAL - 2022-04-27 11:57:17 --> Undefined variable: config
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_auth/_login.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 17, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_auth/_login', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(13): view('_auth/_login')
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+CRITICAL - 2022-04-27 13:26:11 --> Undefined variable: config
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_auth/_login.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 17, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_auth/_login', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(13): view('_auth/_login')
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+ERROR - 2022-04-27 13:26:11 --> Unknown column 'abs_datang' in 'field list'
+CRITICAL - 2022-04-27 13:26:11 --> Unknown column 'abs_datang' in 'field list'
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `ab...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ab...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ab...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ab...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(66): CodeIgniter\BaseModel->save(Array)
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->BatchRow()
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#13 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#14 {main}
+ERROR - 2022-04-27 13:28:19 --> Unknown column 'abs_datang' in 'field list'
+CRITICAL - 2022-04-27 13:28:19 --> Unknown column 'abs_datang' in 'field list'
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `ab...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ab...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ab...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ab...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(64): CodeIgniter\BaseModel->save(Array)
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->BatchRow()
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#13 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#14 {main}
+CRITICAL - 2022-04-27 13:30:36 --> Undefined variable: config
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_auth/_login.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 17, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_auth/_login', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(13): view('_auth/_login')
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+CRITICAL - 2022-04-27 13:31:12 --> Undefined variable: config
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_auth/_login.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 17, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_auth/_login', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(13): view('_auth/_login')
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+ERROR - 2022-04-27 13:35:49 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+CRITICAL - 2022-04-27 13:35:49 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:36:09 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+CRITICAL - 2022-04-27 13:36:09 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:37:00 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+CRITICAL - 2022-04-27 13:37:00 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:45:13 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+CRITICAL - 2022-04-27 13:45:13 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:45:26 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+CRITICAL - 2022-04-27 13:45:26 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:46:21 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+CRITICAL - 2022-04-27 13:46:21 --> Can't update table 'absensi' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:47:18 --> Unknown column 'end_time' in 'field list'
+CRITICAL - 2022-04-27 13:47:18 --> Unknown column 'end_time' in 'field list'
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:47:44 --> Unknown column 'abs_datang' in 'field list'
+CRITICAL - 2022-04-27 13:47:44 --> Unknown column 'abs_datang' in 'field list'
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:47:54 --> Unknown column 'abs_datang' in 'field list'
+CRITICAL - 2022-04-27 13:47:54 --> Unknown column 'abs_datang' in 'field list'
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:48:43 --> Unknown column 'abs_datg' in 'field list'
+CRITICAL - 2022-04-27 13:48:43 --> Unknown column 'abs_datg' in 'field list'
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:52:06 --> Unknown table 'absensi' in field list
+CRITICAL - 2022-04-27 13:52:06 --> Unknown table 'absensi' in field list
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+ERROR - 2022-04-27 13:53:18 --> Unknown column 'abs_datang' in 'field list'
+CRITICAL - 2022-04-27 13:53:18 --> Unknown column 'abs_datang' in 'field list'
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `absensi...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `absensi...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `absensi...')
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `absensi...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(99): CodeIgniter\Model->update('248', Array)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->UpdateAbsenPulang()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#13 {main}
+CRITICAL - 2022-04-27 14:54:52 --> Undefined variable: indicator
+#0 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Views/_user/_index.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 10, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_user/_index', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/app/Controllers/Home.php(23): view('_user/_index', Array)
+#5 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->home()
+#6 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-presensi-politala/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}

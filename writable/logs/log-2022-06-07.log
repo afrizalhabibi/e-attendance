@@ -1,0 +1,92 @@
+CRITICAL - 2022-06-07 14:16:08 --> Too few arguments to function Hermawan\DataTables\DataTable::add(), 1 passed in D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php on line 141 and at least 2 expected
+#0 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(141): Hermawan\DataTables\DataTable->add('action')
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#6 {main}
+CRITICAL - 2022-06-07 14:16:18 --> Too few arguments to function Hermawan\DataTables\DataTable::add(), 1 passed in D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php on line 141 and at least 2 expected
+#0 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(141): Hermawan\DataTables\DataTable->add('action')
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#6 {main}
+CRITICAL - 2022-06-07 14:35:33 --> Undefined property: stdClass::$abs_id
+#0 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Aplikasi\\e-p...', 142, Array)
+#1 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(87): App\Controllers\Home->App\Controllers\{closure}(Object(stdClass))
+#2 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(145): Hermawan\DataTables\DataTable->toJson(true)
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#9 {main}
+CRITICAL - 2022-06-07 14:35:55 --> Undefined property: stdClass::$abs_id
+#0 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Aplikasi\\e-p...', 142, Array)
+#1 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(87): App\Controllers\Home->App\Controllers\{closure}(Object(stdClass))
+#2 D:\Aplikasi\e-presensi-politala\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(145): Hermawan\DataTables\DataTable->toJson(true)
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AjaxReadAbsen()
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#9 {main}
+CRITICAL - 2022-06-07 14:57:50 --> Too few arguments to function App\Controllers\Home::AbsDetails(), 0 passed in D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AbsDetails()
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#5 {main}
+CRITICAL - 2022-06-07 14:58:12 --> Too few arguments to function App\Controllers\Home::AbsDetails(), 0 passed in D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AbsDetails()
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#5 {main}
+CRITICAL - 2022-06-07 14:58:24 --> Too few arguments to function App\Controllers\Home::AbsDetails(), 0 passed in D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AbsDetails()
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#5 {main}
+CRITICAL - 2022-06-07 15:04:53 --> Too few arguments to function App\Controllers\Home::AbsDetails(), 0 passed in D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AbsDetails()
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#5 {main}
+CRITICAL - 2022-06-07 15:05:26 --> Too few arguments to function App\Controllers\Home::AbsDetails(), 0 passed in D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AbsDetails()
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#5 {main}
+CRITICAL - 2022-06-07 15:13:17 --> syntax error, unexpected '}', expecting ';'
+#0 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\Aplikasi\\e-p...')
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#9 {main}
+CRITICAL - 2022-06-07 16:42:06 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::getRow()
+#0 D:\Aplikasi\e-presensi-politala\app\Controllers\Home.php(152): App\Models\AbsenModel->get_abs_by_id('311')
+#1 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->AbsDetails('311')
+#2 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Aplikasi\e-presensi-politala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Aplikasi\e-presensi-politala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\e-p...')
+#6 {main}
