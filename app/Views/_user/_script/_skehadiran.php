@@ -4,7 +4,15 @@ $(document).ready(function() {
         processing: true,
         serverSide: true,
         scrollX: true,
-        dom : 'lrtip',
+        dom : 'Blrtip',
+        buttons: [
+        {
+            extend: 'excelHtml5',
+            exportOptions: {
+                columns : [0,1,2,3,4,5,6]
+            }
+        }
+    ],
         order: [[1, 'desc']], //init datatable not ordering
         ajax: {
             url: '<?php echo site_url('ajax-readabsen')?>',
@@ -26,9 +34,11 @@ $(document).ready(function() {
                 render: function(data, type, row, meta) {
                     if(row.abs_jamkerja.indexOf("-") > -1) {
                         return '00:00:00'
+                    } else if(row.abs_datang == '00:00:00') {
+                        return '00:00:00'
                     } else {
-                        return row.abs_jamkerja;
-                    }  
+                        return row.abs_jamkerja
+                    }
             }},
             {data: 'abs_status',
                 render: function(data, type, row) {
@@ -39,8 +49,9 @@ $(document).ready(function() {
                     } else {
                         badgeclass = ' bg-yellow';
                     }
-                    return '<span class="badge'+badgeclass+'"></span>'+"&nbsp&nbsp"+row.abs_status
+                    return '<span class="me-2 badge'+badgeclass+'"></span>'+row.abs_status
             }},
+            {data: 'abs_ket', orderable:false, visible:false},
             {data: 'action', orderable: false},
         ]
     });
@@ -53,7 +64,7 @@ $(document).ready(function() {
             dataType: "JSON",
             success: function(data)
             {
-                console.log(data);
+                // console.log(data);
     
                 $('#absdetailsdate').html(data.abs_hari + ", " +data.abs_tgl);
                 $('#absdetailsname').html(data.nama);
@@ -62,6 +73,8 @@ $(document).ready(function() {
                 $('#jampulang').html(data.abs_pulang);
 
                 if (data.abs_jamkerja.indexOf("-") > -1) {
+                    jamkerja = '00:00:00';
+                } else if(data.abs_datang == '00:00:00') {
                     jamkerja = '00:00:00';
                 } else {
                     jamkerja = data.abs_jamkerja;
@@ -81,6 +94,8 @@ $(document).ready(function() {
                 }
 
                 $('#absenstatus').html(data.abs_status).addClass(badgeclass);
+                
+                $('#ket').html(data.abs_ket);
     
                 $('#modal-absdetails').modal('show');
                 $('.modal-title').text('Detail Kehadiran');
@@ -93,8 +108,10 @@ $(document).ready(function() {
             }
     });
     });
- 
-
+    $('.dt-buttons').hide();
+    $("#_exportXLS").click(function(event) {
+        $(".buttons-excel").trigger("click");
+    })
     $('#newSearch').keyup(function() {
     table_absen.search($(this).val()).draw(); 
     })
@@ -119,6 +136,7 @@ $(document).ready(function() {
         singleMode: false,
         // resetButton: true,
         splitView:false,
+        lang: "id",
         tooltipText: {
             one: 'Hari',
             other: 'Hari'
@@ -134,7 +152,7 @@ $(document).ready(function() {
         },
         resetButton: () => {
         let btn = document.createElement('button');
-        btn.innerText = 'Clear';
+        btn.innerText = 'Reset';
         btn.addEventListener('click', (evt) => {
             evt.preventDefault();
         });

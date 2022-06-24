@@ -7,7 +7,7 @@
           </button>
           <h1 class="navbar-brand navbar-brand-autodark">
             <a href=".">
-            <img src="<?php base_url()?>/assets/static/logo-white.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+            <img src="<?php base_url()?>/assets/static/simpun-white.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
             </a>
           </h1>
           <div class="navbar-nav flex-row d-lg-none">
@@ -36,7 +36,7 @@
             <div class="nav-item dropdown">
             <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
                <!-- <span class="avatar avatar-rounded avatar-sm" style="background-image: url(<?=base_url()?>/assets/static/avatars/default.svg)"></span> -->
-               <span class="avatar avatar-rounded avatar-sm">H</span>
+               <span class="avatar avatar-rounded avatar-sm" style="background-image: url(<?php echo base_url()?>/assets/static/avatars/avatar-34.png)"></span>
                 <div class="d-none d-xl-block ps-2">
                   <div><?php if(isset($userdata)) {
                           echo $userdata->nama;
@@ -63,7 +63,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?=base_url()?>/home" >
                   <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-smart-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M19 8.71l-5.333 -4.148a2.666 2.666 0 0 0 -3.274 0l-5.334 4.148a2.665 2.665 0 0 0 -1.029 2.105v7.2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-7.2c0 -.823 -.38 -1.6 -1.03 -2.105"></path>
+                    <path d="M16 15c-2.21 1.333 -5.792 1.333 -8 0"></path>
+                  </svg>
                   </span>
                   <span class="nav-link-title">
                     Home
@@ -85,8 +89,8 @@
                       <a class="dropdown-item" href="<?=base_url()?>/kehadiran" >
                         Data Kehadiran
                       </a>
-                      <a class="dropdown-item" href="./accordion.html" >
-                        Accordion
+                      <a class="dropdown-item" href="<?=base_url()?>/monitoring" >
+                        Monitoring
                       </a>
                     </div>
                   </div>
@@ -148,7 +152,7 @@
             <div class="nav-item dropdown">
             <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
                <!-- <span class="avatar avatar-rounded avatar-sm" style="background-image: url(<?=base_url()?>/assets/static/avatars/default.svg)"></span> -->
-               <span class="avatar avatar-rounded avatar-sm">H</span>
+               <span class="avatar avatar-rounded avatar-sm" style="background-image: url(<?php echo base_url()?>/assets/static/avatars/avatar-34.png)"></span>
                 <div class="d-none d-xl-block ps-2">
                   <div><?php if(isset($userdata)) {
                           echo $userdata->nama;

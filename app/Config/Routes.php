@@ -35,12 +35,14 @@ $routes->get('/', 'Home::index');
 $routes->group('', ['filter' => 'login'], function($routes){
 $routes->get('/home', 'Home::home');
 $routes->get('/kehadiran', 'Home::kehadiran');
-$routes->get('/time_ticking', 'Home::LiveTime');
+$routes->get('/monitoring', 'Home::monitorKehadiran');
+// $routes->get('/time_ticking', 'Home::LiveTime');
 $routes->post('/update-absendatang', 'Home::UpdateAbsenDatang');
 $routes->post('/update-absenpulang', 'Home::UpdateAbsenPulang');
 $routes->get('/fetch-absen', 'Home::ReadAbsen');
 $routes->get('/ajax-readabsen', 'Home::AjaxReadAbsen');
 $routes->get('/fetch-firstabsen', 'Home::Readfirstabsen');
+$routes->get('/chartstatus', 'Home::Ajaxchartstatus');
 $routes->get('/batch-row', 'Home::BatchRow');
 $routes->get('/abs-details/(:any)', 'Home::AbsDetails/$1');
 });

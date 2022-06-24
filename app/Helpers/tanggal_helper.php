@@ -12,6 +12,19 @@
             return $tanggal.' '.$bulan.' '.$tahun;
         }
     }
+
+    if ( ! function_exists('bulan_indo'))
+    {
+        function bulan_indo($tgl)
+        {
+            $ubah = gmdate($tgl, time()+60*60*8);
+            $pecah = explode("-",$ubah);
+            $tanggal = $pecah[2];
+            $bulan = bulan($pecah[1]);
+            $tahun = $pecah[0];
+            return $bulan.' '.$tahun;
+        }
+    }
       
     if ( ! function_exists('bulan'))
     {

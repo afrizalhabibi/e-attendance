@@ -12,7 +12,7 @@ class AbsenModel extends Model
    
 
     protected $protectFields = true;
-    protected $allowedFields = ['pgw_id','abs_datang','abs_pulang','abs_status','abs_hari','abs_jamkerja','abs_long','abs_lat','abs_ket'];
+    protected $allowedFields = ['pgw_id','abs_datang','abs_pulang','abs_status','abs_hari','abs_jamkerja','abs_long','abs_lat','abs_ket','abs_terlambat'];
 
 
     public function getAbsen() 
@@ -130,6 +130,18 @@ class AbsenModel extends Model
                 ->where('abs_status','Dinas Luar')
                 ->like('abs_tgl',date('Y-m'))
                 ->countAllResults();
+        return $result;
+    }
+
+    public function getChartStatus()
+    {
+        $result = $this->db->table('absensi')
+                ->select('abs_status')
+                ->select("count(*) AS total")
+                ->where('pgw_id', user()->getpgwId())
+                ->like('abs_tgl',date('Y-m'))
+                ->groupBy('abs_status')
+                ->get();
         return $result;
     }
 

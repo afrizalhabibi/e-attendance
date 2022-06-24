@@ -4,6 +4,7 @@
     
     // displayabsen();
     firstabsen();
+    chartStatus();
     // timedate liveticking
     function timestamp() {
         moment.locale('id');
@@ -41,7 +42,7 @@
                 $('#btn-datang').hide();
                 // displayabsen();
                 firstabsen();
-               
+                chartStatus();
                 Swal.fire(
                     'Berhasil',
                     'Absen datang berhasil',
@@ -77,6 +78,7 @@
                 $('#btn-pulang').hide();
                 // displayabsen();
                 firstabsen();
+                chartStatus();
                 Swal.fire(
                     'Berhasil',
                     'Absen pulang berhasil',
@@ -156,18 +158,34 @@
                 } else {
                     badgeclass = ' status-yellow';
                 }
-                hari = value['abs_hari'];
+
+                let badgeterlambat = "";
+                let terlambat = value['abs_terlambat'];
+                if (terlambat.includes("Terlambat")) {
+                    badgeterlambat = 'status-yellow';
+                } else if(terlambat.includes("Tepat")) {
+                    badgeterlambat = 'status-green';
+                } else {
+                    badgeterlambat = 'status-red';
+                }
+
+                $('#terlambat').html(terlambat).addClass(badgeterlambat);
+
+               
 				$('#jamdatang').html(jamdatang);
                 $('#jampulang').html(jampulang);
                 $('#absenstatus').html(status).addClass(badgeclass);
 
                 if (value['abs_jamkerja'].indexOf("-") > -1) {
                     jamkerja = '00:00:00';
+                } else if (value['abs_datang'] == '00:00:00') {
+                    jamkerja = '00:00:00';
                 } else {
                     jamkerja = value['abs_jamkerja'];
                 }
                 jam = jamkerja.substr(0,2);
                 menit = jamkerja.substr(3,2);
+                //chartperbulan.render();
                 $('#tglabsen').html(value['abs_hari']+', '+value['abs_tgl']);
                 $('#jamkerja').html(jam+ ' Jam' + ' ' + menit + ' Menit');
                 $('#ket').html(value['abs_ket']);
@@ -181,7 +199,6 @@
                     center: [114.7666395, -3.7533148],
                 });
               
-
                 //get long and lat
                 var geolocate = new mapboxgl.GeolocateControl({
                 positionOptions: {
@@ -203,7 +220,6 @@
                     lat = e.coords.latitude;
                     console.log("lng:" + long + ", lat:" + lat);
                     
-
                     // const marker1 = new mapboxgl.Marker({ color: 'black'})
                     // .setLngLat([long, lat])
                     // .addTo(absenmap);
@@ -214,7 +230,103 @@
         });
     }
     // end display latest presence
+
+    function chartStatus()
+    {
+    
+	$.ajax({
+		url:'<?= site_url('chartstatus') ?>',
+		method:'get',
+		success:function(response){
+            var nama_status = [];
+            let jumlah = [];
+            
+			$.each(response.chartstatus,function(key, value){
+              nama_status.push(value['abs_status']);
+              jumlah.push(parseInt(value['total']));
+			});
+            var chartperbulan = new ApexCharts(document.getElementById('chart-status'), {
+                chart: {
+                    type: "donut",
+                    fontFamily: 'inherit',
+                    height: 260,
+                    sparkline: {
+                        enabled: true
+                    },
+                    animations: {
+                        enabled: true
+                    },
+                },
+                fill: {
+                    opacity: 1,
+                },
+
+                plotOptions: {
+                    pie: {
+                    donut: {
+                        labels: {
+                        show: true,
+                        total: {
+                            showAlways: true,
+                            show: true
+                        }
+                        }
+                    }
+                    }
+                },
+                series: jumlah,
+                labels: nama_status,
+        
+                grid: {
+                    strokeDashArray: 4,
+                },
+                colors: ["#206bc4", "#79a6dc", "#d2e1f3", "#e9ecf1"], 
+                legend: {
+                    show: true,
+                    position: 'bottom',
+                    offsetY: 12,
+                    markers: {
+                        width: 10,
+                        height: 10,
+                        radius: 100,
+                    },
+                    itemMargin: {
+                        horizontal: 8,
+                        vertical: 8
+                    },
+                },
+                tooltip: {
+                    fillSeriesColor: false
+                },
+            }).render();
+        } 
+        });
+    }
+
+    let actpicker = new Litepicker({
+        element: document.getElementById('act-date'),
+        singleMode: true,
+        // resetButton: true,
+        splitView:false,
+        lang: "id",
+
+        buttonText: {
+            previousMonth: `<!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>`,
+                        nextMonth: `<!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>`,
+        },
+        resetButton: () => {
+        let btn = document.createElement('button');
+        btn.innerText = 'Reset';
+        btn.addEventListener('click', (evt) => {
+            evt.preventDefault();
+        });
+        return btn;
+        },
+    });
 });
+
 
 
 </script>

@@ -9,7 +9,7 @@
       <div class="col">
         <!-- Page pre-title -->
         <div class="page-pretitle">
-          Monitoring
+          Record
         </div>
         <h2 class="page-title">
           Data Kehadiran
@@ -121,7 +121,25 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Record Kehadiran</h3>
+                <div class="w-100">
+              <div class="row">
+                <div class="col">
+                <h3 class="card-title">Record Kehadiran</h3>
+                </div>
+                <div class="col">
+                  <button class="btn float-end" id="_exportXLS">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M19 18a3.5 3.5 0 0 0 0 -7h-1a5 4.5 0 0 0 -11 -2a4.6 4.4 0 0 0 -2.1 8.4"></path>
+                    <line x1="12" y1="13" x2="12" y2="22"></line>
+                    <polyline points="9 19 12 22 15 19"></polyline>
+                  </svg>
+                      Download XLS
+                  </button>
+                  
+                </div>
+              </div>
+            </div>
                 </div>
                 <div class="card-body border-bottom py-3">
                 <div class="col-sm-12 col-lg-12">
@@ -158,7 +176,7 @@
             <div class="w-100">
               <div class="row">
                 <div class="col">
-                <a class="btn btn-outline-indigo w-100" id="btnfilter">
+                <a class="btn btn-outline w-100" id="btnfilter">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-filter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M5.5 5h13a1 1 0 0 1 .5 1.5l-5 5.5l0 7l-4 -3l0 -4l-5 -5.5a1 1 0 0 1 .5 -1.5"></path>
@@ -196,7 +214,8 @@
                       <th>Jam Pulang</th>
                       <th>Total Jam Kerja</th>
                       <th>Status</th>
-                      <th>Details</th>
+                      <th>Keterangan</th>
+                      <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -226,11 +245,11 @@
           </div>
           <div class="modal-body">
           <div class="row row-cards">
-            <div class="col-md-4 col-sm-4">
+            <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Tanggal</div>
               <div id="absdetailsdate">-</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Nama</div>
               <div class="d-flex align-items-center">
                   <span class="avatar avatar-xs me-2 avatar-rounded" style="background-image: url(<?=base_url()?>/assets/static/avatars/profile.JPG)"></span>
