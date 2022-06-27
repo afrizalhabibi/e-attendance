@@ -84,16 +84,22 @@ $(document).ready(function() {
                 menit = jamkerja.substr(3,2);
                 $('#jamkerja').html(jam+ ' Jam' + ' ' + menit + ' Menit');
 
-                let badgeclass = "";
                 if(data.abs_status == 'Bekerja' || data.abs_status == 'WFH' || data.abs_status == 'Dinas Luar') {
                     badgeclass = ' status-green';
+                    $('#absenstatus').removeClass(" status-red");
+                    $('#absenstatus').removeClass(" status-yellow");
+                    $('#absenstatus').html(data.abs_status).addClass(badgeclass);
                 } else if (data.abs_status == 'Hari Libur' || data.abs_status == 'Tanpa Keterangan') {
                     badgeclass = ' status-red';
+                    $('#absenstatus').removeClass(" status-green");
+                    $('#absenstatus').removeClass(" status-yellow");
+                    $('#absenstatus').html(data.abs_status).addClass(badgeclass);
                 } else {
                     badgeclass = ' status-yellow';
+                    $('#absenstatus').removeClass(" status-green");
+                    $('#absenstatus').removeClass(" status-red");
+                    $('#absenstatus').html(data.abs_status).addClass(badgeclass);
                 }
-
-                $('#absenstatus').html(data.abs_status).addClass(badgeclass);
                 
                 $('#ket').html(data.abs_ket);
     

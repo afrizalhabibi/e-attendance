@@ -169,6 +169,12 @@
                     badgeterlambat = 'status-red';
                 }
 
+                if(value['act_id'] != '0' && value['act_id'] != null) {
+                    $('#kegiatan').html('Melaporkan');
+                } else {
+                    $('#kegiatan').html('Belum Melaporkan');
+                }
+
                 $('#terlambat').html(terlambat).addClass(badgeterlambat);
 
                
@@ -303,18 +309,30 @@
         });
     }
 
+
+    //* Activity Section
+    // moment.locale('id');
+    // moment().format(); 
+    var startDate = moment().add(1, 'days').format("MM/DD/YYYY");
+    var today = moment().add(365, 'days').format("MM/DD/YYYY");
+    var lockDays = [startDate,today];
+    console.log(lockDays);
     let actpicker = new Litepicker({
-        element: document.getElementById('act-date'),
+        element: document.getElementById('frm_act_tgl'),
         singleMode: true,
         // resetButton: true,
         splitView:false,
         lang: "id",
+        lockDays :[lockDays],
+        lockDaysFilter: (day) => {
+        const d = day.getDay();
+
+        return [6, 0].includes(d);
+        },
 
         buttonText: {
-            previousMonth: `<!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>`,
-                        nextMonth: `<!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>`,
+            previousMonth: `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>`,
+            nextMonth: `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>`,
         },
         resetButton: () => {
         let btn = document.createElement('button');
@@ -325,6 +343,47 @@
         return btn;
         },
     });
+    //* Activity Send
+    // Ajax Insert Absen
+    $(document).on('click','#btn-act-send',function(){
+        var act_tgl = $('#frm_act_tgl').val();
+        var act_qty = $('#frm_act_qty').val();
+        var act_ket = $('#frm_act_ket').val();
+        var act_output = $('#frm_act_output').val();
+        
+        $.ajax({
+            url:'<?= site_url('activity/addactivity') ?>',
+            method:'post',
+            data:
+                {
+                    ativity_act_tgl:act_tgl,
+                    ativity_act_qty:act_qty,
+                    ativity_act_ket:act_ket,
+                    ativity_act_output:act_output
+
+                },
+            success:function(response){
+                $('#modal-act-report').modal('hide');
+                $('#modal-act-report').find("input,textarea,select").val('');
+                
+                // displayabsen();
+
+                Swal.fire(
+                    'Berhasil',
+                    'Laporan berhasil terkirim',
+                    'success'
+                )
+            },
+            error:function (request, error) {
+                Swal.fire(
+                    'Gagal',
+                    'Laporan gagal terkirim',
+                    'error'
+                )
+            }
+        }); 
+    });
+
 });
 
 

@@ -47,6 +47,7 @@ class Autoload extends AutoloadConfig
         'Myth\Auth'   => APPPATH .'ThirdParty/myth-auth/src',
         'PHPSQLParser'          => APPPATH .'ThirdParty/php-sql-parser/src/PHPSQLParser',
         'Hermawan\DataTables'   => APPPATH .'ThirdParty/CodeIgniter4-DataTables/src',
+        // 'Michalsn\Uuid'         => APPPATH . 'ThirdParty/codeigniter4-uuid/src',
     ];
 
     /**

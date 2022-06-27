@@ -41,15 +41,15 @@
         <div class="col-auto ms-auto d-print-none">
           <div class="btn-list">
             <a href="#" class="btn btn-indigo d-none d-sm-inline-block" data-bs-toggle="modal"
-              data-bs-target="#modal-report">
+              data-bs-target="#modal-act-report">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <line x1="12" y1="5" x2="12" y2="19" />
                 <line x1="5" y1="12" x2="19" y2="12" /></svg>
-              Buat Log Harian
+              Buat Laporan Kegiatan
             </a>
-            <a href="#" class="btn btn-indigo d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report"
+            <a href="#" class="btn btn-indigo d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-act-report"
               aria-label="Create new report">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -71,7 +71,7 @@
               <div class="col-md-6">
                 <div class="card-body p-4 text-center">
                   <span class="avatar avatar-xl mb-3 avatar-rounded"
-                    style="background-image: url(<?=base_url()?>/assets/static/avatars/avatar-34.png)"></span>
+                    style="background-image: url(<?=base_url()?>/assets/static/avatars/avatar-14.png)"></span>
                   <h1 class="m-0 mb-1" id='timestamp'></h1>
                   <div class="text">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
@@ -275,7 +275,7 @@
                   <div class="datagrid-content">
                     <div class="d-flex align-items-center">
                       <span class="avatar avatar-xs me-2 avatar-rounded"
-                        style="background-image: url(<?=base_url()?>/assets/static/avatars/avatar-34.png)"></span>
+                        style="background-image: url(<?=base_url()?>/assets/static/avatars/avatar-14.png)"></span>
                       <?php if(isset($userdata)) {
                                 echo $userdata->nama;
                             } ?>
@@ -326,16 +326,14 @@
                 </div>
                 <div class="datagrid-item">
                   <div class="datagrid-title">Kegiatan Harian</div>
-                  <div class="datagrid-content">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/check -->
+                  <div class="datagrid-content" id="kegiatan">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24"
                       viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                       stroke-linejoin="round">
-                      <desc>Download more icon variants from https://tabler-icons.io/i/check</desc>
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <path d="M5 12l5 5l10 -10"></path>
                     </svg>
-                    Melaporkan
+                    -
                   </div>
                 </div>
                 <div class="datagrid-item">
@@ -383,19 +381,20 @@
 <?php echo view('/layout/_footer') ?>
 </div>
 </div>
-<div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal modal-blur fade" id="modal-act-report" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Buat Laporan Kinerja</h5>
+        <h5 class="modal-title">Buat Laporan Kegiatan Harian</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="row">
+          
           <div class="col-lg-6">
             <label class="form-label">Tanggal</label>
             <div class="input-icon mb-3">
-              <input class="form-control" placeholder="" id="act-date" value="">
+              <input class="form-control" placeholder="" id="frm_act_tgl" value="">
               <span class="input-icon-addon">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -412,28 +411,28 @@
           <div class="col-lg-6">
             <div class="mb-3">
               <label class="form-label">Jumlah Kegiatan</label>
-              <input type="number" class="form-control">
+              <input id="frm_act_qty" type="number" min="1" class="form-control">
             </div>
           </div>
           <div class="col-lg-12">
             <div class="mb-3">
               <label class="form-label">Uraian Kegiatan</label>
-              <textarea class="form-control" rows="5"></textarea>
+              <textarea id="frm_act_ket" class="form-control" rows="5"></textarea>
             </div>
           </div>
           <div class="col-lg-12">
             <div>
               <label class="form-label">Output Kegiatan</label>
-              <textarea class="form-control" data-bs-toggle="autosize" placeholder=""></textarea>
+              <textarea id="frm_act_output" class="form-control" data-bs-toggle="autosize" placeholder=""></textarea>
             </div>
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
-          Cancel
+          Batal
         </a>
-        <a href="#" class="btn btn-indigo ms-auto" data-bs-dismiss="modal">
+        <a href="#" id="btn-act-send" class="btn btn-indigo ms-auto" data-bs-dismiss="modal">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="24" height="24"
             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
             stroke-linejoin="round">

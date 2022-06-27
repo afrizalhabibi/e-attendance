@@ -7,7 +7,7 @@
           </button>
           <h1 class="navbar-brand navbar-brand-autodark">
             <a href=".">
-            <img src="<?php base_url()?>/assets/static/simpun-white.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+            <img src="<?php base_url()?>/assets/static/logo-white.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
             </a>
           </h1>
           <div class="navbar-nav flex-row d-lg-none">
@@ -61,7 +61,7 @@
           <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="navbar-nav pt-lg-3">
               <li class="nav-item">
-                <a class="nav-link" href="<?=base_url()?>/home" >
+                <a class="nav-link" href="<?=base_url()?>/presensi" >
                   <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-smart-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -96,16 +96,29 @@
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./docs/index.html" >
-                  <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/file-text -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
+                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/file-text -->
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>   <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />   <line x1="13" y1="8" x2="15" y2="8" />   <line x1="13" y1="12" x2="15" y2="12" /> </svg>
                   </span>
                   <span class="nav-link-title">
                     Kegiatan
                   </span>
                 </a>
+                <div class="dropdown-menu">
+                  <div class="dropdown-menu-columns">
+                    <div class="dropdown-menu-column">
+                      <a class="dropdown-item" href="<?=base_url()?>/kegiatan" >
+                        Kegiatan Harian
+                      </a>
+                      <a class="dropdown-item" href="<?=base_url()?>/monitoring-kegiatan" >
+                        Monitoring
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </li>
+             
               <hr>
               <li class="nav-item">
                 <a class="nav-link" href="./docs/index.html" >

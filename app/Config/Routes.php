@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Presensi');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,21 +31,24 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Presensi::presensi');
 $routes->group('', ['filter' => 'login'], function($routes){
-$routes->get('/home', 'Home::home');
-$routes->get('/kehadiran', 'Home::kehadiran');
-$routes->get('/monitoring', 'Home::monitorKehadiran');
-// $routes->get('/time_ticking', 'Home::LiveTime');
-$routes->post('/update-absendatang', 'Home::UpdateAbsenDatang');
-$routes->post('/update-absenpulang', 'Home::UpdateAbsenPulang');
-$routes->get('/fetch-absen', 'Home::ReadAbsen');
-$routes->get('/ajax-readabsen', 'Home::AjaxReadAbsen');
-$routes->get('/fetch-firstabsen', 'Home::Readfirstabsen');
-$routes->get('/chartstatus', 'Home::Ajaxchartstatus');
-$routes->get('/batch-row', 'Home::BatchRow');
-$routes->get('/abs-details/(:any)', 'Home::AbsDetails/$1');
+    $routes->get('/presensi', 'Presensi::presensi');
+    $routes->get('/kehadiran', 'Presensi::kehadiran');
+    $routes->get('/monitoring', 'Presensi::monitorKehadiran');
+    $routes->post('/update-absendatang', 'Presensi::UpdateAbsenDatang');
+    $routes->post('/update-absenpulang', 'Presensi::UpdateAbsenPulang');
+    $routes->get('/fetch-absen', 'Presensi::ReadAbsen');
+    $routes->get('/ajax-readabsen', 'Presensi::AjaxReadAbsen');
+    $routes->get('/fetch-firstabsen', 'Presensi::Readfirstabsen');
+    $routes->get('/chartstatus', 'Presensi::Ajaxchartstatus');
+    $routes->get('/batch-row', 'Presensi::BatchRow');
+    $routes->get('/abs-details/(:any)', 'Presensi::AbsDetails/$1');
+
+    //activity
+    $routes->get('/act-report', 'Activity::AddActivity');
 });
+
 
 /*
  * --------------------------------------------------------------------
