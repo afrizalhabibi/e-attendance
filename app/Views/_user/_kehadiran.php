@@ -124,7 +124,7 @@
                 <div class="w-100">
               <div class="row">
                 <div class="col">
-                <h3 class="card-title">Record Kehadiran</h3>
+                <!-- <h3 class="card-title">Record Kehadiran</h3> -->
                 </div>
                 <div class="col">
                   <button class="btn float-end" id="_exportXLS">
@@ -280,8 +280,7 @@
             </div>
             <div class="col-md-4">
               <div class="subheader mb-2">Kegiatan Harian</div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/check</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l5 5l10 -10"></path></svg>
-              Melaporkan
+              <div id="kegiatan"></div>
             </div>
             <div class="col-md-4">
               <div class="subheader mb-2">Keterangan</div>

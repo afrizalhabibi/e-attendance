@@ -1,16 +1,16 @@
 <?php 
 namespace App\Models;
-// use CodeIgniter\Model;
-use Michalsn\Uuid\UuidModel;
+use CodeIgniter\Model;
+// use Michalsn\Uuid\UuidModel;
 
-class ActivityModel extends UuidModel
+class ActivityModel extends Model
 {
     
     protected $table = 'activity';
     protected $primaryKey = 'act_id';
 
-    protected $uuidFields = ['act_id'];
-    // protected $useAutoIncrement = true;
+    // protected $uuidFields = ['act_id'];
+    protected $useAutoIncrement = false;
     // protected $insertID = 0;
     protected $returnType = 'array';
     // protected $useSoftDeletes = true;

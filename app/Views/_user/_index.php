@@ -99,7 +99,7 @@
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <circle cx="12" cy="12" r="9" />
                         <path d="M9 12l2 2l4 -4" /> </svg>
-                      Absen Datang
+                      Presensi Datang
                     </a>
                   </div>
                   <?php
@@ -118,7 +118,7 @@
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <circle cx="12" cy="12" r="9" />
                         <path d="M9 12l2 2l4 -4" /> </svg>
-                      Absen Pulang
+                      Presensi Pulang
                     </a>
                   </div>
                   <?php
@@ -320,19 +320,14 @@
                   <div class="datagrid-title">Status Waktu Presensi</div>
                   <div class="datagrid-content">
                     <span class="status" id="terlambat">
-                      Tidak Absen
+                      -
                     </span>
                   </div>
                 </div>
                 <div class="datagrid-item">
                   <div class="datagrid-title">Kegiatan Harian</div>
                   <div class="datagrid-content" id="kegiatan">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24"
-                      viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M5 12l5 5l10 -10"></path>
-                    </svg>
+                    
                     -
                   </div>
                 </div>
@@ -458,7 +453,7 @@
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <circle cx="12" cy="12" r="9" />
           <path d="M9 12l2 2l4 -4" /></svg>
-        <h3>Absen Datang</h3>
+        <h3>Presensi Datang</h3>
         <div class="text-muted">Jam kerja normal 7:30 AM - 16:00 PM</div>
         <form id=addAbsen>
           <div class="form-group">
@@ -499,7 +494,7 @@
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <circle cx="12" cy="12" r="9" />
           <path d="M9 12l2 2l4 -4" /></svg>
-        <h3>Absen Pulang</h3>
+        <h3>Presensi Pulang</h3>
         <div class="text-muted">Jam kerja normal 7:30 AM - 16:00 PM</div>
         <form id=addAbsen>
           <div class="form-group">

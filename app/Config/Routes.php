@@ -42,11 +42,14 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/ajax-readabsen', 'Presensi::AjaxReadAbsen');
     $routes->get('/fetch-firstabsen', 'Presensi::Readfirstabsen');
     $routes->get('/chartstatus', 'Presensi::Ajaxchartstatus');
+    $routes->get('/chartjamkerja', 'Presensi::Ajaxchartjamkerja');
     $routes->get('/batch-row', 'Presensi::BatchRow');
     $routes->get('/abs-details/(:any)', 'Presensi::AbsDetails/$1');
 
     //activity
     $routes->get('/act-report', 'Activity::AddActivity');
+    $routes->get('/kinerja', 'Activity::Recordkinerja');
+    $routes->get('/recordkinerja', 'Activity::AjaxReadKinerja');
 });
 
 

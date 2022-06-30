@@ -6,12 +6,14 @@ class PresensiModel extends Model
 {
     protected $table = 'absensi';
     protected $primaryKey = 'abs_id';
-    protected $useAutoIncrement = true;
-    protected $insertID = 0;
+    protected $useAutoIncrement = false;
+    // protected $insertID = 0;
     protected $returnType = 'array';
    
+
     protected $protectFields = true;
-    protected $allowedFields = ['pgw_id','abs_datang','abs_pulang','abs_status','abs_hari','abs_jamkerja','abs_long','abs_lat','abs_ket','abs_terlambat'];
+    protected $allowedFields = ['abs_id','act_id','pgw_id','abs_datang','abs_pulang','abs_status','abs_hari','abs_jamkerja','abs_long','abs_lat','abs_ket','abs_terlambat'];
+
 
     public function getAbsen() 
     {
@@ -139,6 +141,20 @@ class PresensiModel extends Model
                 ->where('pgw_id', user()->getpgwId())
                 ->like('abs_tgl',date('Y-m'))
                 ->groupBy('abs_status')
+                ->get();
+        return $result;
+    }
+
+    public function getChartJamKerja()
+    {
+        $result = $this->db->table('absensi')
+                ->select('abs_jamkerja, abs_tgl')
+                ->where('pgw_id', user()->getpgwId())
+                ->where('abs_status !=', 'Hari Libur')
+                // ->notLike('abs_jamkerja', '%-')
+                ->like('abs_tgl',date('Y-m'))
+                ->orderBy('abs_tgl', 'asc')
+                ->groupBy('abs_jamkerja')
                 ->get();
         return $result;
     }

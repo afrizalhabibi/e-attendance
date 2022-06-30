@@ -49,15 +49,10 @@ class Presensi extends BaseController
         $PresensiModel = new PresensiModel();
 
         $query = $PresensiModel->getpgwid();
-        
+         
         foreach ($query->getResultArray() as $row) {
-            $abs_id = '';
+            $cleanNumber = preg_replace( '/[^0-9]/', '', microtime(false));
             $pgw_id = $row['pgw_id'];
-            $abs_datang = '';
-            $abs_pulang = '';
-            $abs_tgl = '';
-            $abs_status = '';
-            $abs_terlambat = 'Tidak mengisi presensi datang';
             $abs_hari = hari_indo(date('l'));
             if(hari_indo(date('l')) == 'Sabtu' || hari_indo(date('l')) == 'Minggu') {
                 $abs_status = 'Hari Libur';
@@ -67,13 +62,14 @@ class Presensi extends BaseController
             }
             $absenArray = array
             (
-                'abs_id' => $abs_id,
+                'abs_id' => base_convert($cleanNumber, 10, 36),
                 'pgw_id' => $pgw_id,
-                'abs_datang' => $abs_datang,
-                'abs_pulang' => $abs_pulang,
-                'abs_tgl' => $abs_tgl,
-                'abs_status' => $abs_status,  
-                'abs_terlambat' => $abs_terlambat,       
+                'act_id' => null,
+                'abs_datang' => '',
+                'abs_pulang' => '',
+                'abs_tgl' => '',
+                'abs_status' => '',  
+                'abs_terlambat' => 'Tidak mengisi presensi datang',       
                 'abs_hari' => $abs_hari,          
                 'abs_jamkerja' => '',          
             );  
@@ -107,7 +103,6 @@ class Presensi extends BaseController
             'abs_hari' => hari_indo(date('l')),
             'abs_long' => $long,
             'abs_lat' => $lat
-
         ];
 
         $PresensiModel->update($id, $data);
@@ -187,6 +182,11 @@ class Presensi extends BaseController
     public function Ajaxchartstatus() {
         $PresensiModel = new PresensiModel();
         $data['chartstatus'] = $PresensiModel->getChartStatus()->getResult();
+        return $this->response->setJSON($data);
+    }
+    public function Ajaxchartjamkerja() {
+        $PresensiModel = new PresensiModel();
+        $data['chartjamkerja'] = $PresensiModel->getChartJamKerja()->getResult();
         return $this->response->setJSON($data);
     }
 }
