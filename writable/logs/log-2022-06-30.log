@@ -427,3 +427,11 @@ CRITICAL - 2022-06-30 12:16:18 --> Use of undefined constant output2 - assumed '
 #4 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
 #6 {main}
+CRITICAL - 2022-06-30 15:17:04 --> Call to undefined method App\Models\ActivityModel::get_act_by_id
+#0 D:\Aplikasi\github\e-attendance\app\Controllers\Activity.php(84): CodeIgniter\Model->__call('get_act_by_id', Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Activity->ActDetails('2noi9bry9bmx')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activity))
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#6 {main}

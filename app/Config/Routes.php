@@ -50,6 +50,7 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/act-report', 'Activity::AddActivity');
     $routes->get('/kinerja', 'Activity::Recordkinerja');
     $routes->get('/recordkinerja', 'Activity::AjaxReadKinerja');
+    $routes->get('/actdetails/(:any)', 'Activity::ActDetails/$1');
 });
 
 

@@ -365,7 +365,7 @@
                 $('#modal-act-report').modal('hide');
                 $('#modal-act-report').find("input,textarea,select").val('');
                 
-                // displayabsen();
+                firstabsen();
 
                 Swal.fire(
                     'Berhasil',

@@ -19,5 +19,14 @@ class ActivityModel extends Model
     protected $protectFields = true;
     protected $allowedFields = ['act_id','pgw_id','act_tgl','act_qty','act_ket','act_output'];
 
+    public function get_act_by_id($id) {
+        $result = $this->db->table('activity')
+        ->where('pgw_id', user()->getpgwid())
+        ->where('act_id', $id)
+        ->get();
+         
+        return $result->getRow();
+      }
+
 }
 ?>

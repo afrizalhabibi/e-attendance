@@ -143,30 +143,19 @@
           </div>
           <div class="modal-body">
           <div class="row row-cards">
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-6 col-sm-6">
               <div class="subheader mb-2">Tanggal</div>
               <div id="detailsdate">-</div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="subheader mb-2">Nama</div>
-              <div class="d-flex align-items-center">
-                  <span class="avatar avatar-xs me-2 avatar-rounded" style="background-image: url(<?=base_url()?>/assets/static/avatars/profile.JPG)"></span>
-                  <div id="detailsname">-</div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="subheader mb-2">NIP/NIK</div>
-              <div id="idpeg">-</div>
-            </div>
-            <div class="col-md-4">
-              <div class="subheader mb-2">Jumlah</div>
+            <div class="col-md-6">
+              <div class="subheader mb-2">Jumlah Kegiatan</div>
               <div id="detailsjumlah">-</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-12">
               <div class="subheader mb-2">Uraian Kegiatan</div>
                 <div id="detailsket">-</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
               <div class="subheader mb-2">Output</div>
               <div id="detailsoutput">-</div>
             </div>
