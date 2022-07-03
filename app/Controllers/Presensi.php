@@ -54,6 +54,8 @@ class Presensi extends BaseController
             $cleanNumber = preg_replace( '/[^0-9]/', '', microtime(false));
             $pgw_id = $row['pgw_id'];
             $abs_hari = hari_indo(date('l'));
+            $abs_status = '';
+            $abs_terlambat = 'Tidak mengisi presensi datang';
             if(hari_indo(date('l')) == 'Sabtu' || hari_indo(date('l')) == 'Minggu') {
                 $abs_status = 'Hari Libur';
                 $abs_terlambat = 'Hari Libur';
@@ -68,8 +70,8 @@ class Presensi extends BaseController
                 'abs_datang' => '',
                 'abs_pulang' => '',
                 'abs_tgl' => '',
-                'abs_status' => 'Tanpa Keterangan',  
-                'abs_terlambat' => 'Tidak mengisi presensi datang',       
+                'abs_status' => $abs_status,  
+                'abs_terlambat' => $abs_terlambat,       
                 'abs_hari' => $abs_hari,          
                 'abs_jamkerja' => '',          
             );  
@@ -157,7 +159,7 @@ class Presensi extends BaseController
                  }
                })
                ->add('action', function($row){
-                return '<button class="btn bg-blue-lt btn-sm" id="btnabsdetail" data-id="'.$row->abs_id.'">
+                return '<button class="btn btn-outline-indigo btn-md" id="btnabsdetail" data-id="'.$row->abs_id.'">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12.01" y2="8"></line><polyline points="11 12 12 12 12 16 13 16"></polyline></svg>Detail</button>';
                })
                ->toJson(true);

@@ -1,7 +1,7 @@
 <?php echo view('/layout/_header') ?>
 <?php echo view('/layout/_navbar') ?>
 <div class="page-wrapper">
-  <div class="container-xl">
+  <div class="container-fluid">
     <!-- Page title -->
     <div class="page-header d-print-none">
       <div class="row align-items-center">
@@ -63,7 +63,7 @@
     </div>
   </div>
   <div class="page-body">
-    <div class="container-xl">
+    <div class="container-fluid">
       <div class="row row-cards">
         <div class="col-md-6 col-lg-12">
           <div class="card">
@@ -389,7 +389,7 @@
           <div class="col-lg-6">
             <label class="form-label">Tanggal</label>
             <div class="input-icon mb-3">
-              <input class="form-control" placeholder="" id="frm_act_tgl" value="">
+              <input class="form-control" placeholder="" id="frm_act_tgl" name="frm_act_tgl" value="">
               <span class="input-icon-addon">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -402,23 +402,24 @@
                   <line x1="12" y1="15" x2="12" y2="18" /></svg>
               </span>
             </div>
+            
           </div>
           <div class="col-lg-6">
             <div class="mb-3">
               <label class="form-label">Jumlah Kegiatan</label>
-              <input id="frm_act_qty" type="number" min="1" class="form-control">
+              <input id="frm_act_qty" name="frm_act_qty" type="number" min="1" class="form-control">
             </div>
           </div>
           <div class="col-lg-12">
             <div class="mb-3">
               <label class="form-label">Uraian Kegiatan</label>
-              <textarea id="frm_act_ket" class="form-control" rows="5"></textarea>
+              <textarea id="frm_act_ket" name="frm_act_ket" class="form-control" rows="5"></textarea>
             </div>
           </div>
           <div class="col-lg-12">
             <div>
               <label class="form-label">Output Kegiatan</label>
-              <textarea id="frm_act_output" class="form-control" data-bs-toggle="autosize" placeholder=""></textarea>
+              <textarea id="frm_act_output" name="frm_act_output" class="form-control" data-bs-toggle="autosize" placeholder=""></textarea>
             </div>
           </div>
         </div>

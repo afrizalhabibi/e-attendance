@@ -18,7 +18,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  */
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Presensi');
-$routes->setDefaultMethod('index');
+$routes->setDefaultMethod('presensi');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);

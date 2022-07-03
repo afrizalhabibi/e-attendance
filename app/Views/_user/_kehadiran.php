@@ -2,7 +2,7 @@
 <?php echo view('/layout/_navbar') ?>
 
 <div class="page-wrapper">
-  <div class="container-xl">
+  <div class="container-fluid">
     <!-- Page title -->
   <div class="page-header d-print-none">
     <div class="row align-items-center">
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="page-body">
-    <div class="container-xl">
+    <div class="container-fluid">
       <div class="row row-cards">
       <!-- <div class="col-sm-6 col-lg-3">
           <div class="card card-sm">
@@ -150,7 +150,6 @@
               <div class="input-icon mb-3">
                 <input type="text" value="" class="form-control" id="newSearch" placeholder="Cari…">
                 <span class="input-icon-addon">
-                  <!-- Download SVG icon from http://tabler-icons.io/i/search -->
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/search</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="10" cy="10" r="7"></circle><line x1="21" y1="21" x2="15" y2="15"></line></svg>
                 </span>
               </div>
@@ -176,7 +175,7 @@
             <div class="w-100">
               <div class="row">
                 <div class="col">
-                <a class="btn btn-outline w-100" id="btnfilter">
+                <a class="btn btn-outline-primary w-100" id="btnfilter">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-filter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M5.5 5h13a1 1 0 0 1 .5 1.5l-5 5.5l0 7l-4 -3l0 -4l-5 -5.5a1 1 0 0 1 .5 -1.5"></path>
@@ -256,38 +255,35 @@
                   <div id="absdetailsname">-</div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">NIP/NIK</div>
               <div id="idpeg">-</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Jam Datang</div>
               <strong id="jamdatang">00:00:00</strong>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Jam Pulang</div>
               <strong id="jampulang">00:00:00</strong>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Jumlah Jam Kerja</div>
               <strong id="jamkerja">00 Jam 00 Menit</strong>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Status</div>
               <span id="absenstatus" class="status ">
                 -
               </span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Kegiatan Harian</div>
               <div id="kegiatan"></div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Keterangan</div>
                 <div id="ket">-</div>
-            </div>
-            <div class="col-md-4">
-              <div class="subheader mb-2">Lokasi</div>
             </div>
           </div>
           </div> <!--end modal body -->
