@@ -59,6 +59,7 @@ class Presensi extends BaseController
                 $abs_terlambat = 'Hari Libur';
             } else {
                 $abs_status = 'Tanpa Keterangan';
+                $abs_terlambat = 'Tidak mengisi presensi datang';
             }
             $absenArray = array
             (
@@ -68,8 +69,8 @@ class Presensi extends BaseController
                 'abs_datang' => '',
                 'abs_pulang' => '',
                 'abs_tgl' => '',
-                'abs_status' => 'Tanpa Keterangan',  
-                'abs_terlambat' => 'Tidak mengisi presensi datang',       
+                'abs_status' => $abs_status,  
+                'abs_terlambat' => $abs_terlambat,       
                 'abs_hari' => $abs_hari,          
                 'abs_jamkerja' => '',          
             );  
