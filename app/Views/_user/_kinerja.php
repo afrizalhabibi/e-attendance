@@ -1,5 +1,5 @@
 <?php echo view('/layout/_header') ?>
-<?php echo view('/layout/_navbar') ?>
+<?php echo view('/layout/_navbar_dark') ?>
 
 <div class="page-wrapper">
   <div class="container-xl">
@@ -163,6 +163,72 @@
           </div> <!--end modal body -->
           <div class="modal-footer">
             <button type="button" class="btn me-auto" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- edit -->
+    <div class="modal modal-blur fade" id="modal-actedit" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Buat Laporan Kegiatan Harian</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          <form role="form" class="validator-edit" method="POST" id="ajaxKinerja" accept-charset="utf-8">
+            <div class="row">
+            <input id="frm_act_id" type="hidden" value="">
+              <div class="col-lg-6 form-group">
+                <label class="form-label">Tanggal</label>
+                <div class="input-icon mb-3">
+                  <span class="input-icon-addon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                      stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <rect x="4" y="5" width="16" height="16" rx="2" />
+                      <line x1="16" y1="3" x2="16" y2="7" />
+                      <line x1="8" y1="3" x2="8" y2="7" />
+                      <line x1="4" y1="11" x2="20" y2="11" />
+                      <line x1="11" y1="15" x2="12" y2="15" />
+                      <line x1="12" y1="15" x2="12" y2="18" /></svg>
+                  </span>
+                  <input type="text" readonly autocomplete="off" class="form-control" placeholder="" id="frm_act_tgl" title=" " value="" required>
+                </div>
+                
+              </div>
+              <div class="col-lg-6 form-group">
+                <div class="mb-3">
+                  <label class="form-label">Jumlah Kegiatan</label>
+                  <input id="frm_act_qty" type="number" title=" " onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" pattern="[1-9]" min="1" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-lg-12 form-group">
+                <div class="mb-3">
+                  <label class="form-label">Uraian Kegiatan</label>
+                  <textarea id="frm_act_ket" data-v-message="Tidak boleh kosong"  class="form-control" rows="5" required></textarea>
+                </div>
+              </div>
+              <div class="col-lg-12 form-group">
+                <div>
+                  <label class="form-label">Output Kegiatan</label>
+                  <textarea id="frm_act_output" data-v-message="Tidak boleh kosong" class="form-control" data-bs-toggle="autosize" placeholder="" value="" required></textarea>
+                </div>
+              </div>
+              </div>
+            </div>
+            </form>
+            <div class="modal-footer">
+            <button class="btn btn-link link-secondary" data-bs-dismiss="modal">
+              Batal
+            </button>
+            <button type="submit" id="btn-actedit-send" class="btn btn-indigo ms-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" /></svg>
+              Kirim
+            </button>
           </div>
         </div>
       </div>

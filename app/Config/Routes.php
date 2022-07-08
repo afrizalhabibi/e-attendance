@@ -18,7 +18,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  */
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Presensi');
-$routes->setDefaultMethod('index');
+$routes->setDefaultMethod('presensi');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
@@ -51,6 +51,7 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/kinerja', 'Activity::Recordkinerja');
     $routes->get('/recordkinerja', 'Activity::AjaxReadKinerja');
     $routes->get('/actdetails/(:any)', 'Activity::ActDetails/$1');
+    $routes->post('/editkinerja', 'Activity::EdtActivity');
 });
 
 

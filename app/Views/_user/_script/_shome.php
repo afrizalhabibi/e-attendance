@@ -5,6 +5,7 @@
     // displayabsen();
     firstabsen();
     chartStatus();
+    // validateKinerja();
     // timedate liveticking
     function timestamp() {
         moment.locale('id');
@@ -16,14 +17,42 @@
         $('#txt_abs_datang').val(today);
         $('#txt_abs_pulang').val(today);
     }
+    $(document).on('click','#btn-datang',function(){
+        Webcam.set({
+            width: 330,
+            height: 240,
+            image_format: 'jpeg',
+            jpeg_quality: 90
+        });
+        Webcam.attach('#camImgPresensi');
+
+        $(document).on('click','#take_snapshot',function(){
+            Webcam.snap(function(data_uri) {
+                $("#image-tag").val(data_uri);
+                $('#AjaxImgPresensi').append('<img class="rounded" src="'+data_uri+'"/>');
+                $('#camImgPresensi').hide();
+            });
+        });
+
+        $(document).on('click','#reset_snapshot',function(){
+                $("#image-tag").val('');
+                $('#AjaxImgPresensi').html('');
+                $('#camImgPresensi').show();
+        });
+    });
+    
+
+
     // Ajax Insert Absen
     $(document).on('click','#btn-absen-datang',function(){
+
         var abs_id = $('#txt_abs_id').val();
         var pgw_id = $('#txt_pgw_id').val();
         var abs_datang =  $('#txt_abs_datang').val();
         var abs_long =  '114.7666395';
         var abs_lat = '-3.7533148';
         var abs_status = 0;
+        var abs_img = $('#image-tag').val();
         $.ajax({
             url:'<?= site_url('update-absendatang') ?>',
             method:'post',
@@ -34,7 +63,8 @@
                     absen_abs_datang:abs_datang,
                     absen_abs_status:abs_status,
                     absen_abs_long:abs_long,
-                    absen_abs_lat:abs_lat
+                    absen_abs_lat:abs_lat,
+                    absen_abs_img:abs_img
                 },
             success:function(response){
                 $('#confirm-absen-datang').modal('hide');
@@ -45,14 +75,14 @@
                 chartStatus();
                 Swal.fire(
                     'Berhasil',
-                    'Absen datang berhasil',
+                    'Presensi datang berhasil',
                     'success'
                 )
             },
             error:function (request, error) {
                 Swal.fire(
                     'Gagal',
-                    'Absen datang gagal',
+                    'Presensi datang gagal',
                     'error'
                 )
             }
@@ -81,14 +111,14 @@
                 chartStatus();
                 Swal.fire(
                     'Berhasil',
-                    'Absen pulang berhasil',
+                    'Presensi pulang berhasil',
                     'success'
                 )
             },
             error:function (request, error) {
                 Swal.fire(
                     'Gagal',
-                    'Absen pulang gagal',
+                    'Presensi pulang gagal',
                     'error'
                 )
             }
@@ -194,6 +224,7 @@
                 $('#tglabsen').html(value['abs_hari']+', '+value['abs_tgl']);
                 $('#jamkerja').html(jam+ ' Jam' + ' ' + menit + ' Menit');
                 $('#ket').html(value['abs_ket']);
+                // $('#img-absen').append('<img >');
 
                 //mini map location tracker
                 mapboxgl.accessToken = 'pk.eyJ1IjoiaGFiaWJpLXBvbGl0YWxhIiwiYSI6ImNsM3h1NDI3bDAwYWMza2thZThib3NmeWcifQ.cET6J1xPv-NdkdPDPmfjsw';
@@ -223,7 +254,7 @@
                     
                     long = e.coords.longitude;
                     lat = e.coords.latitude;
-                    console.log("lng:" + long + ", lat:" + lat);
+                    // console.log("lng:" + long + ", lat:" + lat);
                     
                     // const marker1 = new mapboxgl.Marker({ color: 'black'})
                     // .setLngLat([long, lat])
@@ -285,7 +316,7 @@
                 grid: {
                     strokeDashArray: 4,
                 },
-                colors: ["#206bc4", "#79a6dc", "#d2e1f3", "#e9ecf1"], 
+                colors: ["#83b298", "#f2cb8e", "#d2e1f3", "#e9ecf1"], 
                 legend: {
                     show: true,
                     position: 'bottom',
@@ -315,7 +346,7 @@
     var startDate = moment().add(1, 'days').format("MM/DD/YYYY");
     var today = moment().add(365, 'days').format("MM/DD/YYYY");
     var lockDays = [startDate,today];
-    console.log(lockDays);
+   
     let actpicker = new Litepicker({
         element: document.getElementById('frm_act_tgl'),
         singleMode: true,
@@ -344,44 +375,94 @@
     });
     //* Activity Send
     // Ajax Insert Absen
-    $(document).on('click','#btn-act-send',function(){
-        var act_tgl = $('#frm_act_tgl').val();
-        var act_qty = $('#frm_act_qty').val();
-        var act_ket = $('#frm_act_ket').val();
-        var act_output = $('#frm_act_output').val();
+    // if($("#ajaxKinerja").length > 0) {
+    //     $("#ajaxKinerja").validate({
+    //         rules: {
+    //             frm_act_tgl: {
+    //                 required: true,
+    //             },
+    //             frm_act_qty: {
+    //                 required: true,
+    //             },
+    //             frm_act_ket: {
+    //                 required: true,
+    //             },
+    //         },
+    //         messages: {
+    //             frm_act_tgl: {
+    //                 required: "Please enter name",
+    //             },
+    //             frm_act_qty: {
+    //                 required: "Please enter valid email",
+    //                 email: "Please enter valid email",
+    //                 maxlength: "The email name should less than or equal to 50 characters",
+    //             },
+    //             frm_act_ket: {
+    //                 required: "Please enter message",
+    //             },
+    //         },
+    //         submitHandler: function(form) {
+
+    //         }
+    //     })
+    // }
+    $(function (){
+
+        let validator = $('form.validator').jbvalidator({
+            errorMessage: true,
+            successClass: false,
+            language: "<?php base_url()?>/assets/dist/libs/jbvalidator/lang/en.json",
+        });
         
-        $.ajax({
-            url:'<?= site_url('activity/addactivity') ?>',
-            method:'post',
-            data:
-                {
-                    ativity_act_tgl:act_tgl,
-                    ativity_act_qty:act_qty,
-                    ativity_act_ket:act_ket,
-                    ativity_act_output:act_output
+        // validator.checkAll();
+        //serverside
+        $(document).on('click','#btn-act-send',function(e){
+            if (validator.checkAll()) {
+                e.preventDefault();
+            } else {
+                var act_tgl = $('#frm_act_tgl').val();
+                var act_qty = $('#frm_act_qty').val();
+                var act_ket = $('#frm_act_ket').val();
+                var act_output = $('#frm_act_output').val();
 
-                },
-            success:function(response){
-                $('#modal-act-report').modal('hide');
-                $('#modal-act-report').find("input,textarea,select").val('');
-                
-                firstabsen();
+                $.ajax({
+                    url:'<?= site_url('activity/addactivity') ?>',
+                    method:'post',
+                    data:
+                        {
+                            ativity_act_tgl:act_tgl,
+                            ativity_act_qty:act_qty,
+                            ativity_act_ket:act_ket,
+                            ativity_act_output:act_output
 
-                Swal.fire(
-                    'Berhasil',
-                    'Laporan berhasil terkirim',
-                    'success'
-                )
-            },
-            error:function (request, error) {
-                Swal.fire(
-                    'Gagal',
-                    'Laporan gagal terkirim',
-                    'error'
-                )
+                        },
+                    success:function(response){
+                        // if(response.status === 'Terkirim') {
+                        //         validatorServerSide.errorTrigger($('[name=frm_act_tgl]'), response.message);
+                        // }
+                        $('#modal-act-report').modal('hide');
+                        $('#modal-act-report').find("input,textarea,select").val('');
+                        
+                        firstabsen();
+
+                        Swal.fire(
+                            'Berhasil',
+                            'Laporan berhasil terkirim',
+                            'success'
+                        )
+                    },
+                    error:function (request, error) {
+                        Swal.fire(
+                            'Gagal',
+                            'Laporan gagal terkirim',
+                            'error'
+                        )
+                    }
+                }); 
             }
-        }); 
+        });
     });
+
 
 });
 

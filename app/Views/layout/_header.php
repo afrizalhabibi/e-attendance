@@ -19,6 +19,8 @@
 
     <!-- JQuery -->
     <script src="<?php base_url()?>/assets/dist/js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emretulek/jbvalidator"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
     <script src="<?php base_url()?>/assets/dist/libs/dataTables/jquery.dataTables.min.js"></script>
     <script src="<?php base_url()?>/assets/dist/libs/dataTables/dataTables.bootstrap5.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>

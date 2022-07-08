@@ -52,7 +52,7 @@ $(document).ready(function() {
                     return '<span class="me-2 badge'+badgeclass+'"></span>'+row.abs_status
             }},
             {data: 'abs_ket', orderable:false, visible:false},
-            {data: 'action', orderable: false},
+            {data: 'action', orderable: false, class: 'text-end'},
         ]
     });
 
@@ -118,8 +118,9 @@ $(document).ready(function() {
                 console.log(jqXHR);
                 alert('Error get data from ajax');
             }
+        });
     });
-    });
+    // edit
     $('.dt-buttons').hide();
     $("#_exportXLS").click(function(event) {
         $(".buttons-excel").trigger("click");

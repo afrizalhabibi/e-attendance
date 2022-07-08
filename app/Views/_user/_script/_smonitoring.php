@@ -17,6 +17,7 @@ $(document).ready(function(){
               nama_status.push(value['abs_status']);
               jumlah.push(parseInt(value['total']));
 			});
+			console.log(jumlah);
             var statusBar = new ApexCharts(document.getElementById('chart-status'), {
       		chart: {
       			type: "bar",
