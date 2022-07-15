@@ -1,6 +1,12 @@
 <script type="text/javascript">
  $(document).ready(function(){
     setInterval(timestamp, 1000);
+
+    let validator = $('form.validator').jbvalidator({
+            errorMessage: true,
+            successClass: false,
+            language: "<?php base_url()?>/assets/dist/libs/jbvalidator/lang/en.json",
+    });
     
     // displayabsen();
     firstabsen();
@@ -19,29 +25,38 @@
     }
     $(document).on('click','#btn-datang',function(){
         Webcam.set({
-            width: 330,
+            width: 320,
             height: 240,
             image_format: 'jpeg',
-            jpeg_quality: 90
+            jpeg_quality: 90,
+            flip_horiz: true
         });
+        $('#camImgPresensi').show();
         Webcam.attach('#camImgPresensi');
 
-        $(document).on('click','#take_snapshot',function(){
-            Webcam.snap(function(data_uri) {
-                $("#image-tag").val(data_uri);
-                $('#AjaxImgPresensi').append('<img class="rounded" src="'+data_uri+'"/>');
-                $('#camImgPresensi').hide();
-            });
-        });
+        $('video').addClass('rounded');
 
-        $(document).on('click','#reset_snapshot',function(){
-                $("#image-tag").val('');
-                $('#AjaxImgPresensi').html('');
-                $('#camImgPresensi').show();
+    });
+
+    $(document).on('click','#take_snapshot',function(){
+        Webcam.snap(function(data_uri) {
+            $("#image-tag").val(data_uri);
+            $('#AjaxImgPresensi').append('<img class="rounded" src="'+data_uri+'"/>');
+            $('#camImgPresensi').hide();
         });
     });
-    
 
+    $(document).on('click','#reset_snapshot',function(){
+            $("#image-tag").val('');
+            $('#AjaxImgPresensi').html('');
+            $('#camImgPresensi').show();
+    });
+    
+    $('#confirm-absen-datang').on('hidden.bs.modal', function () {
+            $("#image-tag").val('');
+            $('#AjaxImgPresensi').html('');
+            $('#camImgPresensi').show();
+    });
 
     // Ajax Insert Absen
     $(document).on('click','#btn-absen-datang',function(){
@@ -126,48 +141,6 @@
     });
     //end insert absen
 
-    // start display absen
-    // function displayabsen()
-    // {
-    // var i = 0;
-    
-	// $.ajax({
-	// 	url:'<?= site_url('fetch-absen') ?>',
-	// 	method:'get',
-	// 	success:function(response){
-	// 		$.each(response.allabsen,function(key, value){
-    //             i++;
-    //             starttime = value['abs_datang'];
-    //             stoptime = value['abs_pulang'];
-                
-    //             if(value['abs_status'] == 'Bekerja' || value['abs_status'] == 'WFH') {
-    //                 badgeclass = ' bg-green';
-    //             } else if (value['abs_status'] == 'Hari Libur' || value['abs_status'] == 'Tanpa Keterangan') {
-    //                 badgeclass = ' bg-red';
-    //             } else {
-    //                 badgeclass = ' bg-yellow';
-    //             }
-                
-    //             if (value['abs_jamkerja'].indexOf("-") > -1) {
-    //                 jamkerja = '00:00:00';
-    //             } else {
-    //                 jamkerja = value['abs_jamkerja'];
-    //             }
-	// 			$('#tableAbsen').append('<tr>\
-	// 				<td> '+i+' </td>\
-	// 				<td> '+value['abs_hari']+", "+value['abs_tgl']+' </td>\
-	// 				<td> '+value['abs_datang']+' </td>\
-	// 				<td> '+value['abs_pulang']+' </td>\
-	// 				<td> '+jamkerja+' </td>\
-	// 				<td><span class="badge'+badgeclass+' me-1"></span>'+"  "+value['abs_status']+'</td>\
-	// 			</tr>');
-	// 		});
-	// 	}
-		
-	// });
-    // }
-    // end display absen
-
     // start display latest presence
     function firstabsen()
     {
@@ -224,42 +197,48 @@
                 $('#tglabsen').html(value['abs_hari']+', '+value['abs_tgl']);
                 $('#jamkerja').html(jam+ ' Jam' + ' ' + menit + ' Menit');
                 $('#ket').html(value['abs_ket']);
-                // $('#img-absen').append('<img >');
+                
+                if(value['abs_img'] != null) {
+                    $('#img-absen').append('<img class="rounded" src="'+value["abs_img"]+'">');
+                } else if (value['abs_img'] == null) {
+                    $('#img-absen').append('<img class="rounded" src="/assets/static/illustrations/img_placeholder.svg">');
+                }
+                
 
                 //mini map location tracker
-                mapboxgl.accessToken = 'pk.eyJ1IjoiaGFiaWJpLXBvbGl0YWxhIiwiYSI6ImNsM3h1NDI3bDAwYWMza2thZThib3NmeWcifQ.cET6J1xPv-NdkdPDPmfjsw';
-                var absenmap = new mapboxgl.Map({
-                    container: 'map-absen',
-                    style: 'mapbox://styles/mapbox/outdoors-v11',
-                    zoom: 16,
-                    center: [114.7666395, -3.7533148],
-                });
+                // mapboxgl.accessToken = 'pk.eyJ1IjoiaGFiaWJpLXBvbGl0YWxhIiwiYSI6ImNsM3h1NDI3bDAwYWMza2thZThib3NmeWcifQ.cET6J1xPv-NdkdPDPmfjsw';
+                // var absenmap = new mapboxgl.Map({
+                //     container: 'map-absen',
+                //     style: 'mapbox://styles/mapbox/outdoors-v11',
+                //     zoom: 16,
+                //     center: [114.7666395, -3.7533148],
+                // });
               
-                //get long and lat
-                var geolocate = new mapboxgl.GeolocateControl({
-                positionOptions: {
-                    enableHighAccuracy: true
-                },
-                trackUserLocation: true
-                });
-                absenmap.addControl(geolocate);
-                absenmap.on("load", function () {
-                    geolocate.trigger(); // add this if you want to fire it by code instead of the button
-                });
-                geolocate.on("geolocate", locateUser);
+                // //get long and lat
+                // var geolocate = new mapboxgl.GeolocateControl({
+                // positionOptions: {
+                //     enableHighAccuracy: true
+                // },
+                // trackUserLocation: true
+                // });
+                // absenmap.addControl(geolocate);
+                // absenmap.on("load", function () {
+                //     geolocate.trigger(); // add this if you want to fire it by code instead of the button
+                // });
+                // geolocate.on("geolocate", locateUser);
 
-                function locateUser(e) {
-                    var long = "";
-                    var lat ="";
+                // function locateUser(e) {
+                //     var long = "";
+                //     var lat ="";
                     
-                    long = e.coords.longitude;
-                    lat = e.coords.latitude;
-                    // console.log("lng:" + long + ", lat:" + lat);
+                //     long = e.coords.longitude;
+                //     lat = e.coords.latitude;
+                //     // console.log("lng:" + long + ", lat:" + lat);
                     
-                    // const marker1 = new mapboxgl.Marker({ color: 'black'})
-                    // .setLngLat([long, lat])
-                    // .addTo(absenmap);
-                }
+                //     // const marker1 = new mapboxgl.Marker({ color: 'black'})
+                //     // .setLngLat([long, lat])
+                //     // .addTo(absenmap);
+                // }
                 
 			});
         } 
@@ -316,7 +295,7 @@
                 grid: {
                     strokeDashArray: 4,
                 },
-                colors: ["#83b298", "#f2cb8e", "#d2e1f3", "#e9ecf1"], 
+                colors: ["#2489FF", "#FFC149", "#d2e1f3", "#e9ecf1"], 
                 legend: {
                     show: true,
                     position: 'bottom',
@@ -344,8 +323,32 @@
     // moment.locale('id');
     // moment().format(); 
     var startDate = moment().add(1, 'days').format("MM/DD/YYYY");
-    var today = moment().add(365, 'days').format("MM/DD/YYYY");
+    var today = moment().add(1825, 'days').format("MM/DD/YYYY");
     var lockDays = [startDate,today];
+    
+
+    // $(document).on('change','#frm_act_tgl',function(){
+    //     var act_tgl = $('#frm_act_tgl').val();
+    //     $.ajax({
+    //         url:'/checkavailabledate',
+    //         method:'post',
+    //         data:
+    //             {
+    //                 available_act_tgl:act_tgl
+    //             },
+    //         success:function(response){
+    //             if(response.status == 'Available') {
+    //                 console.log(response.status);
+    //             } else {
+    //                 console.log(response.status);
+    //             }
+                
+    //         },
+    //         error:function (request, error) {
+    //             // console.log('date not available');
+    //         }
+    //     }); 
+    // });
    
     let actpicker = new Litepicker({
         element: document.getElementById('frm_act_tgl'),
@@ -358,6 +361,39 @@
         const d = day.getDay();
 
         return [6, 0].includes(d);
+        },
+
+        setup: (picker) => {
+            picker.on('selected', (date1,date2) => {
+                validator.checkAll();
+                var act_tgl = $('#frm_act_tgl').val();
+                
+                $.ajax({
+                    url:'/checkavailabledate',
+                    method:'post',
+                    data:
+                        {
+                            available_act_tgl:act_tgl
+                        },
+                    success:function(response){
+                        if(response.status == 'Available') {
+                            $('#frm_act_tgl').addClass('is-valid');
+                            
+                        } else {
+                            validator.errorTrigger($('[name=frm_act_tgl]'), response.status);
+                            actpicker.clearSelection();
+                        }
+                    },
+                    error:function (request, error) {
+                        Swal.fire(
+                            'Gagal',
+                            'Gagal verifikasi tanggal',
+                            'error'
+                        )
+                    }
+                }); 
+                // console.log('selected');
+            });
         },
 
         buttonText: {
@@ -374,45 +410,42 @@
         },
     });
     //* Activity Send
-    // Ajax Insert Absen
-    // if($("#ajaxKinerja").length > 0) {
-    //     $("#ajaxKinerja").validate({
-    //         rules: {
-    //             frm_act_tgl: {
-    //                 required: true,
-    //             },
-    //             frm_act_qty: {
-    //                 required: true,
-    //             },
-    //             frm_act_ket: {
-    //                 required: true,
-    //             },
-    //         },
-    //         messages: {
-    //             frm_act_tgl: {
-    //                 required: "Please enter name",
-    //             },
-    //             frm_act_qty: {
-    //                 required: "Please enter valid email",
-    //                 email: "Please enter valid email",
-    //                 maxlength: "The email name should less than or equal to 50 characters",
-    //             },
-    //             frm_act_ket: {
-    //                 required: "Please enter message",
-    //             },
-    //         },
-    //         submitHandler: function(form) {
-
-    //         }
-    //     })
-    // }
     $(function (){
 
-        let validator = $('form.validator').jbvalidator({
-            errorMessage: true,
-            successClass: false,
-            language: "<?php base_url()?>/assets/dist/libs/jbvalidator/lang/en.json",
+        tinymce.init({
+            selector: 'textarea#frm_act_ket',
+            // skin: "oxide-dark",
+            // content_css: "dark",
+            setup: function (editor) {
+                editor.on('keyup', function () {
+                    tinymce.triggerSave();
+                    validator.checkAll();
+                    
+                });
+            },
+            height: 300,
+            branding :false,
+            menubar: false,
+            statusbar: false,
+            hidden_input: false,
+            plugins: [
+                'autosave','advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+                'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+                'insertdatetime', 'media', 'table', 'help', 'wordcount'
+            ],
+            toolbar: 'undo redo | blocks | ' +
+            'bold italic backcolor |bullist numlist|  alignleft aligncenter ' +
+            'alignright alignjustify | ' +
+            'removeformat | help',
+            content_style: 'body { font-family:Inter,-apple-system,Helvetica,Arial,sans-serif; font-size:14px }'
         });
+
+
+        $(document).on('change','#frm_act_output',function(){
+            validator.checkAll();
+        });
+
+
         
         // validator.checkAll();
         //serverside

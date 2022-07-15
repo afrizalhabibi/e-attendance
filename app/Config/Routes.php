@@ -52,6 +52,7 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/recordkinerja', 'Activity::AjaxReadKinerja');
     $routes->get('/actdetails/(:any)', 'Activity::ActDetails/$1');
     $routes->post('/editkinerja', 'Activity::EdtActivity');
+    $routes->post('/checkavailabledate', 'Activity::docheckDate');
 });
 
 

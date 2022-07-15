@@ -28,5 +28,21 @@ class ActivityModel extends Model
         return $result->getRow();
       }
 
+    public function check_date($avlb_date){
+      $query = $this->db->table('activity')
+               ->where('act_tgl',$avlb_date)
+               ->where('pgw_id', user()->getpgwId());
+             
+               
+      if($query->countAllResults()>0)
+      {
+        return 1;	
+      }
+      else
+      {
+        return 0;	
+      }
+    }
+
 }
 ?>

@@ -152,7 +152,7 @@ class Presensi extends BaseController
         $db = db_connect();
         // $id = user()->getpgwId();
         $builder = $db->table('absensi')
-                      ->select('absensi.pgw_id, abs_id, abs_tgl, abs_datang, abs_pulang, abs_hari, abs_status, abs_jamkerja, abs_ket, pegawai.nama')
+                      ->select('absensi.pgw_id, abs_id, abs_tgl, abs_datang, abs_pulang, abs_hari, abs_status, abs_jamkerja, abs_ket, act_id, pegawai.nama')
                       ->join('pegawai', 'absensi.pgw_id = pegawai.pgw_id')
                       ->where('absensi.pgw_id', user()->getpgwId());
                     //   ->orderBy('abs_tgl', 'desc');
@@ -172,7 +172,7 @@ class Presensi extends BaseController
                  }
                })
                ->add('action', function($row){
-                return '<button class="btn btn-outline-indigo btn-md" id="btnabsdetail" data-id="'.$row->abs_id.'">
+                return '<button class="btn btn-outline-blue btn-md" id="btnabsdetail" data-id="'.$row->abs_id.'">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12.01" y2="8"></line><polyline points="11 12 12 12 12 16 13 16"></polyline></svg>Detail</button>';
                })
                ->toJson(true);
