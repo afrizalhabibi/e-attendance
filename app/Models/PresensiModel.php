@@ -12,7 +12,7 @@ class PresensiModel extends Model
    
 
     protected $protectFields = true;
-    protected $allowedFields = ['abs_id','act_id','pgw_id','abs_datang','abs_pulang','abs_status','abs_hari','abs_jamkerja','abs_long','abs_lat','abs_ket','abs_terlambat'];
+    protected $allowedFields = ['abs_id','act_id','pgw_id','abs_datang','abs_pulang','abs_status','abs_hari','abs_jamkerja','abs_long','abs_lat','abs_ket','abs_terlambat','abs_img'];
 
 
     public function getAbsen() 

@@ -37,6 +37,12 @@ class Presensi extends BaseController
         return view('_user/_kehadiran', $data);
     }
 
+    public function kehadiran_homebase() {
+        $PresensiModel = new PresensiModel();
+        return view('_pimpinan/_hmbkehadiran');
+
+    }
+
     public function monitorKehadiran() {
         $PresensiModel = new PresensiModel();
         $data['chartStatus'] = $PresensiModel->getChartStatus()->getResultArray();
@@ -61,6 +67,7 @@ class Presensi extends BaseController
                 $abs_terlambat = 'Hari Libur';
             } else {
                 $abs_status = 'Tanpa Keterangan';
+                $abs_terlambat = 'Tidak mengisi presensi datang';
             }
             $absenArray = array
             (
@@ -86,6 +93,17 @@ class Presensi extends BaseController
         $id = $this->request->getPost("absen_abs_id");
         $long = $this->request->getPost("absen_abs_long");
         $lat = $this->request->getPost("absen_abs_lat");
+
+        $image = $this->request->getPost("absen_abs_img");
+        $image = str_replace('data:image/jpeg;base64,', '', $image);
+
+        $image = base64_decode($image, true);
+
+        $cleanNumber = preg_replace( '/[^0-9]/', '', microtime(false));
+
+        $filename = user()->getpgwId() . base_convert($cleanNumber, 10, 36) . '.jpg';
+        file_put_contents(FCPATH . '/assets/presensi/images/' . $filename, $image);
+
         if(date('h:i') <= '08:00') {
             $abs_terlambat = 'Tepat Waktu';
         } else if(date('h:i') > '08:00' && hari_indo(date('l')) != 'Sabtu' || hari_indo(date('l')) != 'Minggu') {
@@ -104,7 +122,8 @@ class Presensi extends BaseController
             'abs_terlambat' => $abs_terlambat,
             'abs_hari' => hari_indo(date('l')),
             'abs_long' => $long,
-            'abs_lat' => $lat
+            'abs_lat' => $lat,
+            'abs_img' => '/assets/presensi/images/' . $filename
         ];
 
         $PresensiModel->update($id, $data);
@@ -139,7 +158,7 @@ class Presensi extends BaseController
         $db = db_connect();
         // $id = user()->getpgwId();
         $builder = $db->table('absensi')
-                      ->select('absensi.pgw_id, abs_id, abs_tgl, abs_datang, abs_pulang, abs_hari, abs_status, abs_jamkerja, abs_ket, pegawai.nama')
+                      ->select('absensi.pgw_id, abs_id, abs_tgl, abs_datang, abs_pulang, abs_hari, abs_status, abs_jamkerja, abs_ket, act_id, pegawai.nama')
                       ->join('pegawai', 'absensi.pgw_id = pegawai.pgw_id')
                       ->where('absensi.pgw_id', user()->getpgwId());
                     //   ->orderBy('abs_tgl', 'desc');
@@ -159,7 +178,7 @@ class Presensi extends BaseController
                  }
                })
                ->add('action', function($row){
-                return '<button class="btn btn-outline-indigo btn-md" id="btnabsdetail" data-id="'.$row->abs_id.'">
+                return '<button class="btn btn-outline-blue btn-md" id="btnabsdetail" data-id="'.$row->abs_id.'">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12.01" y2="8"></line><polyline points="11 12 12 12 12 16 13 16"></polyline></svg>Detail</button>';
                })
                ->toJson(true);
@@ -190,5 +209,35 @@ class Presensi extends BaseController
         $PresensiModel = new PresensiModel();
         $data['chartjamkerja'] = $PresensiModel->getChartJamKerja()->getResult();
         return $this->response->setJSON($data);
+    }
+
+    public function PresensiHomebase() {
+        $db = db_connect();
+        // $id = user()->getpgwId();
+        $builder = $db->table('absensi')
+                      ->select('absensi.pgw_id, abs_id, abs_tgl, abs_datang, abs_pulang, abs_hari, abs_status, abs_jamkerja, abs_ket, act_id, pegawai.nama')
+                      ->join('pegawai', 'absensi.pgw_id = pegawai.pgw_id')
+                      ->where('absensi.pgw_id', user()->getpgwId());
+                    //   ->orderBy('abs_tgl', 'desc');
+
+        return DataTable::of($builder)
+               ->addNumbering('no') //it will return data output with numbering on first column
+               ->filter(function($builder, $request){
+                 if ($request->status && !$request->datemin && !$request->datemax) {
+                    $builder->where('abs_status', $request->status);
+                 }
+                 elseif ($request->datemin && $request->datemax &&!$request->status){
+                    $builder->where("abs_tgl BETWEEN '$request->datemin' AND '$request->datemax'", NULL, FALSE);
+                 }
+                 elseif ($request->datemin && $request->datemax && $request->status){
+                    $builder->where("abs_tgl BETWEEN '$request->datemin' AND '$request->datemax'");
+                    $builder->where('abs_status', $request->status);
+                 }
+               })
+               ->add('action', function($row){
+                return '<button class="btn btn-outline-blue btn-md" id="btnabsdetail" data-id="'.$row->abs_id.'">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12.01" y2="8"></line><polyline points="11 12 12 12 12 16 13 16"></polyline></svg>Detail</button>';
+               })
+               ->toJson(true);
     }
 }

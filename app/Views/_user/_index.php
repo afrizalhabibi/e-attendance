@@ -1,7 +1,7 @@
 <?php echo view('/layout/_header') ?>
-<?php echo view('/layout/_navbar') ?>
+<?php echo view('/layout/_navbar_dark') ?>
 <div class="page-wrapper">
-  <div class="container-fluid">
+  <div class="container-xl">
     <!-- Page title -->
     <div class="page-header d-print-none">
       <div class="row align-items-center">
@@ -20,16 +20,15 @@
                     $txt_class = 'text-green';
                     $indicator = 'status-green';
                   }
-              ?>
-          <span class="status-indicator <?php echo $indicator?> status-indicator-animated">
-            <span class="status-indicator-circle"></span>
+            ?>
+            <span class="status-indicator <?php echo $indicator?> status-indicator-animated">
             <span class="status-indicator-circle"></span>
             <span class="status-indicator-circle"></span>
           </span>
         </div>
         <div class="col">
           <h2 class="page-title">
-            e-Presensi Pegawai
+            Presensi
           </h2>
           <div class="text-muted">
             <ul class="list-inline list-inline-dots mb-0">
@@ -38,18 +37,21 @@
           </div>
         </div>
         <!-- Page title actions -->
-        <div class="col-auto ms-auto d-print-none">
+
+        <?php 
+          if( hari_indo(date('l')) != 'Sabtu' &&  hari_indo(date('l')) != 'Minggu') { ?>
+          <div class="col-auto ms-auto d-print-none">
           <div class="btn-list">
-            <a href="#" class="btn btn-indigo d-none d-sm-inline-block" data-bs-toggle="modal"
+            <a href="#" class="btn btn-blue btn-transition d-none d-sm-inline-block" data-bs-toggle="modal"
               data-bs-target="#modal-act-report">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <line x1="12" y1="5" x2="12" y2="19" />
-                <line x1="5" y1="12" x2="19" y2="12" /></svg>
-              Buat Laporan Kegiatan
+                <line x1="5" y1="12" x2="19" y2="12" /></svg> -->
+              Laporan Kegiatan
             </a>
-            <a href="#" class="btn btn-indigo d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-act-report"
+            <a href="#" class="btn btn-blue d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-act-report"
               aria-label="Create new report">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -58,12 +60,16 @@
                 <line x1="5" y1="12" x2="19" y2="12" /></svg>
             </a>
           </div>
-        </div>
+          </div>
+          <?php
+          }
+        ?>
+        
       </div>
     </div>
   </div>
   <div class="page-body">
-    <div class="container-fluid">
+    <div class="container-xl">
       <div class="row row-cards">
         <div class="col-md-6 col-lg-12">
           <div class="card">
@@ -86,11 +92,11 @@
                     </svg>
                     <?php echo longdate_indo(date('Y-m-d'));?>
                   </div>
-                  <?php if(isset($dataabsen->abs_datang) && $dataabsen->abs_datang == '00:00:00' && $dataabsen->abs_tgl == date('Y-m-d') && $dataabsen->abs_status != 'Hari Libur' && date('H') < 12)
-                        {
-                        ?>
+                  <?php if(isset($dataabsen->abs_datang) && $dataabsen->abs_datang == '00:00:00' && $dataabsen->abs_tgl == date('Y-m-d') && $dataabsen->abs_status != 'Hari Libur' && date('H') < 18)
+                    {
+                    ?>
                   <div class="mt-3">
-                    <a style="outline:none" id="btn-datang" table-id='<?php ?>' href="#" class="btn btn-indigo"
+                    <a style="outline:none" id="btn-datang" table-id='<?php ?>' href="#" class="btn btn-transition btn-blue"
                       data-bs-toggle="modal" data-bs-target="#confirm-absen-datang">
                       <!-- Download SVG icon from http://tabler-icons.io/i/mail -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check"
@@ -103,13 +109,13 @@
                     </a>
                   </div>
                   <?php
-                        }
-                        ?>
+                      }
+                      ?>
                   <?php if(isset($dataabsen->abs_pulang) && $dataabsen->abs_pulang == '00:00:00' && $dataabsen->abs_tgl == date('Y-m-d') && $dataabsen->abs_status != 'Hari Libur' && date('H') > 12)
                         {
                         ?>
                   <div class="mt-3">
-                    <a style="outline:none" id="btn-pulang" href="#" class="btn btn-indigo" data-bs-toggle="modal"
+                    <a style="outline:none" id="btn-pulang" href="#" class="btn btn-transition btn-blue" data-bs-toggle="modal"
                       data-bs-target="#confirm-absen-pulang">
                       <!-- Download SVG icon from http://tabler-icons.io/i/mail -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check"
@@ -169,99 +175,6 @@
             <div class="card-header mb-3">
               <div class="card-title">Log Presensi</div>
             </div>
-            <!-- <div class="container">
-                    <div class="row row-cards">
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="card card-sm">
-                          <div class="card-body">
-                            <div class="row align-items-center">
-                              <div class="col-auto">
-                                <span class="text-white avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>   <circle cx="12" cy="12" r="9" />   <polyline points="12 7 12 12 15 15" /> </svg>
-                                </span>
-                              </div>
-                              <div class="col">
-                                <div class="subheader">
-                                    Jam Datang
-                                </div>
-                                <div class="font-weight-medium">
-                                  <strong id="jamdatang">
-                                  00:00:00
-                                  </strong>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="card card-sm">
-                          <div class="card-body">
-                            <div class="row align-items-center">
-                              <div class="col-auto">
-                                <span class="avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>   <circle cx="12" cy="12" r="9" />   <polyline points="12 7 12 12 15 15" /> </svg>
-                                </span>
-                              </div>
-                              <div class="col">
-                                <div class="subheader">
-                                    Jam Pulang
-                                </div>
-                                <div class="font-weight-medium">
-                                  <strong id="jampulang">
-                                    00:00:00
-                                  </strong>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="card card-sm">
-                          <div class="card-body">
-                            <div class="row align-items-center">
-                              <div class="col-auto">
-                                <span class="bg-green-lt text-white avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-briefcase" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>   <rect x="3" y="7" width="18" height="13" rx="2" />   <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />   <line x1="12" y1="12" x2="12" y2="12.01" />   <path d="M3 13a20 20 0 0 0 18 0" /> </svg>
-                                </span>
-                              </div>
-                              <div class="col">
-                                <div class="subheader">
-                                      Jam Kerja
-                                </div>
-                                <div class="font-weight-medium">
-                                  <strong id="jamkerja"></strong>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-lg-3">
-                        <div class="card card-sm">
-                          <div class="card-body">
-                            <div class="row align-items-center">
-                              <div class="col-auto">
-                                <span class="avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-briefcase" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>   <rect x="3" y="7" width="18" height="13" rx="2" />   <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />   <line x1="12" y1="12" x2="12" y2="12.01" />   <path d="M3 13a20 20 0 0 0 18 0" /> </svg>
-                                </span>
-                              </div>
-                              <div class="col">
-                                <div class="subheader">
-                                    Status
-                                </div>
-                                <div class="font-weight-medium">
-                                  <strong id="absenstatus"></strong>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br> -->
             <div class="card-body">
               <div class="datagrid">
                 <div class="datagrid-item">
@@ -310,18 +223,14 @@
                 </div>
                 <div class="datagrid-item">
                   <div class="datagrid-title">Status</div>
-                  <div class="datagrid-content">
-                    <span class="status" id="absenstatus">
-                      Tanpa Keterangan
-                    </span>
+                  <div class="datagrid-content" id="absenstatus">
+                    Tanpa Keterangan
                   </div>
                 </div>
                 <div class="datagrid-item">
                   <div class="datagrid-title">Status Waktu Presensi</div>
-                  <div class="datagrid-content">
-                    <span class="status" id="terlambat">
-                      -
-                    </span>
+                  <div class="datagrid-content" id="terlambat">
+                    
                   </div>
                 </div>
                 <div class="datagrid-item">
@@ -337,7 +246,7 @@
                     -
                   </div>
                 </div>
-                <div class="datagrid-item">
+                <!-- <div class="datagrid-item">
                   <div class="datagrid-title">Lokasi</div>
                   <div class="datagrid-content">
                     <div class="ratio ratio-16x9">
@@ -346,26 +255,17 @@
                       </div>
                     </div>
                   </div>
+                </div> -->
+                <div class="datagrid-item">
+                  <div class="datagrid-title">Foto</div>
+                  <div class="datagrid-content">
+                  <!-- <span class="avatar avatar-xl mb-3 avatar-rounded"style="background-image: url(/assets/presensi/images/21120123858z31yc73tsl.jpg)"></span> -->
+                    
+                    <div class="ratio ratio-4x3 object-cover" id="img-absen"></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- <div class="table-responsive">
-                    <table class="table card-table table-striped table-vcenter text-nowrap">
-                      <thead>
-                        <tr>
-                          <th>No.</th>
-                          <th>Tanggal</th>
-                          <th>Datang</th>
-                          <th>Pulang</th>
-                          <th>Jam Kerja</th>
-                          <th>Status</th>
-                        </tr>
-                      </thead>
-                      <tbody id="tableAbsen">
-                        
-                      </tbody>
-                    </table>
-                  </div> -->
           </div>
         </div>
       </div>
@@ -384,13 +284,19 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+<<<<<<< HEAD
       <?= \Config\Services::validation()->listErrors(); ?>
         <div class="row">
         <form action="javascript:void(0)" name="ajax_kinerja_form" id="ajax_kinerja_form">
           <div class="col-lg-6">
+=======
+      <form role="form" class="validator" method="POST" id="ajaxKinerja" accept-charset="utf-8">
+        <div class="row">
+          <div class="col-lg-6 form-group">
+>>>>>>> 57623f51506a9b6e8931f163b6a8bd80317201e9
             <label class="form-label">Tanggal</label>
-            <div class="input-icon mb-3">
-              <input class="form-control" placeholder="" id="frm_act_tgl" name="frm_act_tgl" value="">
+            <input type="text" autocomplete="off" class="form-control" placeholder="" name="frm_act_tgl" id="frm_act_tgl" title="" required>
+            <!-- <div class="input-icon mb-3">
               <span class="input-icon-addon">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -402,28 +308,33 @@
                   <line x1="11" y1="15" x2="12" y2="15" />
                   <line x1="12" y1="15" x2="12" y2="18" /></svg>
               </span>
-            </div>
-            
+            </div> -->
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 form-group">
             <div class="mb-3">
               <label class="form-label">Jumlah Kegiatan</label>
+<<<<<<< HEAD
               <input id="frm_act_qty" name="frm_act_qty" type="number" min="1" class="form-control">
               <div class="invalid-feedback">Invalid feedback</div>
+=======
+              <input id="frm_act_qty" type="number" title=" " onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" pattern="[1-9]" min="1" class="form-control" required>
+>>>>>>> 57623f51506a9b6e8931f163b6a8bd80317201e9
             </div>
           </div>
-          <div class="col-lg-12">
+          <div class="col-lg-12 form-group">
             <div class="mb-3">
               <label class="form-label">Uraian Kegiatan</label>
-              <textarea id="frm_act_ket" name="frm_act_ket" class="form-control" rows="5"></textarea>
+              <textarea id="frm_act_ket" data-v-message="Tidak boleh kosong" class="form-control" rows="5" required></textarea>
             </div>
           </div>
-          <div class="col-lg-12">
+          <div class="col-lg-12 form-group">
             <div>
               <label class="form-label">Output Kegiatan</label>
-              <textarea id="frm_act_output" name="frm_act_output" class="form-control" data-bs-toggle="autosize" placeholder=""></textarea>
+              <!-- <textarea id="frm_act_output" data-v-message="Tidak boleh kosong" class="form-control" data-bs-toggle="autosize" placeholder="" required></textarea> -->
+              <input type="text" data-role="tagsinput" id="frm_act_output" data-v-message="Tidak boleh kosong" class="form-control" required></input>
             </div>
           </div>
+<<<<<<< HEAD
         </form>
         </div>
      
@@ -440,28 +351,63 @@
             <line x1="10" y1="14" x2="21" y2="3"></line>
             <path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5"></path>
           </svg>
+=======
+          </div>
+        </div>
+        </form>
+        <div class="modal-footer">
+        <button class="btn btn-outline" data-bs-dismiss="modal">
+          Batal
+        </button>
+        <button type="submit" id="btn-act-send" class="btn btn-blue ms-auto w-70">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <line x1="12" y1="5" x2="12" y2="19" />
+        <line x1="5" y1="12" x2="19" y2="12" /></svg> -->
+>>>>>>> 57623f51506a9b6e8931f163b6a8bd80317201e9
           Kirim
-        </a>
+        </button>
       </div>
     </div>
   </div>
 </div>
-<div class="modal modal-blur fade" id="confirm-absen-datang" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal modal-blur fade rounded" id="confirm-absen-datang" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-status bg-indigo"></div>
+      <!-- <div class="modal-status bg-blue"></div> -->
       <div class="modal-body text-center py-4">
-        <!-- Download SVG icon from http://tabler-icons.io/i/circle-check -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-indigo icon-lg" width="24" height="24"
-          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <circle cx="12" cy="12" r="9" />
-          <path d="M9 12l2 2l4 -4" /></svg>
+        <div class="row mb-3 align-items-center">
+          <div class="col-lg-6 rounded mb-3 ratio ratio-4x3" style="margin: 0 auto;display: block;" id="camImgPresensi">
+            
+          </div>
+          <div class="col-lg-12 rounded mb-3" id="AjaxImgPresensi">
+              
+          </div>
+          <div class="col-lg-12 float-center">
+          
+            <button id="take_snapshot" class="btn btn-outline-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-camera-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <circle cx="12" cy="13" r="3"></circle> <path d="M5 7h2a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h2m9 7v7a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2"></path> <line x1="15" y1="6" x2="21" y2="6"></line> <line x1="18" y1="3" x2="18" y2="9"></line> </svg>
+              Ambil Foto
+            </button>
+         
+          
+            <button id="reset_snapshot" class="btn btn-icon btn-outline-red">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-refresh" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path> <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path> </svg>
+            </button>
+         
+          </div>
+          
+        </div>
+
+          
+          
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-blue icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><circle cx="12" cy="12" r="9" /><path d="M9 12l2 2l4 -4" /></svg> -->
+        
         <h3>Presensi Datang</h3>
         <div class="text-muted">Jam kerja normal 7:30 AM - 16:00 PM</div>
         <form id=addAbsen>
           <div class="form-group">
+            <input type="hidden" name="image" value="" id="image-tag">
             <input type="hidden" id="txt_abs_id"
               value="<?php if(isset($dataabsen->abs_id)) {echo $dataabsen->abs_id;}?>">
             <input type="hidden" id="txt_pgw_id" value="<?php echo user()->getpgwId();?>">
@@ -477,12 +423,11 @@
             <div class="col"><a href="#" class="btn w-100" data-bs-dismiss="modal">
                 Batal
               </a></div>
-            <div class="col"><a href="#" id="btn-absen-datang" class="btn btn-indigo w-100">
+            <div class="col"><a href="#" id="btn-absen-datang" class="btn btn-blue w-100">
                 Konfirmasi
               </a></div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -490,10 +435,10 @@
 <div class="modal modal-blur fade" id="confirm-absen-pulang" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-status bg-indigo"></div>
+      <div class="modal-status bg-blue"></div>
       <div class="modal-body text-center py-4">
         <!-- Download SVG icon from http://tabler-icons.io/i/circle-check -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-indigo icon-lg" width="24" height="24"
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-blue icon-lg" width="24" height="24"
           viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
           stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -519,7 +464,7 @@
               </a>
             </div>
             <div class="col">
-              <a href="#" id="btn-absen-pulang" class="btn btn-indigo w-100">
+              <a href="#" id="btn-absen-pulang" class="btn btn-blue w-100">
                 Konfirmasi
               </a>
             </div>

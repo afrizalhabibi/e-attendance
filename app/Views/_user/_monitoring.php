@@ -1,8 +1,8 @@
 <?php echo view('/layout/_header') ?>
-<?php echo view('/layout/_navbar') ?>
+<?php echo view('/layout/_navbar_dark') ?>
 
 <div class="page-wrapper">
-  <div class="container-fluid">
+  <div class="container-xl">
     <!-- Page title -->
   <div class="page-header d-print-none">
     <div class="row align-items-center">
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="page-body">
-    <div class="container-fluid">
+    <div class="container-xl">
     <div class="row row-deck row-cards">
       <div class="col-sm-6 col-lg-4">
         <div class="card">

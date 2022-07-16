@@ -1,8 +1,8 @@
 <?php echo view('/layout/_header') ?>
-<?php echo view('/layout/_navbar') ?>
+<?php echo view('/layout/_navbar_dark') ?>
 
 <div class="page-wrapper">
-  <div class="container-fluid">
+  <div class="container-xl">
     <!-- Page title -->
   <div class="page-header d-print-none">
     <div class="row align-items-center">
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="page-body">
-    <div class="container-fluid">
+    <div class="container-xl">
       <div class="row row-cards">
       <!-- <div class="col-sm-6 col-lg-3">
           <div class="card card-sm">
@@ -175,7 +175,7 @@
             <div class="w-100">
               <div class="row">
                 <div class="col">
-                <a class="btn btn-outline-primary w-100" id="btnfilter">
+                <a class="btn btn-outline-blue w-100" id="btnfilter">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-filter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M5.5 5h13a1 1 0 0 1 .5 1.5l-5 5.5l0 7l-4 -3l0 -4l-5 -5.5a1 1 0 0 1 .5 -1.5"></path>
@@ -213,6 +213,7 @@
                       <th>Jam Pulang</th>
                       <th>Total Jam Kerja</th>
                       <th>Status</th>
+                      <th>Laporan Kegiatan</th>
                       <th>Keterangan</th>
                       <th></th>
                   </tr>
@@ -235,6 +236,7 @@
     echo view('/layout/_js');
     echo view('/_user/_script/_skehadiran');
     ?>
+    
     <div class="modal modal-blur fade" id="modal-absdetails" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">

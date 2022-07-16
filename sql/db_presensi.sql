@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2022 at 05:26 AM
+-- Generation Time: Jul 02, 2022 at 08:02 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `absensi` (
-  `abs_id` int(11) NOT NULL,
+  `abs_id` char(12) NOT NULL,
   `pgw_id` int(50) NOT NULL,
-  `act_id` int(11) NOT NULL,
+  `act_id` char(12) DEFAULT NULL,
   `abs_datang` time DEFAULT '00:00:00',
   `abs_pulang` time DEFAULT '00:00:00',
   `abs_tgl` date NOT NULL DEFAULT current_timestamp(),
@@ -48,112 +48,127 @@ CREATE TABLE `absensi` (
 --
 
 INSERT INTO `absensi` (`abs_id`, `pgw_id`, `act_id`, `abs_datang`, `abs_pulang`, `abs_tgl`, `abs_hari`, `abs_status`, `abs_terlambat`, `abs_long`, `abs_lat`, `abs_ket`) VALUES
-(107, 211201238, 6, '00:00:00', '00:00:00', '2022-04-14', 'Selasa', 'Sakit', 'Tidak Absen', '', '', ''),
-(108, 211201248, 6, '00:00:00', '14:47:50', '2022-04-14', 'Selasa', 'Bekerja', 'Terlambat', '', '', ''),
-(109, 211201238, 6, '11:00:22', '14:47:50', '2022-04-18', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(110, 211201248, 6, '00:00:00', '14:47:50', '2022-04-18', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(176, 211201238, 6, '00:00:00', '00:00:00', '2022-04-19', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(177, 211201246, 6, '00:00:00', '14:47:50', '2022-04-19', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(178, 211201248, 6, '00:00:00', '14:47:50', '2022-04-19', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(179, 211201238, 6, '00:00:00', '14:47:50', '2022-04-20', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(180, 211201246, 6, '00:00:00', '14:47:50', '2022-04-20', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(181, 211201248, 6, '00:00:00', '14:47:50', '2022-04-20', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(194, 211201238, 6, '00:00:00', '14:47:50', '2022-04-21', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(195, 211201246, 6, '00:00:00', '14:47:50', '2022-04-21', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(196, 211201248, 6, '00:00:00', '14:47:50', '2022-04-21', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(197, 211201238, 6, '08:01:43', '14:47:50', '2022-04-25', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(198, 211201246, 6, '00:00:00', '14:47:50', '2022-04-25', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(199, 211201248, 6, '09:28:21', '14:47:50', '2022-04-25', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(221, 211201238, 6, '00:00:00', '14:47:50', '2022-04-26', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(222, 211201246, 6, '00:00:00', '14:47:50', '2022-04-26', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(223, 211201248, 6, '00:00:00', '14:47:50', '2022-04-26', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(248, 211201238, 6, '08:12:00', '14:47:50', '2022-04-27', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(249, 211201246, 6, '00:00:00', '14:47:50', '2022-04-27', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(250, 211201248, 6, '00:00:00', '14:47:50', '2022-04-27', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(254, 211201238, 6, '11:21:48', '14:47:50', '2022-04-28', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(255, 211201246, 6, '00:00:00', '14:47:50', '2022-04-28', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(256, 211201248, 6, '00:00:00', '14:47:50', '2022-04-28', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(257, 211201238, 6, '11:32:17', '00:00:00', '2022-05-13', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(258, 211201246, 6, '00:00:00', '14:47:50', '2022-05-13', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(259, 211201248, 6, '00:00:00', '14:47:50', '2022-05-13', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(260, 211201238, 6, '09:33:33', '14:59:54', '2022-05-17', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(261, 211201246, 6, '00:00:00', '14:47:50', '2022-05-17', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(262, 211201248, 6, '00:00:00', '14:57:15', '2022-05-17', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(263, 211201238, 6, '08:27:41', '16:25:05', '2022-05-18', 'Rabu', 'Bekerja', 'Tidak Absen', '', '', ''),
-(264, 211201246, 6, '00:00:00', '00:00:00', '2022-05-18', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(265, 211201248, 6, '00:00:00', '16:24:38', '2022-05-18', 'Rabu', 'WFH', 'Tidak Absen', '', '', ''),
-(266, 211201238, 6, '11:29:40', '16:26:17', '2022-05-19', 'Kamis', 'WFH', 'Tidak Absen', '', '', ''),
-(267, 211201246, 6, '00:00:00', '00:00:00', '2022-05-19', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(268, 211201248, 6, '00:00:00', '00:00:00', '2022-05-19', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(269, 211201238, 6, '09:47:21', '17:01:23', '2022-05-20', 'Jumat', 'Bekerja', 'Tidak Absen', '', '', ''),
-(270, 211201246, 6, '00:00:00', '00:00:00', '2022-05-20', 'Jumat', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(271, 211201248, 6, '09:57:21', '00:00:00', '2022-05-20', 'Jumat', 'Bekerja', 'Tidak Absen', '', '', ''),
-(272, 211201238, 6, '00:00:00', '00:00:00', '2022-05-21', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
-(273, 211201246, 6, '00:00:00', '00:00:00', '2022-05-21', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
-(274, 211201248, 6, '00:00:00', '00:00:00', '2022-05-21', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
-(275, 211201238, 6, '00:00:00', '00:00:00', '2022-05-23', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(276, 211201246, 6, '00:00:00', '00:00:00', '2022-05-23', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(277, 211201248, 6, '00:00:00', '00:00:00', '2022-05-23', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(278, 211201238, 6, '11:46:44', '00:00:00', '2022-05-25', 'Rabu', 'Bekerja', 'Tidak Absen', '', '', ''),
-(279, 211201246, 6, '00:00:00', '00:00:00', '2022-05-25', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(280, 211201248, 6, '00:00:00', '00:00:00', '2022-05-25', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(281, 211201238, 6, '10:51:57', '00:00:00', '2022-05-31', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
-(282, 211201246, 6, '00:00:00', '00:00:00', '2022-05-31', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(283, 211201248, 6, '00:00:00', '00:00:00', '2022-05-31', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(284, 211201238, 6, '00:00:00', '00:00:00', '2022-06-01', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(285, 211201246, 6, '00:00:00', '00:00:00', '2022-06-01', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(286, 211201248, 6, '00:00:00', '00:00:00', '2022-06-01', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(287, 211201238, 6, '08:32:06', '16:25:13', '2022-06-02', 'Kamis', 'Bekerja', 'Tidak Absen', '', '', ''),
-(288, 211201246, 6, '00:00:00', '00:00:00', '2022-06-02', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(289, 211201248, 6, '00:00:00', '00:00:00', '2022-06-02', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(290, 211201238, 6, '09:42:32', '00:00:00', '2022-06-03', 'Jumat', 'Bekerja', 'Tidak Absen', '', '', ''),
-(291, 211201246, 6, '00:00:00', '00:00:00', '2022-06-03', 'Jumat', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(292, 211201248, 6, '00:00:00', '00:00:00', '2022-06-03', 'Jumat', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(293, 211201238, 6, '00:00:00', '00:00:00', '2022-06-04', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
-(294, 211201246, 6, '00:00:00', '00:00:00', '2022-06-04', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
-(295, 211201248, 6, '00:00:00', '00:00:00', '2022-06-04', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
-(299, 211201238, 6, '10:38:19', '16:41:19', '2022-06-06', 'Senin', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
-(300, 211201246, 6, '00:00:00', '00:00:00', '2022-06-06', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(301, 211201248, 6, '00:00:00', '00:00:00', '2022-06-06', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
-(311, 211201238, 6, '09:00:16', '00:00:00', '2022-06-07', 'Selasa', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
-(312, 211201246, 6, '00:00:00', '00:00:00', '2022-06-07', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(313, 211201248, 6, '00:00:00', '00:00:00', '2022-06-07', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(314, 211201238, 6, '08:37:24', '17:08:36', '2022-06-08', 'Rabu', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
-(315, 211201246, 6, '00:00:00', '00:00:00', '2022-06-08', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(316, 211201248, 6, '00:00:00', '00:00:00', '2022-06-08', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(320, 211201238, 6, '08:50:40', '00:00:00', '2022-06-09', 'Kamis', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
-(321, 211201246, 6, '00:00:00', '00:00:00', '2022-06-09', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(322, 211201248, 6, '00:00:00', '00:00:00', '2022-06-09', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(326, 211201238, 6, '10:41:31', '00:00:00', '2022-06-13', 'Senin', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
-(327, 211201246, 6, '00:00:00', '00:00:00', '2022-06-13', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(328, 211201248, 6, '00:00:00', '00:00:00', '2022-06-13', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(335, 211201238, 6, '09:00:09', '00:00:00', '2022-06-15', 'Rabu', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', 'Menghadiri acara peresmian'),
-(336, 211201246, 6, '00:00:00', '00:00:00', '2022-06-15', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(337, 211201248, 6, '00:00:00', '00:00:00', '2022-06-15', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(338, 211201238, 6, '00:00:00', '14:14:20', '2022-06-16', 'Kamis', 'Bekerja', 'Tidak Absen', NULL, NULL, ''),
-(339, 211201246, 6, '00:00:00', '00:00:00', '2022-06-16', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(340, 211201248, 6, '00:00:00', '00:00:00', '2022-06-16', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(344, 211201238, 6, '00:00:00', '16:55:51', '2022-06-20', 'Senin', 'Bekerja', 'Tidak Absen', NULL, NULL, ''),
-(345, 211201246, 6, '00:00:00', '00:00:00', '2022-06-20', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(346, 211201248, 6, '00:00:00', '00:00:00', '2022-06-20', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(350, 211201238, 6, '10:48:26', '00:00:00', '2022-06-21', 'Selasa', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
-(351, 211201246, 6, '00:00:00', '00:00:00', '2022-06-21', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(352, 211201248, 6, '00:00:00', '00:00:00', '2022-06-21', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
-(353, 211201238, 6, '08:35:47', '16:10:04', '2022-06-22', 'Rabu', 'Bekerja', 'Terlambat 0 Jam 35 menit', '114.7666395', '-3.7533148', ''),
-(363, 211201246, 6, '00:00:00', '00:00:00', '2022-06-22', 'Rabu', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
-(364, 211201248, 6, '09:23:40', '00:00:00', '2022-06-22', 'Rabu', 'Bekerja', 'Terlambat 1 Jam 23 menit', '114.7666395', '-3.7533148', ''),
-(368, 211201238, 6, '11:39:34', '16:39:43', '2022-06-23', 'Kamis', 'Bekerja', 'Terlambat 3 Jam 39 menit', '114.7666395', '-3.7533148', ''),
-(369, 211201246, 6, '00:00:00', '00:00:00', '2022-06-23', 'Kamis', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
-(370, 211201248, 6, '00:00:00', '00:00:00', '2022-06-23', 'Kamis', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
-(374, 211201238, 6, '08:33:36', '00:00:00', '2022-06-24', 'Jumat', 'Bekerja', 'Terlambat 0 Jam 33 menit', '114.7666395', '-3.7533148', ''),
-(375, 211201246, 6, '00:00:00', '00:00:00', '2022-06-24', 'Jumat', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
-(376, 211201248, 6, '00:00:00', '00:00:00', '2022-06-24', 'Jumat', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
-(386, 211201238, 6, '00:00:00', '00:00:00', '2022-06-26', 'Minggu', 'Hari Libur', 'Hari Libur', NULL, NULL, ''),
-(387, 211201246, 6, '00:00:00', '00:00:00', '2022-06-26', 'Minggu', 'Hari Libur', 'Hari Libur', NULL, NULL, ''),
-(388, 211201248, 6, '00:00:00', '00:00:00', '2022-06-26', 'Minggu', 'Hari Libur', 'Hari Libur', NULL, NULL, ''),
-(392, 211201238, 0, '07:45:01', '00:00:00', '2022-06-27', 'Senin', 'Bekerja', 'Tepat Waktu', '114.7666395', '-3.7533148', ''),
-(393, 211201246, 0, '00:00:00', '00:00:00', '2022-06-27', 'Senin', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
-(394, 211201248, 0, '00:00:00', '00:00:00', '2022-06-27', 'Senin', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, '');
+('107', 211201238, NULL, '00:00:00', '00:00:00', '2022-04-14', 'Selasa', 'Sakit', 'Tidak Absen', '', '', ''),
+('108', 211201248, NULL, '00:00:00', '14:47:50', '2022-04-14', 'Selasa', 'Bekerja', 'Terlambat', '', '', ''),
+('109', 211201238, NULL, '11:00:22', '14:47:50', '2022-04-18', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('110', 211201248, NULL, '00:00:00', '14:47:50', '2022-04-18', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('16iwcnx39sfn', 211201238, '2noi9bry9bmx', '10:50:05', '00:00:00', '2022-06-30', 'Kamis', 'Bekerja', 'Terlambat 2 Jam 50 menit', '114.7666395', '-3.7533148', ''),
+('176', 211201238, NULL, '00:00:00', '00:00:00', '2022-04-19', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('177', 211201246, NULL, '00:00:00', '14:47:50', '2022-04-19', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('178', 211201248, NULL, '00:00:00', '14:47:50', '2022-04-19', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('179', 211201238, NULL, '00:00:00', '14:47:50', '2022-04-20', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('180', 211201246, NULL, '00:00:00', '14:47:50', '2022-04-20', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('181', 211201248, NULL, '00:00:00', '14:47:50', '2022-04-20', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('194', 211201238, NULL, '00:00:00', '14:47:50', '2022-04-21', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('195', 211201246, NULL, '00:00:00', '14:47:50', '2022-04-21', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('196', 211201248, NULL, '00:00:00', '14:47:50', '2022-04-21', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('197', 211201238, NULL, '08:01:43', '14:47:50', '2022-04-25', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('198', 211201246, NULL, '00:00:00', '14:47:50', '2022-04-25', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('199', 211201248, NULL, '09:28:21', '14:47:50', '2022-04-25', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('1c5ucalr0shf', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-30', 'Kamis', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('1on6lk6q8l6b', 211201248, '64cjainzq9ca', '10:53:39', '15:28:40', '2022-06-30', 'Kamis', 'Bekerja', 'Terlambat 2 Jam 53 menit', '114.7666395', '-3.7533148', ''),
+('221', 211201238, NULL, '00:00:00', '14:47:50', '2022-04-26', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('222', 211201246, NULL, '00:00:00', '14:47:50', '2022-04-26', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('223', 211201248, NULL, '00:00:00', '14:47:50', '2022-04-26', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('248', 211201238, NULL, '08:12:00', '14:47:50', '2022-04-27', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('249', 211201246, NULL, '00:00:00', '14:47:50', '2022-04-27', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('250', 211201248, NULL, '00:00:00', '14:47:50', '2022-04-27', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('254', 211201238, NULL, '11:21:48', '14:47:50', '2022-04-28', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('255', 211201246, NULL, '00:00:00', '14:47:50', '2022-04-28', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('256', 211201248, NULL, '00:00:00', '14:47:50', '2022-04-28', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('257', 211201238, NULL, '11:32:17', '00:00:00', '2022-05-13', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('258', 211201246, NULL, '00:00:00', '14:47:50', '2022-05-13', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('259', 211201248, NULL, '00:00:00', '14:47:50', '2022-05-13', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('260', 211201238, NULL, '09:33:33', '14:59:54', '2022-05-17', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('261', 211201246, NULL, '00:00:00', '14:47:50', '2022-05-17', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('262', 211201248, NULL, '00:00:00', '14:57:15', '2022-05-17', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('263', 211201238, NULL, '08:27:41', '16:25:05', '2022-05-18', 'Rabu', 'Bekerja', 'Tidak Absen', '', '', ''),
+('264', 211201246, NULL, '00:00:00', '00:00:00', '2022-05-18', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('265', 211201248, NULL, '00:00:00', '16:24:38', '2022-05-18', 'Rabu', 'WFH', 'Tidak Absen', '', '', ''),
+('266', 211201238, NULL, '11:29:40', '16:26:17', '2022-05-19', 'Kamis', 'WFH', 'Tidak Absen', '', '', ''),
+('267', 211201246, NULL, '00:00:00', '00:00:00', '2022-05-19', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('268', 211201248, NULL, '00:00:00', '00:00:00', '2022-05-19', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('269', 211201238, NULL, '09:47:21', '17:01:23', '2022-05-20', 'Jumat', 'Bekerja', 'Tidak Absen', '', '', ''),
+('270', 211201246, NULL, '00:00:00', '00:00:00', '2022-05-20', 'Jumat', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('271', 211201248, NULL, '09:57:21', '00:00:00', '2022-05-20', 'Jumat', 'Bekerja', 'Tidak Absen', '', '', ''),
+('272', 211201238, NULL, '00:00:00', '00:00:00', '2022-05-21', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
+('273', 211201246, NULL, '00:00:00', '00:00:00', '2022-05-21', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
+('274', 211201248, NULL, '00:00:00', '00:00:00', '2022-05-21', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
+('275', 211201238, NULL, '00:00:00', '00:00:00', '2022-05-23', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('276', 211201246, NULL, '00:00:00', '00:00:00', '2022-05-23', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('277', 211201248, NULL, '00:00:00', '00:00:00', '2022-05-23', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('278', 211201238, NULL, '11:46:44', '00:00:00', '2022-05-25', 'Rabu', 'Bekerja', 'Tidak Absen', '', '', ''),
+('279', 211201246, NULL, '00:00:00', '00:00:00', '2022-05-25', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('280', 211201248, NULL, '00:00:00', '00:00:00', '2022-05-25', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('281', 211201238, NULL, '10:51:57', '00:00:00', '2022-05-31', 'Selasa', 'Bekerja', 'Tidak Absen', '', '', ''),
+('282', 211201246, NULL, '00:00:00', '00:00:00', '2022-05-31', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('283', 211201248, NULL, '00:00:00', '00:00:00', '2022-05-31', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('284', 211201238, NULL, '08:00:00', '16:00:00', '2022-06-01', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('285', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-01', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('286', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-01', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('287', 211201238, NULL, '08:32:06', '16:25:13', '2022-06-02', 'Kamis', 'Bekerja', 'Tidak Absen', '', '', ''),
+('288', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-02', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('289', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-02', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('290', 211201238, NULL, '09:42:32', '00:00:00', '2022-06-03', 'Jumat', 'Bekerja', 'Tidak Absen', '', '', ''),
+('291', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-03', 'Jumat', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('292', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-03', 'Jumat', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('293', 211201238, NULL, '00:00:00', '00:00:00', '2022-06-04', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
+('294', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-04', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
+('295', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-04', 'Sabtu', 'Hari Libur', 'Tidak Absen', '', '', ''),
+('299', 211201238, NULL, '10:38:19', '16:41:19', '2022-06-06', 'Senin', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
+('2kq1qu6l14p', 211201238, '6tbdtziva90w', '09:03:40', '16:47:00', '2022-07-01', 'Jumat', 'Bekerja', 'Terlambat 1 Jam 3 menit', '114.7666395', '-3.7533148', ''),
+('300', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-06', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('301', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-06', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', '', '', ''),
+('311', 211201238, NULL, '09:00:16', '00:00:00', '2022-06-07', 'Selasa', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
+('312', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-07', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('313', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-07', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('314', 211201238, NULL, '08:37:24', '17:08:36', '2022-06-08', 'Rabu', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
+('315', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-08', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('316', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-08', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('320', 211201238, NULL, '08:50:40', '00:00:00', '2022-06-09', 'Kamis', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
+('321', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-09', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('322', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-09', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('326', 211201238, NULL, '10:41:31', '00:00:00', '2022-06-13', 'Senin', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
+('327', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-13', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('328', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-13', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('335', 211201238, NULL, '09:00:09', '00:00:00', '2022-06-15', 'Rabu', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', 'Menghadiri acara peresmian'),
+('336', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-15', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('337', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-15', 'Rabu', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('338', 211201238, NULL, '00:00:00', '14:14:20', '2022-06-16', 'Kamis', 'Bekerja', 'Tidak Absen', NULL, NULL, ''),
+('339', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-16', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('340', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-16', 'Kamis', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('344', 211201238, NULL, '00:00:00', '16:55:51', '2022-06-20', 'Senin', 'Bekerja', 'Tidak Absen', NULL, NULL, ''),
+('345', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-20', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('346', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-20', 'Senin', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('350', 211201238, NULL, '10:48:26', '00:00:00', '2022-06-21', 'Selasa', 'Bekerja', 'Tidak Absen', '114.7666395', '-3.7533148', ''),
+('351', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-21', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('352', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-21', 'Selasa', 'Tanpa Keterangan', 'Tidak Absen', NULL, NULL, ''),
+('353', 211201238, NULL, '08:35:47', '16:10:04', '2022-06-22', 'Rabu', 'Bekerja', 'Terlambat 0 Jam 35 menit', '114.7666395', '-3.7533148', ''),
+('363', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-22', 'Rabu', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('364', 211201248, NULL, '09:23:40', '00:00:00', '2022-06-22', 'Rabu', 'Bekerja', 'Terlambat 1 Jam 23 menit', '114.7666395', '-3.7533148', ''),
+('368', 211201238, NULL, '11:39:34', '16:39:43', '2022-06-23', 'Kamis', 'Bekerja', 'Terlambat 3 Jam 39 menit', '114.7666395', '-3.7533148', ''),
+('369', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-23', 'Kamis', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('370', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-23', 'Kamis', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('374', 211201238, NULL, '08:33:36', '00:00:00', '2022-06-24', 'Jumat', 'Bekerja', 'Terlambat 0 Jam 33 menit', '114.7666395', '-3.7533148', ''),
+('375', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-24', 'Jumat', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('376', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-24', 'Jumat', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('386', 211201238, NULL, '00:00:00', '00:00:00', '2022-06-26', 'Minggu', 'Hari Libur', 'Hari Libur', NULL, NULL, ''),
+('387', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-26', 'Minggu', 'Hari Libur', 'Hari Libur', NULL, NULL, ''),
+('388', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-26', 'Minggu', 'Hari Libur', 'Hari Libur', NULL, NULL, ''),
+('392', 211201238, NULL, '07:45:01', '14:56:58', '2022-06-27', 'Senin', 'Bekerja', 'Tepat Waktu', '114.7666395', '-3.7533148', ''),
+('393', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-27', 'Senin', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('394', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-27', 'Senin', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('398', 211201238, NULL, '08:29:35', '16:30:00', '2022-06-28', 'Selasa', 'Bekerja', 'Terlambat 0 Jam 29 menit', '114.7666395', '-3.7533148', ''),
+('399', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-28', 'Selasa', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('400', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-28', 'Selasa', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('401', 211201238, NULL, '08:28:35', '00:00:00', '2022-06-29', 'Rabu', 'Sakit', 'Terlambat 0 Jam 28 menit', '114.7666395', '-3.7533148', ''),
+('402', 211201246, NULL, '00:00:00', '00:00:00', '2022-06-29', 'Rabu', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('403', 211201248, NULL, '00:00:00', '00:00:00', '2022-06-29', 'Rabu', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('4416qd2e936v', 211201238, NULL, '00:00:00', '00:00:00', '2022-07-02', 'Sabtu', 'Hari Libur', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('49uhpk1yryp3', 211201246, NULL, '00:00:00', '00:00:00', '2022-07-02', 'Sabtu', 'Hari Libur', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('4g0invncul47', 211201248, NULL, '00:00:00', '00:00:00', '2022-07-02', 'Sabtu', 'Hari Libur', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('91gb7c75cs9', 211201246, NULL, '00:00:00', '00:00:00', '2022-07-01', 'Jumat', 'Tanpa Keterangan', 'Tidak mengisi presensi datang', NULL, NULL, ''),
+('c66n5buq8e1', 211201248, '1zcrnru1263o', '00:00:00', '14:30:06', '2022-07-01', 'Jumat', 'Bekerja', 'Tidak mengisi presensi datang', NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -162,7 +177,7 @@ INSERT INTO `absensi` (`abs_id`, `pgw_id`, `act_id`, `abs_datang`, `abs_pulang`,
 --
 
 CREATE TABLE `activity` (
-  `act_id` binary(16) NOT NULL,
+  `act_id` char(12) NOT NULL,
   `pgw_id` int(50) NOT NULL,
   `act_tgl` date NOT NULL,
   `act_qty` int(11) NOT NULL,
@@ -175,10 +190,10 @@ CREATE TABLE `activity` (
 --
 
 INSERT INTO `activity` (`act_id`, `pgw_id`, `act_tgl`, `act_qty`, `act_ket`, `act_output`) VALUES
-(0x1e3f5c03356769263f283f3f2f3f6e53, 211201238, '2022-06-27', 1, 'Uji coba UUID 6', 'UUID versi 6 untuk primary key'),
-(0x5c3f3f083f3f113f3f293f3f2f3f6e53, 211201238, '2022-06-27', 1, 'UUID versi 1', 'Time based UUID'),
-(0x821d0a0df1da4d4fab57d4e9f4a50651, 211201238, '2022-06-27', 1, 'UUID v4 with binary 16', 'UUID v4'),
-(0xc20845fe095f4c8d96876d5c1f43b409, 211201238, '2022-06-24', 1, 'Membuat fitur tambah laporan', 'laporan kegiatan');
+('1zcrnru1263o', 211201248, '2022-07-01', 1, 'Uji coba kinerja', 'data kinerja'),
+('2noi9bry9bmx', 211201238, '2022-06-30', 1, '1.Menghubungkan tabel kegiatan dengan presensi\n2.Menghubungkan tabel kegiatan dengan presensi\n3.Menghubungkan tabel kegiatan dengan presensi\n4.Menghubungkan tabel kegiatan dengan presensi', 'join tabel'),
+('64cjainzq9ca', 211201248, '2022-06-30', 1, '1. Membuat fitur disposisi surat', 'fitur disposisi'),
+('6tbdtziva90w', 211201238, '2022-07-01', 1, 'Rekap Presensi Bulan Juni', 'Rekap Presensi Juni');
 
 -- --------------------------------------------------------
 
@@ -366,7 +381,21 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (116, '::1', 'habibi@politala.ac.id', 5, '2022-06-26 11:15:18', 1),
 (117, '::1', 'habibi@politala.ac.id', 5, '2022-06-26 11:40:33', 1),
 (118, '::1', 'habibi@politala.ac.id', 5, '2022-06-27 08:43:02', 1),
-(119, '::1', 'habibi@politala.ac.id', 5, '2022-06-27 08:43:29', 1);
+(119, '::1', 'habibi@politala.ac.id', 5, '2022-06-27 08:43:29', 1),
+(120, '::1', 'habibi@politala.ac.id', 5, '2022-06-27 14:51:40', 1),
+(121, '::1', 'habibi@politala.ac.id', 5, '2022-06-28 08:17:40', 1),
+(122, '::1', 'habibi@politala.ac.id', 5, '2022-06-29 08:25:02', 1),
+(123, '::1', 'habibi@politala.ac.id', 5, '2022-06-30 08:29:46', 1),
+(124, '::1', 'syahrul@politala.ac.id', 7, '2022-06-30 10:53:33', 1),
+(125, '::1', 'habibi@politala.ac.id', 5, '2022-06-30 10:55:32', 1),
+(126, '::1', 'syahrul@politala.ac.id', 7, '2022-06-30 15:28:29', 1),
+(127, '::1', 'habibi@politala.ac.id', 5, '2022-06-30 15:30:40', 1),
+(128, '::1', 'habibi@politala.ac.id', 5, '2022-07-01 08:59:27', 1),
+(129, '::1', 'habibi@politala.ac.id', 5, '2022-07-01 14:24:01', 1),
+(130, '::1', 'syahrul@politala.ac.id', 7, '2022-07-01 14:29:30', 1),
+(131, '::1', 'habibi@politala.ac.id', 5, '2022-07-01 14:31:13', 1),
+(132, '::1', 'habibi@politala.ac.id', 5, '2022-07-01 16:33:15', 1),
+(133, '::1', 'habibi@politala.ac.id', 5, '2022-07-02 13:54:59', 1);
 
 -- --------------------------------------------------------
 
@@ -509,7 +538,7 @@ INSERT INTO `users` (`id`, `email`, `pgw_id`, `username`, `password_hash`, `rese
 ALTER TABLE `absensi`
   ADD PRIMARY KEY (`abs_id`),
   ADD KEY `pgw_id` (`pgw_id`),
-  ADD KEY `act_FK` (`act_id`);
+  ADD KEY `act_abs_FK` (`act_id`);
 
 --
 -- Indexes for table `activity`
@@ -605,12 +634,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `absensi`
---
-ALTER TABLE `absensi`
-  MODIFY `abs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=395;
-
---
 -- AUTO_INCREMENT for table `auth_activation_attempts`
 --
 ALTER TABLE `auth_activation_attempts`
@@ -626,7 +649,7 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`

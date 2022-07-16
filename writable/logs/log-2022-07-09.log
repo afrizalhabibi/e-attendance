@@ -1,0 +1,10 @@
+CRITICAL - 2022-07-09 10:13:43 --> syntax error, unexpected '<'
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('_user/_index', Array, true)
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(24): view('_user/_index', Array)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->Presensi()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}

@@ -1,10 +1,17 @@
 <script type="text/javascript">
  $(document).ready(function(){
     setInterval(timestamp, 1000);
+
+    let validator = $('form.validator').jbvalidator({
+            errorMessage: true,
+            successClass: false,
+            language: "<?php base_url()?>/assets/dist/libs/jbvalidator/lang/en.json",
+    });
     
     // displayabsen();
     firstabsen();
     chartStatus();
+    // validateKinerja();
     // timedate liveticking
     function timestamp() {
         moment.locale('id');
@@ -16,14 +23,51 @@
         $('#txt_abs_datang').val(today);
         $('#txt_abs_pulang').val(today);
     }
+    $(document).on('click','#btn-datang',function(){
+        Webcam.set({
+            width: 320,
+            height: 240,
+            image_format: 'jpeg',
+            jpeg_quality: 90,
+            flip_horiz: true
+        });
+        $('#camImgPresensi').show();
+        Webcam.attach('#camImgPresensi');
+
+        $('video').addClass('rounded');
+
+    });
+
+    $(document).on('click','#take_snapshot',function(){
+        Webcam.snap(function(data_uri) {
+            $("#image-tag").val(data_uri);
+            $('#AjaxImgPresensi').append('<img class="rounded" src="'+data_uri+'"/>');
+            $('#camImgPresensi').hide();
+        });
+    });
+
+    $(document).on('click','#reset_snapshot',function(){
+            $("#image-tag").val('');
+            $('#AjaxImgPresensi').html('');
+            $('#camImgPresensi').show();
+    });
+    
+    $('#confirm-absen-datang').on('hidden.bs.modal', function () {
+            $("#image-tag").val('');
+            $('#AjaxImgPresensi').html('');
+            $('#camImgPresensi').show();
+    });
+
     // Ajax Insert Absen
     $(document).on('click','#btn-absen-datang',function(){
+
         var abs_id = $('#txt_abs_id').val();
         var pgw_id = $('#txt_pgw_id').val();
         var abs_datang =  $('#txt_abs_datang').val();
         var abs_long =  '114.7666395';
         var abs_lat = '-3.7533148';
         var abs_status = 0;
+        var abs_img = $('#image-tag').val();
         $.ajax({
             url:'<?= site_url('update-absendatang') ?>',
             method:'post',
@@ -34,9 +78,11 @@
                     absen_abs_datang:abs_datang,
                     absen_abs_status:abs_status,
                     absen_abs_long:abs_long,
-                    absen_abs_lat:abs_lat
+                    absen_abs_lat:abs_lat,
+                    absen_abs_img:abs_img
                 },
             success:function(response){
+                Webcam.reset();
                 $('#confirm-absen-datang').modal('hide');
                 $('#tableAbsen').html('');
                 $('#btn-datang').hide();
@@ -45,14 +91,14 @@
                 chartStatus();
                 Swal.fire(
                     'Berhasil',
-                    'Absen datang berhasil',
+                    'Presensi datang berhasil',
                     'success'
                 )
             },
             error:function (request, error) {
                 Swal.fire(
                     'Gagal',
-                    'Absen datang gagal',
+                    'Presensi datang gagal',
                     'error'
                 )
             }
@@ -81,62 +127,20 @@
                 chartStatus();
                 Swal.fire(
                     'Berhasil',
-                    'Absen pulang berhasil',
+                    'Presensi pulang berhasil',
                     'success'
                 )
             },
             error:function (request, error) {
                 Swal.fire(
                     'Gagal',
-                    'Absen pulang gagal',
+                    'Presensi pulang gagal',
                     'error'
                 )
             }
         });
     });
     //end insert absen
-
-    // start display absen
-    // function displayabsen()
-    // {
-    // var i = 0;
-    
-	// $.ajax({
-	// 	url:'<?= site_url('fetch-absen') ?>',
-	// 	method:'get',
-	// 	success:function(response){
-	// 		$.each(response.allabsen,function(key, value){
-    //             i++;
-    //             starttime = value['abs_datang'];
-    //             stoptime = value['abs_pulang'];
-                
-    //             if(value['abs_status'] == 'Bekerja' || value['abs_status'] == 'WFH') {
-    //                 badgeclass = ' bg-green';
-    //             } else if (value['abs_status'] == 'Hari Libur' || value['abs_status'] == 'Tanpa Keterangan') {
-    //                 badgeclass = ' bg-red';
-    //             } else {
-    //                 badgeclass = ' bg-yellow';
-    //             }
-                
-    //             if (value['abs_jamkerja'].indexOf("-") > -1) {
-    //                 jamkerja = '00:00:00';
-    //             } else {
-    //                 jamkerja = value['abs_jamkerja'];
-    //             }
-	// 			$('#tableAbsen').append('<tr>\
-	// 				<td> '+i+' </td>\
-	// 				<td> '+value['abs_hari']+", "+value['abs_tgl']+' </td>\
-	// 				<td> '+value['abs_datang']+' </td>\
-	// 				<td> '+value['abs_pulang']+' </td>\
-	// 				<td> '+jamkerja+' </td>\
-	// 				<td><span class="badge'+badgeclass+' me-1"></span>'+"  "+value['abs_status']+'</td>\
-	// 			</tr>');
-	// 		});
-	// 	}
-		
-	// });
-    // }
-    // end display absen
 
     // start display latest presence
     function firstabsen()
@@ -152,11 +156,14 @@
                 
                 let badgeclass = "";
                 if(value['abs_status'] == 'Bekerja' || value['abs_status'] == 'WFH' || value['abs_status'] == 'Dinas Luar') {
-                    badgeclass = ' status-green';
+                    // badgeclass = ' status-green';
+                    $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <circle cx="12" cy="12" r="9"></circle><path d="M9 12l2 2l4 -4"></path></svg> '+value['abs_status']);
                 } else if (value['abs_status'] == 'Hari Libur' || value['abs_status'] == 'Tanpa Keterangan') {
-                    badgeclass = ' status-red';
+                    // badgeclass = ' status-red';
+                    $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line></svg> '+value['abs_status']);
                 } else {
-                    badgeclass = ' status-yellow';
+                    // badgeclass = ' status-yellow';
+                    $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-off text-yellow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M19.823 19.824a2 2 0 0 1 -1.823 1.176h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 1.175 -1.823m3.825 -.177h9a2 2 0 0 1 2 2v9"></path> <line x1="16" y1="3" x2="16" y2="7"></line> <line x1="8" y1="3" x2="8" y2="4"></line> <path d="M4 11h7m4 0h5"></path> <line x1="11" y1="15" x2="12" y2="15"></line> <line x1="12" y1="15" x2="12" y2="18"></line> <line x1="3" y1="3" x2="21" y2="21"></line> </svg> '+value['abs_status']);
                 }
 
                 let badgeterlambat = "";
@@ -175,11 +182,11 @@
                     $('#kegiatan').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line></svg> Belum Melaporkan');
                 }
 
-                $('#terlambat').html(terlambat).addClass(badgeterlambat);
+                $('#terlambat').html(terlambat);
 
 				$('#jamdatang').html(jamdatang);
                 $('#jampulang').html(jampulang);
-                $('#absenstatus').html(status).addClass(badgeclass);
+                // $('#absenstatus').html(status).addClass(badgeclass);
 
                 if (value['abs_jamkerja'].indexOf("-") > -1) {
                     jamkerja = '00:00:00';
@@ -194,41 +201,48 @@
                 $('#tglabsen').html(value['abs_hari']+', '+value['abs_tgl']);
                 $('#jamkerja').html(jam+ ' Jam' + ' ' + menit + ' Menit');
                 $('#ket').html(value['abs_ket']);
+                
+                if(value['abs_img'] != null) {
+                    $('#img-absen').append('<img class="rounded" src="'+value["abs_img"]+'">');
+                } else if (value['abs_img'] == null) {
+                    $('#img-absen').append('<img class="rounded" src="/assets/static/illustrations/img_placeholder.svg">');
+                }
+                
 
                 //mini map location tracker
-                mapboxgl.accessToken = 'pk.eyJ1IjoiaGFiaWJpLXBvbGl0YWxhIiwiYSI6ImNsM3h1NDI3bDAwYWMza2thZThib3NmeWcifQ.cET6J1xPv-NdkdPDPmfjsw';
-                var absenmap = new mapboxgl.Map({
-                    container: 'map-absen',
-                    style: 'mapbox://styles/mapbox/outdoors-v11',
-                    zoom: 16,
-                    center: [114.7666395, -3.7533148],
-                });
+                // mapboxgl.accessToken = 'pk.eyJ1IjoiaGFiaWJpLXBvbGl0YWxhIiwiYSI6ImNsM3h1NDI3bDAwYWMza2thZThib3NmeWcifQ.cET6J1xPv-NdkdPDPmfjsw';
+                // var absenmap = new mapboxgl.Map({
+                //     container: 'map-absen',
+                //     style: 'mapbox://styles/mapbox/outdoors-v11',
+                //     zoom: 16,
+                //     center: [114.7666395, -3.7533148],
+                // });
               
-                //get long and lat
-                var geolocate = new mapboxgl.GeolocateControl({
-                positionOptions: {
-                    enableHighAccuracy: true
-                },
-                trackUserLocation: true
-                });
-                absenmap.addControl(geolocate);
-                absenmap.on("load", function () {
-                    geolocate.trigger(); // add this if you want to fire it by code instead of the button
-                });
-                geolocate.on("geolocate", locateUser);
+                // //get long and lat
+                // var geolocate = new mapboxgl.GeolocateControl({
+                // positionOptions: {
+                //     enableHighAccuracy: true
+                // },
+                // trackUserLocation: true
+                // });
+                // absenmap.addControl(geolocate);
+                // absenmap.on("load", function () {
+                //     geolocate.trigger(); // add this if you want to fire it by code instead of the button
+                // });
+                // geolocate.on("geolocate", locateUser);
 
-                function locateUser(e) {
-                    var long = "";
-                    var lat ="";
+                // function locateUser(e) {
+                //     var long = "";
+                //     var lat ="";
                     
-                    long = e.coords.longitude;
-                    lat = e.coords.latitude;
-                    console.log("lng:" + long + ", lat:" + lat);
+                //     long = e.coords.longitude;
+                //     lat = e.coords.latitude;
+                //     // console.log("lng:" + long + ", lat:" + lat);
                     
-                    // const marker1 = new mapboxgl.Marker({ color: 'black'})
-                    // .setLngLat([long, lat])
-                    // .addTo(absenmap);
-                }
+                //     // const marker1 = new mapboxgl.Marker({ color: 'black'})
+                //     // .setLngLat([long, lat])
+                //     // .addTo(absenmap);
+                // }
                 
 			});
         } 
@@ -285,7 +299,7 @@
                 grid: {
                     strokeDashArray: 4,
                 },
-                colors: ["#83b298", "#f2cb8e", "#d2e1f3", "#e9ecf1"], 
+                colors: ["#2489FF", "#FFC149", "#d2e1f3", "#e9ecf1"], 
                 legend: {
                     show: true,
                     position: 'bottom',
@@ -313,9 +327,33 @@
     // moment.locale('id');
     // moment().format(); 
     var startDate = moment().add(1, 'days').format("MM/DD/YYYY");
-    var today = moment().add(365, 'days').format("MM/DD/YYYY");
+    var today = moment().add(1825, 'days').format("MM/DD/YYYY");
     var lockDays = [startDate,today];
-    console.log(lockDays);
+    
+
+    // $(document).on('change','#frm_act_tgl',function(){
+    //     var act_tgl = $('#frm_act_tgl').val();
+    //     $.ajax({
+    //         url:'/checkavailabledate',
+    //         method:'post',
+    //         data:
+    //             {
+    //                 available_act_tgl:act_tgl
+    //             },
+    //         success:function(response){
+    //             if(response.status == 'Available') {
+    //                 console.log(response.status);
+    //             } else {
+    //                 console.log(response.status);
+    //             }
+                
+    //         },
+    //         error:function (request, error) {
+    //             // console.log('date not available');
+    //         }
+    //     }); 
+    // });
+   
     let actpicker = new Litepicker({
         element: document.getElementById('frm_act_tgl'),
         singleMode: true,
@@ -327,6 +365,39 @@
         const d = day.getDay();
 
         return [6, 0].includes(d);
+        },
+
+        setup: (picker) => {
+            picker.on('selected', (date1,date2) => {
+                validator.checkAll();
+                var act_tgl = $('#frm_act_tgl').val();
+                
+                $.ajax({
+                    url:'/checkavailabledate',
+                    method:'post',
+                    data:
+                        {
+                            available_act_tgl:act_tgl
+                        },
+                    success:function(response){
+                        if(response.status == 'Available') {
+                            $('#frm_act_tgl').addClass('is-valid');
+                            
+                        } else {
+                            validator.errorTrigger($('[name=frm_act_tgl]'), response.status);
+                            actpicker.clearSelection();
+                        }
+                    },
+                    error:function (request, error) {
+                        Swal.fire(
+                            'Gagal',
+                            'Gagal verifikasi tanggal',
+                            'error'
+                        )
+                    }
+                }); 
+                // console.log('selected');
+            });
         },
 
         buttonText: {
@@ -343,6 +414,7 @@
         },
     });
     //* Activity Send
+<<<<<<< HEAD
     // Ajax Insert Absen
     $(document).on('click','#btn-act-send',function(){
         if ($("#ajax_kinerja_form").length > 0) {
@@ -415,7 +487,94 @@
             })
         }
         
+=======
+    $(function (){
+
+        tinymce.init({
+            selector: 'textarea#frm_act_ket',
+            // skin: "oxide-dark",
+            // content_css: "dark",
+            setup: function (editor) {
+                editor.on('keyup', function () {
+                    tinymce.triggerSave();
+                    validator.checkAll();
+                    
+                });
+            },
+            height: 300,
+            branding :false,
+            menubar: false,
+            statusbar: false,
+            hidden_input: false,
+            plugins: [
+                'autosave','advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+                'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+                'insertdatetime', 'media', 'table', 'help', 'wordcount'
+            ],
+            toolbar: 'undo redo | blocks | ' +
+            'bold italic backcolor |bullist numlist|  alignleft aligncenter ' +
+            'alignright alignjustify | ' +
+            'removeformat | help',
+            content_style: 'body { font-family:Inter,-apple-system,Helvetica,Arial,sans-serif; font-size:14px }'
+        });
+
+
+        $(document).on('change','#frm_act_output',function(){
+            validator.checkAll();
+        });
+
+
+        
+        // validator.checkAll();
+        //serverside
+        $(document).on('click','#btn-act-send',function(e){
+            if (validator.checkAll()) {
+                e.preventDefault();
+            } else {
+                var act_tgl = $('#frm_act_tgl').val();
+                var act_qty = $('#frm_act_qty').val();
+                var act_ket = $('#frm_act_ket').val();
+                var act_output = $('#frm_act_output').val();
+
+                $.ajax({
+                    url:'<?= site_url('activity/addactivity') ?>',
+                    method:'post',
+                    data:
+                        {
+                            ativity_act_tgl:act_tgl,
+                            ativity_act_qty:act_qty,
+                            ativity_act_ket:act_ket,
+                            ativity_act_output:act_output
+
+                        },
+                    success:function(response){
+                        // if(response.status === 'Terkirim') {
+                        //         validatorServerSide.errorTrigger($('[name=frm_act_tgl]'), response.message);
+                        // }
+                        $('#modal-act-report').modal('hide');
+                        $('#modal-act-report').find("input,textarea,select").val('');
+                        
+                        firstabsen();
+
+                        Swal.fire(
+                            'Berhasil',
+                            'Laporan berhasil terkirim',
+                            'success'
+                        )
+                    },
+                    error:function (request, error) {
+                        Swal.fire(
+                            'Gagal',
+                            'Laporan gagal terkirim',
+                            'error'
+                        )
+                    }
+                }); 
+            }
+        });
+>>>>>>> 57623f51506a9b6e8931f163b6a8bd80317201e9
     });
+
 
 });
 

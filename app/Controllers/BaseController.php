@@ -35,7 +35,7 @@ class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = ['tanggal','url'];
+    protected $helpers = ['tanggal','url','auth'];
     
 
     /**
