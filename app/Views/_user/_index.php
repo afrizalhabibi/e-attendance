@@ -42,16 +42,16 @@
           if( hari_indo(date('l')) != 'Sabtu' &&  hari_indo(date('l')) != 'Minggu') { ?>
           <div class="col-auto ms-auto d-print-none">
           <div class="btn-list">
-            <a href="#" class="btn btn-primary btn-transition d-none d-sm-inline-block" data-bs-toggle="modal"
+            <a href="#" class="btn btn-blue btn-transition d-none d-sm-inline-block" data-bs-toggle="modal"
               data-bs-target="#modal-act-report">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <line x1="12" y1="5" x2="12" y2="19" />
-                <line x1="5" y1="12" x2="19" y2="12" /></svg>
+                <line x1="5" y1="12" x2="19" y2="12" /></svg> -->
               Laporan Kegiatan
             </a>
-            <a href="#" class="btn btn-pill btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-act-report"
+            <a href="#" class="btn btn-blue d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-act-report"
               aria-label="Create new report">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -96,7 +96,7 @@
                     {
                     ?>
                   <div class="mt-3">
-                    <a style="outline:none" id="btn-datang" table-id='<?php ?>' href="#" class="btn btn-primary"
+                    <a style="outline:none" id="btn-datang" table-id='<?php ?>' href="#" class="btn btn-transition btn-blue"
                       data-bs-toggle="modal" data-bs-target="#confirm-absen-datang">
                       <!-- Download SVG icon from http://tabler-icons.io/i/mail -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check"
@@ -115,7 +115,7 @@
                         {
                         ?>
                   <div class="mt-3">
-                    <a style="outline:none" id="btn-pulang" href="#" class="btn btn-primary" data-bs-toggle="modal"
+                    <a style="outline:none" id="btn-pulang" href="#" class="btn btn-transition btn-blue" data-bs-toggle="modal"
                       data-bs-target="#confirm-absen-pulang">
                       <!-- Download SVG icon from http://tabler-icons.io/i/mail -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check"
@@ -223,18 +223,14 @@
                 </div>
                 <div class="datagrid-item">
                   <div class="datagrid-title">Status</div>
-                  <div class="datagrid-content">
-                    <span class="status" id="absenstatus">
-                      Tanpa Keterangan
-                    </span>
+                  <div class="datagrid-content" id="absenstatus">
+                    Tanpa Keterangan
                   </div>
                 </div>
                 <div class="datagrid-item">
                   <div class="datagrid-title">Status Waktu Presensi</div>
-                  <div class="datagrid-content">
-                    <span class="status" id="terlambat">
-                      -
-                    </span>
+                  <div class="datagrid-content" id="terlambat">
+                    
                   </div>
                 </div>
                 <div class="datagrid-item">
@@ -292,7 +288,8 @@
         <div class="row">
           <div class="col-lg-6 form-group">
             <label class="form-label">Tanggal</label>
-            <div class="input-icon mb-3">
+            <input type="text" autocomplete="off" class="form-control" placeholder="" name="frm_act_tgl" id="frm_act_tgl" title="" required>
+            <!-- <div class="input-icon mb-3">
               <span class="input-icon-addon">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -304,9 +301,7 @@
                   <line x1="11" y1="15" x2="12" y2="15" />
                   <line x1="12" y1="15" x2="12" y2="18" /></svg>
               </span>
-              <input type="text" autocomplete="off" class="form-control" placeholder="" name="frm_act_tgl" id="frm_act_tgl" title="" required>
-            </div>
-            
+            </div> -->
           </div>
           <div class="col-lg-6 form-group">
             <div class="mb-3">
@@ -334,11 +329,11 @@
         <button class="btn btn-outline" data-bs-dismiss="modal">
           Batal
         </button>
-        <button type="submit" id="btn-act-send" class="btn btn-primary ms-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <button type="submit" id="btn-act-send" class="btn btn-blue ms-auto w-70">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <line x1="12" y1="5" x2="12" y2="19" />
-        <line x1="5" y1="12" x2="19" y2="12" /></svg>
+        <line x1="5" y1="12" x2="19" y2="12" /></svg> -->
           Kirim
         </button>
       </div>

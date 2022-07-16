@@ -1,0 +1,12 @@
+CRITICAL - 2022-07-15 16:10:24 --> Undefined variable: status
+#0 D:\Aplikasi\github\e-attendance\app\Views\_pimpinan\_hmbkehadiran.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Aplikasi\\git...', 73, Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\Aplikasi\\git...')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#4 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(42): view('_pimpinan/_hmbk...')
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_homebase()
+#6 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#10 {main}

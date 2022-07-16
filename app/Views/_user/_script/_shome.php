@@ -82,6 +82,7 @@
                     absen_abs_img:abs_img
                 },
             success:function(response){
+                Webcam.reset();
                 $('#confirm-absen-datang').modal('hide');
                 $('#tableAbsen').html('');
                 $('#btn-datang').hide();
@@ -155,11 +156,14 @@
                 
                 let badgeclass = "";
                 if(value['abs_status'] == 'Bekerja' || value['abs_status'] == 'WFH' || value['abs_status'] == 'Dinas Luar') {
-                    badgeclass = ' status-green';
+                    // badgeclass = ' status-green';
+                    $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <circle cx="12" cy="12" r="9"></circle><path d="M9 12l2 2l4 -4"></path></svg> '+value['abs_status']);
                 } else if (value['abs_status'] == 'Hari Libur' || value['abs_status'] == 'Tanpa Keterangan') {
-                    badgeclass = ' status-red';
+                    // badgeclass = ' status-red';
+                    $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line></svg> '+value['abs_status']);
                 } else {
-                    badgeclass = ' status-yellow';
+                    // badgeclass = ' status-yellow';
+                    $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-off text-yellow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M19.823 19.824a2 2 0 0 1 -1.823 1.176h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 1.175 -1.823m3.825 -.177h9a2 2 0 0 1 2 2v9"></path> <line x1="16" y1="3" x2="16" y2="7"></line> <line x1="8" y1="3" x2="8" y2="4"></line> <path d="M4 11h7m4 0h5"></path> <line x1="11" y1="15" x2="12" y2="15"></line> <line x1="12" y1="15" x2="12" y2="18"></line> <line x1="3" y1="3" x2="21" y2="21"></line> </svg> '+value['abs_status']);
                 }
 
                 let badgeterlambat = "";
@@ -178,11 +182,11 @@
                     $('#kegiatan').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line></svg> Belum Melaporkan');
                 }
 
-                $('#terlambat').html(terlambat).addClass(badgeterlambat);
+                $('#terlambat').html(terlambat);
 
 				$('#jamdatang').html(jamdatang);
                 $('#jampulang').html(jampulang);
-                $('#absenstatus').html(status).addClass(badgeclass);
+                // $('#absenstatus').html(status).addClass(badgeclass);
 
                 if (value['abs_jamkerja'].indexOf("-") > -1) {
                     jamkerja = '00:00:00';
