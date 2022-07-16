@@ -29,6 +29,7 @@ class Activity extends BaseController
         ];
         
         $tgl =  $this->request->getPost("ativity_act_tgl");
+        
         $ActivityModel->save($data);
         // $PresensiModel->update($id, $act_id);
         $builder = $db->table('absensi')

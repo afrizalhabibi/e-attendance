@@ -1,0 +1,16 @@
+ERROR - 2022-07-16 13:52:59 --> Error connecting to the database: Connection refused
+CRITICAL - 2022-07-16 13:52:59 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/app/ThirdParty/myth-auth/src/Authentication/LocalAuthenticator.php(156): CodeIgniter\BaseModel->first()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/app/ThirdParty/myth-auth/src/Authentication/LocalAuthenticator.php(20): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/app/ThirdParty/myth-auth/src/Controllers/AuthController.php(88): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#12 {main}

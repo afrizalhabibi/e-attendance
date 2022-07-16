@@ -39,16 +39,11 @@
         <!-- Page title actions -->
 
         <?php 
-          if( hari_indo(date('l')) != 'Sabtu' &&  hari_indo(date('l')) != 'Minggu') { ?>
+          if( hari_indo(date('l')) != 'Sabtu' &&  hari_indo(date('l')) != 'Minggu') : ?>
           <div class="col-auto ms-auto d-print-none">
           <div class="btn-list">
             <a href="#" class="btn btn-blue btn-transition d-none d-sm-inline-block" data-bs-toggle="modal"
               data-bs-target="#modal-act-report">
-              <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <line x1="12" y1="5" x2="12" y2="19" />
-                <line x1="5" y1="12" x2="19" y2="12" /></svg> -->
               Laporan Kegiatan
             </a>
             <a href="#" class="btn btn-blue d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-act-report"
@@ -61,10 +56,7 @@
             </a>
           </div>
           </div>
-          <?php
-          }
-        ?>
-        
+          <?php endif ?>
       </div>
     </div>
   </div>
@@ -92,7 +84,7 @@
                     </svg>
                     <?php echo longdate_indo(date('Y-m-d'));?>
                   </div>
-                  <?php if(isset($dataabsen->abs_datang) && $dataabsen->abs_datang == '00:00:00' && $dataabsen->abs_tgl == date('Y-m-d') && $dataabsen->abs_status != 'Hari Libur' && date('H') < 18)
+                  <?php if(isset($dataabsen->abs_datang) && $dataabsen->abs_datang == '00:00:00' && $dataabsen->abs_tgl == date('Y-m-d') /*&& $dataabsen->abs_status != 'Hari Libur' && date('H') < 12 */)
                     {
                     ?>
                   <div class="mt-3">
