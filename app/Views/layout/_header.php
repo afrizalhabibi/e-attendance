@@ -8,9 +8,7 @@
     <!-- CSS files -->
     <link href="<?php base_url()?>/assets/dist/css/tabler.min.css" rel="stylesheet"/>
     <link href="<?php base_url()?>/assets/dist/css/demo.min.css" rel="stylesheet"/>
-    <link href="<?php base_url()?>/assets/dist/css/tabler-flags.min.css" rel="stylesheet"/>
-    <link href="<?php base_url()?>/assets/dist/css/tabler-payments.min.css" rel="stylesheet"/>
-    <link href="<?php base_url()?>/assets/dist/css/tabler-vendors.min.css" rel="stylesheet"/>
+
     <link href="<?php base_url()?>/assets/dist/css/dataTables.bootstrap5.min.css" rel="stylesheet"/>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-html5-2.2.3/datatables.min.css"/>
@@ -19,6 +17,9 @@
 
     <!-- JQuery -->
     <script src="<?php base_url()?>/assets/dist/js/jquery-3.6.0.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
     <script src="<?php base_url()?>/assets/dist/libs/dataTables/jquery.dataTables.min.js"></script>
     <script src="<?php base_url()?>/assets/dist/libs/dataTables/dataTables.bootstrap5.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>

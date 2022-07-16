@@ -384,8 +384,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+      <?= \Config\Services::validation()->listErrors(); ?>
         <div class="row">
-          
+        <form action="javascript:void(0)" name="ajax_kinerja_form" id="ajax_kinerja_form">
           <div class="col-lg-6">
             <label class="form-label">Tanggal</label>
             <div class="input-icon mb-3">
@@ -408,6 +409,7 @@
             <div class="mb-3">
               <label class="form-label">Jumlah Kegiatan</label>
               <input id="frm_act_qty" name="frm_act_qty" type="number" min="1" class="form-control">
+              <div class="invalid-feedback">Invalid feedback</div>
             </div>
           </div>
           <div class="col-lg-12">
@@ -422,13 +424,15 @@
               <textarea id="frm_act_output" name="frm_act_output" class="form-control" data-bs-toggle="autosize" placeholder=""></textarea>
             </div>
           </div>
+        </form>
         </div>
+     
       </div>
       <div class="modal-footer">
         <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
           Batal
         </a>
-        <a href="#" id="btn-act-send" class="btn btn-indigo ms-auto" data-bs-dismiss="modal">
+        <a href="#" id="btn-act-send" class="btn btn-indigo ms-auto">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="24" height="24"
             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
             stroke-linejoin="round">

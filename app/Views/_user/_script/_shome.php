@@ -345,42 +345,76 @@
     //* Activity Send
     // Ajax Insert Absen
     $(document).on('click','#btn-act-send',function(){
-        var act_tgl = $('#frm_act_tgl').val();
-        var act_qty = $('#frm_act_qty').val();
-        var act_ket = $('#frm_act_ket').val();
-        var act_output = $('#frm_act_output').val();
-        
-        $.ajax({
-            url:'<?= site_url('activity/addactivity') ?>',
-            method:'post',
-            data:
-                {
-                    ativity_act_tgl:act_tgl,
-                    ativity_act_qty:act_qty,
-                    ativity_act_ket:act_ket,
-                    ativity_act_output:act_output
-
-                },
-            success:function(response){
-                $('#modal-act-report').modal('hide');
-                $('#modal-act-report').find("input,textarea,select").val('');
+        if ($("#ajax_kinerja_form").length > 0) {
+            $("#ajax_kinerja_form").validate({
+                rules: {
+                    frm_act_tgl: {
+                        required: true,
+                    },
                 
-                firstabsen();
+                    frm_act_qty: {
+                        required: true,
+                    }, 
+                
+                    frm_act_ket: {
+                        required: true,
+                    },   
+                },
+                messages: {
+                    
+                    frm_act_tgl: {
+                        required: "Please enter name",
+                    },
+                    frm_act_qty: {
+                        required: "Please enter valid email",
+                    },      
+                    frm_act_ket: {
+                        required: "Please enter message",
+                    },
+                    
+                },
+                submitHandler: function(form) {
+                    var act_tgl = $('#frm_act_tgl').val();
+                    var act_qty = $('#frm_act_qty').val();
+                    var act_ket = $('#frm_act_ket').val();
+                    var act_output = $('#frm_act_output').val();
+                    
+                    $.ajax({
+                        url:'<?= site_url('activity/addactivity') ?>',
+                        method:'post',
+                        data:
+                            {
+                                ativity_act_tgl:act_tgl,
+                                ativity_act_qty:act_qty,
+                                ativity_act_ket:act_ket,
+                                ativity_act_output:act_output
 
-                Swal.fire(
-                    'Berhasil',
-                    'Laporan berhasil terkirim',
-                    'success'
-                )
-            },
-            error:function (request, error) {
-                Swal.fire(
-                    'Gagal',
-                    'Laporan gagal terkirim',
-                    'error'
-                )
-            }
-        }); 
+                            },
+                        success:function(response){
+                            $('#modal-act-report').modal('hide');
+                            $('#modal-act-report').find("input,textarea,select").val('');
+                            
+                            firstabsen();
+
+                            Swal.fire(
+                                'Berhasil',
+                                'Laporan berhasil terkirim',
+                                'success'
+                            )
+                        },
+                        error:function (request, error) {
+                            
+                            Swal.fire(
+                                'Gagal',
+                                'Laporan gagal terkirim',
+                                'error'
+                            )
+                        }
+                    }); 
+                }
+            })
+        }
+        
     });
 
 });
