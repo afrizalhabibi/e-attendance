@@ -321,7 +321,6 @@
           Batal
         </button>
         <button type="submit" id="btn-act-send" class="btn btn-blue ms-auto w-70">
-          
           Kirim
         </button>
       </div>

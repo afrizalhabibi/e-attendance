@@ -19,8 +19,14 @@
 
     <!-- JQuery -->
     <script src="<?php base_url()?>/assets/dist/js/jquery-3.6.0.min.js"></script>
+<<<<<<< HEAD
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
+=======
     <script src="https://cdn.jsdelivr.net/npm/@emretulek/jbvalidator"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+>>>>>>> 57623f51506a9b6e8931f163b6a8bd80317201e9
     <script src="<?php base_url()?>/assets/dist/libs/dataTables/jquery.dataTables.min.js"></script>
     <script src="<?php base_url()?>/assets/dist/libs/dataTables/dataTables.bootstrap5.min.js"></script>
     <script src="<?php base_url()?>/assets/dist/libs/tinymce/tinymce.min.js"></script>
