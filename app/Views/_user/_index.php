@@ -38,8 +38,7 @@
         </div>
         <!-- Page title actions -->
 
-        <?php 
-          if( hari_indo(date('l')) != 'Sabtu' &&  hari_indo(date('l')) != 'Minggu') : ?>
+        
           <div class="col-auto ms-auto d-print-none">
           <div class="btn-list">
             <a href="#" class="btn btn-blue btn-transition d-none d-sm-inline-block" data-bs-toggle="modal"
@@ -56,7 +55,7 @@
             </a>
           </div>
           </div>
-          <?php endif ?>
+          
       </div>
     </div>
   </div>
@@ -322,10 +321,7 @@
           Batal
         </button>
         <button type="submit" id="btn-act-send" class="btn btn-blue ms-auto w-70">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <line x1="12" y1="5" x2="12" y2="19" />
-        <line x1="5" y1="12" x2="19" y2="12" /></svg> -->
+          
           Kirim
         </button>
       </div>
@@ -350,20 +346,11 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-camera-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <circle cx="12" cy="13" r="3"></circle> <path d="M5 7h2a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h2m9 7v7a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2"></path> <line x1="15" y1="6" x2="21" y2="6"></line> <line x1="18" y1="3" x2="18" y2="9"></line> </svg>
               Ambil Foto
             </button>
-         
-          
             <button id="reset_snapshot" class="btn btn-icon btn-outline-red">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-refresh" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path> <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path> </svg>
             </button>
-         
           </div>
-          
         </div>
-
-          
-          
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-blue icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><circle cx="12" cy="12" r="9" /><path d="M9 12l2 2l4 -4" /></svg> -->
-        
         <h3>Presensi Datang</h3>
         <div class="text-muted">Jam kerja normal 7:30 AM - 16:00 PM</div>
         <form id=addAbsen>
@@ -381,10 +368,10 @@
       <div class="modal-footer">
         <div class="w-100">
           <div class="row">
-            <div class="col"><a href="#" class="btn w-100" data-bs-dismiss="modal">
+            <div class="col"><a href="#" id="btn-datang-cancel" class="btn w-100" data-bs-dismiss="modal">
                 Batal
               </a></div>
-            <div class="col"><a href="#" id="btn-absen-datang" class="btn btn-blue w-100">
+            <div class="col"><a href="#" id="btn-datang-confirm" class="btn btn-blue w-100">
                 Konfirmasi
               </a></div>
           </div>

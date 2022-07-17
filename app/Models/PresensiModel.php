@@ -41,19 +41,19 @@ class PresensiModel extends Model
     public function get_abs_by_id($id) {
         $result = $this->db->table('absensi')
         ->join('pegawai', 'absensi.pgw_id = pegawai.pgw_id')
-        ->where('absensi.pgw_id', user()->getpgwid())
         ->where('abs_id', $id)
         ->get();
          
         return $result->getRow();
-      }
+    }
 
     public function getuserdata()
     {
         $result = $this->db->table('pegawai')
+        ->select('pegawai.hmb_id, homebase.hmb_name, pegawai.nama, pegawai.jabatan, pegawai.pgw_id')
         ->join('users', 'pegawai.pgw_id = users.pgw_id')
-        ->where('pegawai.pgw_id',user()->getpgwId())
-        ->limit(1)
+        ->join('homebase', 'pegawai.hmb_id = homebase.hmb_id')
+        ->where('pegawai.pgw_id', user()->getpgwId())
         ->get();
 
         return $result;
@@ -76,7 +76,6 @@ class PresensiModel extends Model
     {
         $result = $this->db->table('absensi')
                 ->select('abs_status')
-                ->where('pgw_id', user()->getpgwId())
                 ->distinct()
                 ->get();
         return $result;

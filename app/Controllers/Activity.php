@@ -84,26 +84,10 @@ class Activity extends BaseController
                     $builder->where("act_tgl BETWEEN '$request->datemin' AND '$request->datemax'", NULL, FALSE);
                  }
                })
-        ->add('action', function($row){
-        // return '<button class="btn btn-outline-indigo btn-md" id="btnactdetail" data-id="'.$row->act_id.'">
-        //     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12.01" y2="8"></line><polyline points="11 12 12 12 12 16 13 16"></polyline></svg>Info</button>
-        //     <button class="btn btn-outline-indigo btn-md" id="btnactdetail" data-id="'.$row->act_id.'">
-        //     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        //     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        //     <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"></path>
-        //     <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"></path>
-        //     <path d="M16 5l3 3"></path>
-        //     </svg>Edit</button>';               
+        ->add('action', function($row){            
         return '<div class="float-end">
-        <button class="btn btn-outline-blue btn-md me-2" id="btnactdetail" data-id="'.$row->act_id.'">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12.01" y2="8"></line><polyline points="11 12 12 12 12 16 13 16"></polyline></svg>Info</button>
-        <button class="btn btn-outline-blue btn-md" id="btnactedit" data-id="'.$row->act_id.'">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"></path>
-        <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"></path>
-        <path d="M16 5l3 3"></path>
-        </svg>Edit</button>
+        <button class="btn btn-outline-blue btn-md me-2" id="btnactdetail" data-id="'.$row->act_id.'">Detail</button>
+        <button class="btn btn-outline-orange btn-md" id="btnactedit" data-id="'.$row->act_id.'">Edit</button>
             </div>';               
         })
         ->toJson(true);

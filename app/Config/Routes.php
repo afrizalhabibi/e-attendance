@@ -33,8 +33,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Presensi::presensi');
 $routes->group('', ['filter' => 'login'], function($routes){
+    // presensi pegawai
     $routes->get('/presensi', 'Presensi::presensi');
-    $routes->get('/kehadiran', 'Presensi::kehadiran');
+    $routes->get('/presensi-pegawai', 'Presensi::kehadiran');
     $routes->get('/monitoring', 'Presensi::monitorKehadiran');
     $routes->post('/update-absendatang', 'Presensi::UpdateAbsenDatang');
     $routes->post('/update-absenpulang', 'Presensi::UpdateAbsenPulang');
@@ -53,6 +54,12 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/actdetails/(:any)', 'Activity::ActDetails/$1');
     $routes->post('/editkinerja', 'Activity::EdtActivity');
     $routes->post('/checkavailabledate', 'Activity::docheckDate');
+
+    //monitoring presensi homebase
+    $routes->get('/presensi-bidang', 'Presensi::kehadiran_bidang');
+    $routes->get('/presensibidangajax', 'Presensi::PresensiHomebase');
+
+    
 });
 
 

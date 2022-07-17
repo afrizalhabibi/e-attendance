@@ -87,7 +87,25 @@
                   <div class="dropdown-menu">
                     <div class="dropdown-menu-columns">
                       <div class="dropdown-menu-column">
-                        <a class="dropdown-item" href="<?=base_url()?>/kehadiran" >
+                        <div class="dropend">
+                          <a class="dropdown-item dropdown-toggle" href="#sidebar-cards" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                            Cards
+                            <span class="badge badge-sm bg-green text-uppercase ms-2">New</span>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="./cards.html" class="dropdown-item">
+                              Sample cards
+                            </a>
+                            <a href="./card-actions.html" class="dropdown-item">
+                              Card actions
+                              <span class="badge badge-sm bg-green text-uppercase ms-2">New</span>
+                            </a>
+                            <a href="./cards-masonry.html" class="dropdown-item">
+                              Cards Masonry
+                            </a>
+                          </div>
+                        </div>
+                        <a class="dropdown-item" href="<?=base_url()?>/presensi-pegawai" >
                           Data Kehadiran
                         </a>
                         <a class="dropdown-item" href="<?=base_url()?>/monitoring" >

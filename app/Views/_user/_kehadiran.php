@@ -166,9 +166,9 @@
             <div class="col-md-3">
               <select class="form-select mb-3" id="filterStatus">
               <option value>Semua Status</option>
-                <?php foreach($status as $st) { ?>
+                <?php foreach($status as $st) :?>
               <option value="<?php echo $st['abs_status']?>"><?php echo $st['abs_status']?></option>
-                <?php } ?>
+                <?php endforeach ?>
               </select>
             </div>
             <div class="col-md-3">
@@ -253,7 +253,7 @@
             <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Nama</div>
               <div class="d-flex align-items-center">
-                  <span class="avatar avatar-xs me-2 avatar-rounded" style="background-image: url(<?=base_url()?>/assets/static/avatars/profile.JPG)"></span>
+                  <span class="avatar avatar-sm me-2 avatar-rounded" style="background-image: url(<?=base_url()?>/assets/static/avatars/avatar-14.png)"></span>
                   <div id="absdetailsname">-</div>
               </div>
             </div>

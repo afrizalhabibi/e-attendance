@@ -12,7 +12,7 @@
           Record
         </div>
         <h2 class="page-title">
-          Data Kehadiran
+          Data Kehadiran <?php echo $hmbid->hmb_name ?>
         </h2>
       </div>
       <!-- Page title actions -->
@@ -69,8 +69,10 @@
             </div>
             <div class="col-md-3">
               <select class="form-select mb-3" id="filterStatus">
-              <option value>Semua Status</option>
-                
+                <option value>Semua Status</option>
+                <?php foreach($status as $st) :?>
+                <option value="<?php echo $st['abs_status']?>"><?php echo $st['abs_status']?></option>
+                <?php endforeach ?>
               </select>
             </div>
             <div class="col-md-3">
@@ -111,6 +113,7 @@
                   <tr>
                       <th>No.</th>
                       <th>Tanggal</th>
+                      <th>Nama</th>
                       <th>Jam Datang</th>
                       <th>Jam Pulang</th>
                       <th>Total Jam Kerja</th>
@@ -136,7 +139,7 @@
     </div>
     <?php 
     echo view('/layout/_js');
-    echo view('/_user/_script/_skehadiran');
+    echo view('/_pimpinan/_script/_spresensi_bidang');
     ?>
     
     <div class="modal modal-blur fade" id="modal-absdetails" tabindex="-1" role="dialog" aria-hidden="true">
@@ -155,7 +158,7 @@
             <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Nama</div>
               <div class="d-flex align-items-center">
-                  <span class="avatar avatar-xs me-2 avatar-rounded" style="background-image: url(<?=base_url()?>/assets/static/avatars/profile.JPG)"></span>
+                  <span class="avatar avatar-xs me-2 avatar-rounded" style="background-image: url(<?=base_url()?>/assets/static/avatars/avatar-14.png)"></span>
                   <div id="absdetailsname">-</div>
               </div>
             </div>
@@ -185,9 +188,14 @@
               <div class="subheader mb-2">Kegiatan Harian</div>
               <div id="kegiatan"></div>
             </div>
+
             <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Keterangan</div>
                 <div id="ket">-</div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="subheader mb-2">Foto</div>
+              <div class="ratio ratio-4x3 object-cover" id="img-presensi"></div>
             </div>
           </div>
           </div> <!--end modal body -->

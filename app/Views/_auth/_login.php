@@ -23,13 +23,12 @@ echo view('/layout/_header.php');
               <label for="floating-input"><?=lang('Auth.email')?></label>
               </div>
 <?php else: ?>
-						<div class="form-group mb-2">
-							<label class="form-label" for="login"><?=lang('Auth.emailOrUsername')?></label>
-							<input type="text" class="form-control <?php if(session('errors.login')) : ?>is-invalid<?php endif ?>"
-								   name="login" placeholder="<?=lang('Auth.emailOrUsername')?>">
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control <?php if(session('errors.login')) : ?>is-invalid<?php endif ?>" id="floating-input" name="login" placeholder="<?=lang('Auth.emailOrUsername')?>">
 							<div class="invalid-feedback">
 								<?= session('errors.login') ?>
 							</div>
+							<label for="floating-input"><?=lang('Auth.emailOrUsername')?></label>
 						</div>
 <?php endif; ?>
 

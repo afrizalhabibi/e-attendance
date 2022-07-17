@@ -35,6 +35,8 @@
         Webcam.attach('#camImgPresensi');
 
         $('video').addClass('rounded');
+        $('#btn-datang-confirm').hide();
+        $('#btn-datang-cancel').hide();
 
     });
 
@@ -43,6 +45,8 @@
             $("#image-tag").val(data_uri);
             $('#AjaxImgPresensi').append('<img class="rounded" src="'+data_uri+'"/>');
             $('#camImgPresensi').hide();
+            $('#btn-datang-confirm').show();
+            $('#btn-datang-cancel').show();
         });
     });
 
@@ -50,6 +54,8 @@
             $("#image-tag").val('');
             $('#AjaxImgPresensi').html('');
             $('#camImgPresensi').show();
+            $('#btn-datang-confirm').hide();
+            $('#btn-datang-cancel').hide();
     });
     
     $('#confirm-absen-datang').on('hidden.bs.modal', function () {
@@ -59,7 +65,7 @@
     });
 
     // Ajax Insert Absen
-    $(document).on('click','#btn-absen-datang',function(){
+    $(document).on('click','#btn-datang-confirm',function(){
 
         var abs_id = $('#txt_abs_id').val();
         var pgw_id = $('#txt_pgw_id').val();
@@ -454,9 +460,11 @@
         // validator.checkAll();
         //serverside
         $(document).on('click','#btn-act-send',function(e){
+            
             if (validator.checkAll()) {
                 e.preventDefault();
             } else {
+                $('#btn-act-send').html('<div class="spinner-border spinner-border-sm text-white me-2" role="status"></div> Mengirim');
                 var act_tgl = $('#frm_act_tgl').val();
                 var act_qty = $('#frm_act_qty').val();
                 var act_ket = $('#frm_act_ket').val();
@@ -477,7 +485,12 @@
                         // if(response.status === 'Terkirim') {
                         //         validatorServerSide.errorTrigger($('[name=frm_act_tgl]'), response.message);
                         // }
+                        $('#btn-act-send').html('Kirim');
                         $('#modal-act-report').modal('hide');
+                        $('#frm_act_tgl').removeClass('is-valid');
+                        $('#frm_act_output').tagsinput('removeAll');
+                        actpicker.clearSelection(); 
+                        tinymce.get('frm_act_ket').setContent('');
                         $('#modal-act-report').find("input,textarea,select").val('');
                         
                         firstabsen();

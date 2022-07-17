@@ -14,3 +14,213 @@ Main connection [MySQLi]: Connection refused
 #10 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #11 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
 #12 {main}
+CRITICAL - 2022-07-16 15:36:39 --> Undefined index: hmb_id
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/app/ThirdParty/myth-auth/src/Entities/User.php(276): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/Users/habibi/D...', 276, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(42): Myth\Auth\Entities\User->gethmbID()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#7 {main}
+CRITICAL - 2022-07-16 15:37:00 --> Undefined index: homebase.hmb_id
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/app/ThirdParty/myth-auth/src/Entities/User.php(276): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/Users/habibi/D...', 276, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(42): Myth\Auth\Entities\User->gethmbID()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#7 {main}
+CRITICAL - 2022-07-16 15:37:29 --> Undefined index: hmb_id
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/app/ThirdParty/myth-auth/src/Entities/User.php(276): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/Users/habibi/D...', 276, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(42): Myth\Auth\Entities\User->gethmbID()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#7 {main}
+CRITICAL - 2022-07-16 15:37:41 --> Undefined index: pegawai.hmb_id
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/app/ThirdParty/myth-auth/src/Entities/User.php(276): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/Users/habibi/D...', 276, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(42): Myth\Auth\Entities\User->gethmbID()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#7 {main}
+CRITICAL - 2022-07-16 15:41:43 --> Undefined variable: homebase_id
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Views/_pimpinan/_hmbkehadiran.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 15, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(42): view('_pimpinan/_hmbk...')
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+ERROR - 2022-07-16 16:09:01 --> Unknown column 'pgw_id' in 'where clause'
+CRITICAL - 2022-07-16 16:09:01 --> Unknown column 'pgw_id' in 'where clause'
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT `hmb_id`...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hmb_id`...')
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hmb_id`...')
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `hmb_id`...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Models/PresensiModel.php(166): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(42): App\Models\PresensiModel->gethmbID()
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#11 {main}
+ERROR - 2022-07-16 16:09:15 --> Unknown column 'homebase.pgw_id' in 'where clause'
+CRITICAL - 2022-07-16 16:09:15 --> Unknown column 'homebase.pgw_id' in 'where clause'
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT `hmb_id`...', 0)
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `hmb_id`...')
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `hmb_id`...')
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `hmb_id`...', Array, false)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Models/PresensiModel.php(166): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(42): App\Models\PresensiModel->gethmbID()
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#11 {main}
+CRITICAL - 2022-07-16 16:11:11 --> Undefined variable: hmb_id
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Views/_pimpinan/_hmbkehadiran.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/habibi/D...', 15, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(43): view('_pimpinan/_hmbk...', Array)
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+CRITICAL - 2022-07-16 16:11:22 --> Object of class stdClass could not be converted to string
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(43): view('_pimpinan/_hmbk...', Array)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#9 {main}
+CRITICAL - 2022-07-16 16:12:11 --> Undefined property: stdClass::$hmbid
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Views/_pimpinan/_hmbkehadiran.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/Users/habibi/D...', 15, Array)
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include('/Users/habibi/D...')
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(43): view('_pimpinan/_hmbk...', Array)
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#10 {main}
+CRITICAL - 2022-07-16 16:13:37 --> Object of class stdClass could not be converted to string
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(43): view('_pimpinan/_hmbk...', Array)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#9 {main}
+CRITICAL - 2022-07-16 16:15:18 --> Object of class stdClass could not be converted to string
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(43): view('_pimpinan/_hmbk...', Array)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#9 {main}
+CRITICAL - 2022-07-16 16:15:45 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(43): view('_pimpinan/_hmbk...', Array)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#9 {main}
+CRITICAL - 2022-07-16 16:16:07 --> Object of class stdClass could not be converted to string
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(43): view('_pimpinan/_hmbk...', Array)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#9 {main}
+CRITICAL - 2022-07-16 16:17:08 --> Object of class stdClass could not be converted to string
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(43): view('_pimpinan/_hmbk...', Array)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#9 {main}
+CRITICAL - 2022-07-16 16:17:48 --> Object of class stdClass could not be converted to string
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(43): view('_pimpinan/_hmbk...', Array)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#9 {main}
+CRITICAL - 2022-07-16 16:18:46 --> Object of class stdClass could not be converted to string
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(44): view('_pimpinan/_hmbk...', Array)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#9 {main}
+CRITICAL - 2022-07-16 16:22:02 --> Object of class stdClass could not be converted to string
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(44): view('_pimpinan/_hmbk...', Array)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#9 {main}
+CRITICAL - 2022-07-16 16:22:24 --> Cannot use object of type stdClass as array
+#0 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(210): include()
+#1 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#3 /Users/habibi/Documents/Politala/ICT/e-attendance/app/Controllers/Presensi.php(44): view('_pimpinan/_hmbk...', Array)
+#4 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#5 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#6 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/habibi/Documents/Politala/ICT/e-attendance/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /Users/habibi/Documents/Politala/ICT/e-attendance/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/habibi/D...')
+#9 {main}
