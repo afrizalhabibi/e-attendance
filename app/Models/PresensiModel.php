@@ -80,6 +80,13 @@ class PresensiModel extends Model
                 ->get();
         return $result;
     }
+    public function getHomebase()
+    {
+        $result = $this->db->table('homebase')
+                ->distinct()
+                ->get();
+        return $result;
+    }
 
     public function getCountBekerja()
     {

@@ -21,7 +21,6 @@ class ActivityModel extends Model
 
     public function get_act_by_id($id) {
         $result = $this->db->table('activity')
-        ->where('pgw_id', user()->getpgwid())
         ->where('act_id', $id)
         ->get();
          

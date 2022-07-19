@@ -31,11 +31,13 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Presensi::presensi');
+
 $routes->group('', ['filter' => 'login'], function($routes){
-    // presensi pegawai
-    $routes->get('/presensi', 'Presensi::presensi');
-    $routes->get('/presensi-pegawai', 'Presensi::kehadiran');
+    $routes->get('/', 'Presensi::DoPresensi');
+
+    //presensi pegawai
+    $routes->get('/presensi', 'Presensi::DoPresensi');
+    $routes->get('/presensi-pegawai', 'Presensi::presensi_pegawai');
     $routes->get('/monitoring', 'Presensi::monitorKehadiran');
     $routes->post('/update-absendatang', 'Presensi::UpdateAbsenDatang');
     $routes->post('/update-absenpulang', 'Presensi::UpdateAbsenPulang');
@@ -56,8 +58,16 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->post('/checkavailabledate', 'Activity::docheckDate');
 
     //monitoring presensi homebase
-    $routes->get('/presensi-bidang', 'Presensi::kehadiran_bidang');
-    $routes->get('/presensibidangajax', 'Presensi::PresensiHomebase');
+    $routes->get('/presensi-homebase', 'Presensi::presensi_homebase', ['filter' => 'role:pimpinan']);
+    $routes->get('/presensihomebaseajax', 'Presensi::PresensiHomebase');
+
+    //monitoring kinerja homebase
+    $routes->get('/kinerja-homebase', 'Activity::Recordkinerjabidang', ['filter' => 'role:pimpinan']);
+    $routes->get('/recordkinerjahomebase', 'Activity::AjaxReadKinerjaHomebase');
+
+    //monitoring presensi all
+    $routes->get('/admin/presensi', 'Presensi::presensi_all', ['filter' => 'role:appadmin']);
+    $routes->get('/presensipegawaiallajax', 'Presensi::PresensiPegawaiAll');
 
     
 });

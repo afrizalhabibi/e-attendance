@@ -1,0 +1,304 @@
+CRITICAL - 2022-07-18 10:32:24 --> Undefined variable: hmbid
+#0 D:\Aplikasi\github\e-attendance\app\Views\layout\_navbar_dark.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Aplikasi\\git...', 94, Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\Aplikasi\\git...')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('/layout/_navbar...', Array, true)
+#4 D:\Aplikasi\github\e-attendance\app\Views\_user\_index.php(2): view('/layout/_navbar...')
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\Aplikasi\\git...')
+#6 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('_user/_index', Array, true)
+#8 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(24): view('_user/_index', Array)
+#9 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->Presensi()
+#10 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#11 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#14 {main}
+CRITICAL - 2022-07-18 10:40:01 --> Undefined variable: hmbid
+#0 D:\Aplikasi\github\e-attendance\app\Views\_pimpinan\_hmbkehadiran.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Aplikasi\\git...', 15, Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\Aplikasi\\git...')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('_pimpinan/_hmbk...', Array, true)
+#4 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(44): view('_pimpinan/_hmbk...', Array)
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->kehadiran_bidang()
+#6 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#10 {main}
+CRITICAL - 2022-07-18 11:23:41 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:23:58 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:24:14 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:24:26 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:25:49 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:26:28 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:26:35 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:30:09 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:30:12 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:30:44 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:30:50 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+ERROR - 2022-07-18 11:32:32 --> Error connecting to the database: Class 'SQLite3' not found
+CRITICAL - 2022-07-18 11:32:32 --> Unable to connect to the database.
+Main connection [SQLite3]: Class 'SQLite3' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '7')
+#4 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Authentication\AuthenticationBase.php(137): CodeIgniter\BaseModel->find('7')
+#5 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Authentication\LocalAuthenticator.php(70): Myth\Auth\Authentication\AuthenticationBase->isLoggedIn()
+#6 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Filters\RoleFilter.php(40): Myth\Auth\Authentication\LocalAuthenticator->check()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#8 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#9 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#12 {main}
+CRITICAL - 2022-07-18 11:32:39 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:32:53 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:33:35 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:34:36 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:34:38 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+ERROR - 2022-07-18 11:35:02 --> Error connecting to the database: Unknown database 'db_presens'
+CRITICAL - 2022-07-18 11:35:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_presens'
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '7')
+#4 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Authentication\AuthenticationBase.php(137): CodeIgniter\BaseModel->find('7')
+#5 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Authentication\LocalAuthenticator.php(70): Myth\Auth\Authentication\AuthenticationBase->isLoggedIn()
+#6 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Filters\RoleFilter.php(40): Myth\Auth\Authentication\LocalAuthenticator->check()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#8 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#9 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#12 {main}
+CRITICAL - 2022-07-18 11:35:09 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:36:46 --> tests is not a valid database connection group.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Model.php(97): CodeIgniter\Database\Config::connect('tests')
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\Factories.php(110): CodeIgniter\Model->__construct(NULL)
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(780): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#3 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Config\Services.php(27): model('Myth\\Auth\\Model...')
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(248): Myth\Auth\Config\Services::authentication('local', NULL, NULL, false)
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('authentication', Array)
+#6 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Config\Services.php(24): CodeIgniter\Config\BaseService::getSharedInstance('authentication', 'local', NULL, NULL)
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(248): Myth\Auth\Config\Services::authentication()
+#8 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(929): CodeIgniter\Config\BaseService::__callStatic('authentication', Array)
+#9 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Filters\RoleFilter.php(37): service('authentication')
+#10 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#11 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#12 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#15 {main}
+CRITICAL - 2022-07-18 11:37:15 --> default is not a valid database connection group.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Model.php(97): CodeIgniter\Database\Config::connect('default')
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\Factories.php(110): CodeIgniter\Model->__construct(NULL)
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(780): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#3 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Config\Services.php(27): model('Myth\\Auth\\Model...')
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(248): Myth\Auth\Config\Services::authentication('local', NULL, NULL, false)
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('authentication', Array)
+#6 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Config\Services.php(24): CodeIgniter\Config\BaseService::getSharedInstance('authentication', 'local', NULL, NULL)
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(248): Myth\Auth\Config\Services::authentication()
+#8 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(929): CodeIgniter\Config\BaseService::__callStatic('authentication', Array)
+#9 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Filters\RoleFilter.php(37): service('authentication')
+#10 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#11 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#12 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#15 {main}
+CRITICAL - 2022-07-18 11:37:34 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:38:28 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:41:23 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 11:56:23 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 13:47:56 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 13:49:48 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 14:03:01 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 14:03:02 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 14:03:36 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 14:03:39 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 14:03:45 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 14:03:52 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-18 14:03:58 --> Anda tidak memiliki izin yang memadai untuk mengakses halaman itu.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('presensi-bidang', 'before')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}

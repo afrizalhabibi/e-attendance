@@ -8,6 +8,7 @@
     <!-- CSS files -->
     <link href="<?php base_url()?>/assets/dist/css/tabler.min.css" rel="stylesheet"/>
     <link href="<?php base_url()?>/assets/dist/css/demo.min.css" rel="stylesheet"/>
+    <link href="<?php base_url()?>/assets/dist/css/tabler-vendors.min.css" rel="stylesheet"/>
 
     <link href="<?php base_url()?>/assets/dist/css/dataTables.bootstrap5.min.css" rel="stylesheet"/>
     <link href="<?php base_url()?>/assets/dist/css/dataTables.bootstrap5.min.css" rel="stylesheet"/>

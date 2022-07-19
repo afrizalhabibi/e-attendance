@@ -8,6 +8,17 @@ use \Hermawan\DataTables\DataTable;
 
 class Activity extends BaseController
 {
+    public function Recordkinerja() {
+        $PresensiModel = new PresensiModel();
+        $data['userdata'] = $PresensiModel->getuserdata()->getRow();
+        return view('_user/_kinerja',$data);
+    }
+
+    public function Recordkinerjabidang() {
+        $PresensiModel = new PresensiModel();
+        $data['userdata'] = $PresensiModel->getuserdata()->getRow();
+        return view('_pimpinan/_hmbkinerja',$data);
+    }
     public function AddActivity() 
     {
         helper(['form', 'url']);
@@ -61,12 +72,6 @@ class Activity extends BaseController
 
         return $this->response->setJSON($output);
     }
-    
-    public function Recordkinerja() {
-        // $PresensiModel = new PresensiModel();
-
-        return view('_user/_kinerja');
-    }
 
     public function AjaxReadKinerja() {
         $db = db_connect();
@@ -88,6 +93,31 @@ class Activity extends BaseController
         return '<div class="float-end">
         <button class="btn btn-outline-blue btn-md me-2" id="btnactdetail" data-id="'.$row->act_id.'">Detail</button>
         <button class="btn btn-outline-orange btn-md" id="btnactedit" data-id="'.$row->act_id.'">Edit</button>
+            </div>';               
+        })
+        ->toJson(true);
+    }
+    public function AjaxReadKinerjaHomebase() {
+        $PresensiModel = new PresensiModel();
+        $userdata = $PresensiModel->getuserdata()->getRow(1);
+        $db = db_connect();
+        // $id = user()->getpgwId();
+        $builder = $db->table('activity')
+                      ->select('activity.pgw_id, act_id, act_tgl, act_qty, act_ket, act_output, pegawai.nama')
+                      ->join('pegawai', 'activity.pgw_id = pegawai.pgw_id')
+                      ->where('pegawai.hmb_id', $userdata->hmb_id);
+                    
+
+        return DataTable::of($builder)
+            ->addNumbering('no') //it will return data output with numbering on first column
+               ->filter(function($builder, $request){
+                 if ($request->datemin && $request->datemax){
+                    $builder->where("act_tgl BETWEEN '$request->datemin' AND '$request->datemax'", NULL, FALSE);
+                 }
+               })
+        ->add('action', function($row){            
+        return '<div class="float-end">
+        <button class="btn btn-outline-blue btn-md me-2" id="btnactdetail" data-id="'.$row->act_id.'">Detail</button>
             </div>';               
         })
         ->toJson(true);

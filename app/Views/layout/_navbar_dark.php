@@ -1,13 +1,13 @@
 <body >
     <div class="page">
-      <header class="navbar navbar-expand-md navbar-dark d-print-none">
+      <header class="navbar navbar-expand-md navbar-light d-print-none">
         <div class="container-xl">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
             <span class="navbar-toggler-icon"></span>
           </button>
           <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
             <a href=".">
-              <img src="<?= base_url()?>/assets/static/logo-white.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+              <img src="<?= base_url()?>/assets/static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
             </a>
           </h1>
           <div class="navbar-nav flex-row order-md-last">
@@ -81,33 +81,28 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-stats" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>   <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />   <path d="M18 14v4h4" />   <circle cx="18" cy="18" r="4" />   <path d="M15 3v4" />   <path d="M7 3v4" />   <path d="M3 11h16" /> </svg>
                     </span>
                     <span class="nav-link-title">
-                      Kehadiran
+                      Presensi
                     </span>
                   </a>
                   <div class="dropdown-menu">
                     <div class="dropdown-menu-columns">
                       <div class="dropdown-menu-column">
-                        <div class="dropend">
-                          <a class="dropdown-item dropdown-toggle" href="#sidebar-cards" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
-                            Cards
-                            <span class="badge badge-sm bg-green text-uppercase ms-2">New</span>
-                          </a>
-                          <div class="dropdown-menu">
-                            <a href="./cards.html" class="dropdown-item">
-                              Sample cards
-                            </a>
-                            <a href="./card-actions.html" class="dropdown-item">
-                              Card actions
-                              <span class="badge badge-sm bg-green text-uppercase ms-2">New</span>
-                            </a>
-                            <a href="./cards-masonry.html" class="dropdown-item">
-                              Cards Masonry
-                            </a>
-                          </div>
-                        </div>
                         <a class="dropdown-item" href="<?=base_url()?>/presensi-pegawai" >
-                          Data Kehadiran
+                          Data Presensi
                         </a>
+                        <?php if(in_groups('pimpinan')) : ?>
+                        <a class="dropdown-item" href="<?=base_url()?>/presensi-homebase" >
+                        Data Presensi
+                          <?php if(isset($userdata->hmb_name)) :
+                              echo $userdata->hmb_name;
+                          endif ?>
+                        </a>
+                        <?php endif ?>
+                        <?php if(in_groups('appadmin')) : ?>
+                        <a class="dropdown-item" href="<?=base_url()?>/admin/presensi" >
+                          Presensi Seluruh Pegawai
+                        </a>
+                        <?php endif ?>
                         <a class="dropdown-item" href="<?=base_url()?>/monitoring" >
                           Monitoring
                         </a>
@@ -115,15 +110,32 @@
                     </div>
                   </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="<?=base_url()?>/kinerja" >
-                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/file-text -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18"></path> <line x1="13" y1="8" x2="15" y2="8"></line> <line x1="13" y1="12" x2="15" y2="12"></line> </svg>
                     </span>
                     <span class="nav-link-title">
-                    Laporan Kegiatan
+                      Kinerja
                     </span>
                   </a>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-menu-columns">
+                      <div class="dropdown-menu-column">
+                        <a class="dropdown-item" href="<?=base_url()?>/kinerja" >
+                          Laporan Kinerja
+                        </a>
+                        <?php if(in_groups('pimpinan')) : ?>
+                        <a class="dropdown-item" href="<?=base_url()?>/kinerja-homebase" >
+                          Laporan Kinerja
+                          <?php if(isset($userdata->hmb_name)) :
+                              echo $userdata->hmb_name;
+                          endif ?>
+                        </a>
+                        <?php endif ?>
+                      </div>
+                    </div>
+                  </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./docs/index.html" >

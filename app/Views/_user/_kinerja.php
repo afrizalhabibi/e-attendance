@@ -102,7 +102,7 @@
                   <tr>
                       <th>No.</th>
                       <th>Tanggal</th>
-                      <th>Jumlah Kegiatan</th>
+                      <th>Jumlah</th>
                       <th>Uraian</th>
                       <th>Output</th>
                       <th></th>

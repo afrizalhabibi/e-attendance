@@ -37,8 +37,6 @@
           </div>
         </div>
         <!-- Page title actions -->
-
-        
           <div class="col-auto ms-auto d-print-none">
           <div class="btn-list">
             <a href="#" class="btn btn-blue btn-transition d-none d-sm-inline-block" data-bs-toggle="modal"
@@ -55,7 +53,6 @@
             </a>
           </div>
           </div>
-          
       </div>
     </div>
   </div>
@@ -83,11 +80,11 @@
                     </svg>
                     <?php echo longdate_indo(date('Y-m-d'));?>
                   </div>
-                  <?php if(isset($dataabsen->abs_datang) && $dataabsen->abs_datang == '00:00:00' && $dataabsen->abs_tgl == date('Y-m-d') /*&& $dataabsen->abs_status != 'Hari Libur' && date('H') < 12 */)
+                  <?php if(isset($dataabsen->abs_datang) && $dataabsen->abs_datang == '00:00:00' && $dataabsen->abs_tgl == date('Y-m-d') && $dataabsen->abs_status != 'Hari Libur' && date('H') < 12)
                     {
                     ?>
                   <div class="mt-3">
-                    <a style="outline:none" id="btn-datang" table-id='<?php ?>' href="#" class="btn btn-transition btn-blue"
+                    <a style="outline:none" id="btn-datang" table-id='<?php ?>' href="#" class="btn btn-transition btn-primary"
                       data-bs-toggle="modal" data-bs-target="#confirm-absen-datang">
                       <!-- Download SVG icon from http://tabler-icons.io/i/mail -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check"
@@ -106,7 +103,7 @@
                         {
                         ?>
                   <div class="mt-3">
-                    <a style="outline:none" id="btn-pulang" href="#" class="btn btn-transition btn-blue" data-bs-toggle="modal"
+                    <a style="outline:none" id="btn-pulang" href="#" class="btn btn-transition btn-primary" data-bs-toggle="modal"
                       data-bs-target="#confirm-absen-pulang">
                       <!-- Download SVG icon from http://tabler-icons.io/i/mail -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check"
@@ -141,7 +138,7 @@
                   <circle cx="12" cy="12" r="9" />
                   <circle cx="12" cy="10" r="3" />
                   <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /> </svg>
-                <?php if(isset($userdata)) {
+                      <?php if(isset($userdata)) {
                           echo $userdata->nama;
                       } ?>
               </div>
@@ -154,7 +151,7 @@
                   <line x1="15" y1="8" x2="17" y2="8" />
                   <line x1="15" y1="12" x2="17" y2="12" />
                   <line x1="7" y1="16" x2="17" y2="16" /> </svg>
-                <?php if(isset($userdata)) {
+                      <?php if(isset($userdata)) {
                           echo $userdata->pgw_id;
                       } ?>
               </div>
@@ -218,12 +215,12 @@
                     Tanpa Keterangan
                   </div>
                 </div>
-                <div class="datagrid-item">
+                <!-- <div class="datagrid-item">
                   <div class="datagrid-title">Status Waktu Presensi</div>
                   <div class="datagrid-content" id="terlambat">
                     
                   </div>
-                </div>
+                </div> -->
                 <div class="datagrid-item">
                   <div class="datagrid-title">Kegiatan Harian</div>
                   <div class="datagrid-content" id="kegiatan">
@@ -240,9 +237,9 @@
                 <!-- <div class="datagrid-item">
                   <div class="datagrid-title">Lokasi</div>
                   <div class="datagrid-content">
-                    <div class="ratio ratio-16x9">
+                    <div class="ratio ratio-4x3 ">
                       <div>
-                        <div id="map-absen" class="w-100 h-100"></div>
+                        <div id="map-absen" class="w-100 h-100 rounded"></div>
                       </div>
                     </div>
                   </div>
@@ -277,22 +274,9 @@
       <div class="modal-body">
       <form role="form" class="validator" method="POST" id="ajaxKinerja" accept-charset="utf-8">
         <div class="row">
-          <div class="col-lg-6 form-group">
+          <div class="col-lg-6 form-group mb-3">
             <label class="form-label">Tanggal</label>
             <input type="text" autocomplete="off" class="form-control" placeholder="" name="frm_act_tgl" id="frm_act_tgl" title="" required>
-            <!-- <div class="input-icon mb-3">
-              <span class="input-icon-addon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-                  stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <rect x="4" y="5" width="16" height="16" rx="2" />
-                  <line x1="16" y1="3" x2="16" y2="7" />
-                  <line x1="8" y1="3" x2="8" y2="7" />
-                  <line x1="4" y1="11" x2="20" y2="11" />
-                  <line x1="11" y1="15" x2="12" y2="15" />
-                  <line x1="12" y1="15" x2="12" y2="18" /></svg>
-              </span>
-            </div> -->
           </div>
           <div class="col-lg-6 form-group">
             <div class="mb-3">
@@ -317,12 +301,12 @@
         </div>
         </form>
         <div class="modal-footer">
-        <button class="btn btn-outline" data-bs-dismiss="modal">
-          Batal
-        </button>
-        <button type="submit" id="btn-act-send" class="btn btn-blue ms-auto w-70">
-          Kirim
-        </button>
+        <div class="w-100">
+          <div class="row">
+            <!-- <div class="col-lg-6 col-sm-6"></div> -->
+            <div class="col-lg-12"><!--<button class="btn btn-outline me-2" data-bs-dismiss="modal">Batal</button> --> <button type="submit" id="btn-act-send" class="btn btn-lg btn-primary ms-auto w-100">Kirim Laporan</button></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -382,15 +366,8 @@
 <div class="modal modal-blur fade" id="confirm-absen-pulang" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-status bg-blue"></div>
       <div class="modal-body text-center py-4">
-        <!-- Download SVG icon from http://tabler-icons.io/i/circle-check -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-blue icon-lg" width="24" height="24"
-          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <circle cx="12" cy="12" r="9" />
-          <path d="M9 12l2 2l4 -4" /></svg>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-red icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M12 7v1"></path> <path d="M20.042 16.045a9 9 0 0 0 -12.087 -12.087m-2.318 1.677a9 9 0 1 0 12.725 12.73"></path> <path d="M3 3l18 18"></path> </svg> -->
         <h3>Presensi Pulang</h3>
         <div class="text-muted">Jam kerja normal 7:30 AM - 16:00 PM</div>
         <form id=addAbsen>
@@ -411,7 +388,7 @@
               </a>
             </div>
             <div class="col">
-              <a href="#" id="btn-absen-pulang" class="btn btn-blue w-100">
+              <a href="#" id="btn-absen-pulang" class="btn btn-red w-100">
                 Konfirmasi
               </a>
             </div>

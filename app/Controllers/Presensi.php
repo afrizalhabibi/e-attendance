@@ -13,7 +13,7 @@ class Presensi extends BaseController
         return view('_auth/_login');
     }
 
-    public function Presensi()
+    public function DoPresensi()
     {
         $PresensiModel = new PresensiModel();
         $data['dataabsen'] = $PresensiModel->getfirstAbsen()->getRow();
@@ -24,7 +24,7 @@ class Presensi extends BaseController
         return view('_user/_index', $data);
     }
 
-    public function kehadiran() {
+    public function presensi_pegawai() {
         $PresensiModel = new PresensiModel();
         $data['status'] = $PresensiModel->getStatus()->getResultArray();
         $data['userdata'] = $PresensiModel->getuserdata()->getRow();
@@ -37,16 +37,25 @@ class Presensi extends BaseController
         return view('_user/_kehadiran', $data);
     }
 
-    public function kehadiran_bidang() {
+    public function presensi_homebase() {
         $PresensiModel = new PresensiModel();
         $data['status'] = $PresensiModel->getStatus()->getResultArray();
-        $data['hmbid'] = $PresensiModel->getuserdata()->getRow(1);
+        $data['userdata'] = $PresensiModel->getuserdata()->getRow(1);
         return view('_pimpinan/_hmbkehadiran', $data);
+
+    }
+    public function presensi_all() {
+        $PresensiModel = new PresensiModel();
+        $data['status'] = $PresensiModel->getStatus()->getResultArray();
+        $data['homebase'] = $PresensiModel->getHomebase()->getResultArray();
+        $data['userdata'] = $PresensiModel->getuserdata()->getRow(1);
+        return view('_admin/_admkehadiran', $data);
 
     }
 
     public function monitorKehadiran() {
         $PresensiModel = new PresensiModel();
+        $data['userdata'] = $PresensiModel->getuserdata()->getRow();
         $data['chartStatus'] = $PresensiModel->getChartStatus()->getResultArray();
         return view('_user/_monitoring', $data);
     }
@@ -242,4 +251,40 @@ class Presensi extends BaseController
                })
                ->toJson(true);
     }
+    public function PresensiPegawaiAll() {
+        $PresensiModel = new PresensiModel();
+        $userdata = $PresensiModel->getuserdata()->getRow(1);
+        $db = db_connect();
+        
+        $builder = $db->table('absensi')
+                      ->select('absensi.pgw_id, abs_id, abs_tgl, abs_datang, abs_pulang, abs_hari, abs_status, abs_jamkerja, abs_ket, act_id, pegawai.nama, pegawai.hmb_id, homebase.hmb_name')
+                      ->join('pegawai', 'absensi.pgw_id = pegawai.pgw_id')
+                      ->join('homebase', 'pegawai.hmb_id = homebase.hmb_id');
+                      //->where('pegawai.hmb_id', $userdata->hmb_id);
+
+        return DataTable::of($builder)
+               ->addNumbering('no')
+               ->filter(function($builder, $request){
+                 if ($request->status && !$request->datemin && !$request->datemax) {
+                    $builder->where('abs_status', $request->status);
+                 }
+                 elseif ($request->homebase && !$request->status && !$request->datemin && !$request->datemax){
+                    $builder->where('homebase.hmb_id', $request->homebase);
+                 }
+                 elseif ($request->datemin && $request->datemax &&!$request->status){
+                    $builder->where("abs_tgl BETWEEN '$request->datemin' AND '$request->datemax'", NULL, FALSE);
+                 }
+                 elseif ($request->datemin && $request->datemax && $request->status && $request->homebase){
+                    $builder->where("abs_tgl BETWEEN '$request->datemin' AND '$request->datemax'");
+                    $builder->where('abs_status', $request->status);
+                    $builder->where('homebase.hmb_id', $request->homebase);
+                 }
+               })
+               ->add('action', function($row){
+                return '<button class="btn btn-outline-blue btn-md" id="btnabsdetail" data-id="'.$row->abs_id.'">Detail</button>';
+               })
+               ->toJson(true);
+    }
+
+    
 }

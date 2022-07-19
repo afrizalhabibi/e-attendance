@@ -160,26 +160,18 @@
                 jampulang = value['abs_pulang'];
                 status = value['abs_status'];
                 
-                let badgeclass = "";
+                // let badgeclass = "";
                 if(value['abs_status'] == 'Bekerja' || value['abs_status'] == 'WFH' || value['abs_status'] == 'Dinas Luar') {
                     // badgeclass = ' status-green';
                     $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <circle cx="12" cy="12" r="9"></circle><path d="M9 12l2 2l4 -4"></path></svg> '+value['abs_status']);
-                } else if (value['abs_status'] == 'Hari Libur' || value['abs_status'] == 'Tanpa Keterangan') {
+                } else if (value['abs_status'] == 'Tanpa Keterangan') {
                     // badgeclass = ' status-red';
-                    $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line></svg> '+value['abs_status']);
+                    $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-question-mark text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path> <line x1="12" y1="19" x2="12" y2="19.01"></line> </svg> '+value['abs_status']);
+                } else if (value['abs_status'] == 'Hari Libur'){
+                    $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-off text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M19.823 19.824a2 2 0 0 1 -1.823 1.176h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 1.175 -1.823m3.825 -.177h9a2 2 0 0 1 2 2v9"></path> <line x1="16" y1="3" x2="16" y2="7"></line> <line x1="8" y1="3" x2="8" y2="4"></line> <path d="M4 11h7m4 0h5"></path> <line x1="11" y1="15" x2="12" y2="15"></line> <line x1="12" y1="15" x2="12" y2="18"></line> <line x1="3" y1="3" x2="21" y2="21"></line> </svg> '+value['abs_status']);
                 } else {
                     // badgeclass = ' status-yellow';
                     $('#absenstatus').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-off text-yellow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M19.823 19.824a2 2 0 0 1 -1.823 1.176h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 1.175 -1.823m3.825 -.177h9a2 2 0 0 1 2 2v9"></path> <line x1="16" y1="3" x2="16" y2="7"></line> <line x1="8" y1="3" x2="8" y2="4"></line> <path d="M4 11h7m4 0h5"></path> <line x1="11" y1="15" x2="12" y2="15"></line> <line x1="12" y1="15" x2="12" y2="18"></line> <line x1="3" y1="3" x2="21" y2="21"></line> </svg> '+value['abs_status']);
-                }
-
-                let badgeterlambat = "";
-                let terlambat = value['abs_terlambat'];
-                if (terlambat.includes("Terlambat")) {
-                    badgeterlambat = 'status-yellow';
-                } else if(terlambat.includes("Tepat")) {
-                    badgeterlambat = 'status-green';
-                } else {
-                    badgeterlambat = 'status-red';
                 }
 
                 if(value['act_id'] != '0' && value['act_id'] != null) {
@@ -188,7 +180,7 @@
                     $('#kegiatan').html('<svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line></svg> Belum Melaporkan');
                 }
 
-                $('#terlambat').html(terlambat);
+                // $('#terlambat').html(value['abs_terlambat']);
 
 				$('#jamdatang').html(jamdatang);
                 $('#jampulang').html(jampulang);
@@ -215,7 +207,7 @@
                 }
                 
 
-                //mini map location tracker
+                // mini map location tracker
                 // mapboxgl.accessToken = 'pk.eyJ1IjoiaGFiaWJpLXBvbGl0YWxhIiwiYSI6ImNsM3h1NDI3bDAwYWMza2thZThib3NmeWcifQ.cET6J1xPv-NdkdPDPmfjsw';
                 // var absenmap = new mapboxgl.Map({
                 //     container: 'map-absen',
@@ -330,35 +322,9 @@
 
 
     //* Activity Section
-    // moment.locale('id');
-    // moment().format(); 
     var startDate = moment().add(1, 'days').format("MM/DD/YYYY");
     var today = moment().add(1825, 'days').format("MM/DD/YYYY");
     var lockDays = [startDate,today];
-    
-
-    // $(document).on('change','#frm_act_tgl',function(){
-    //     var act_tgl = $('#frm_act_tgl').val();
-    //     $.ajax({
-    //         url:'/checkavailabledate',
-    //         method:'post',
-    //         data:
-    //             {
-    //                 available_act_tgl:act_tgl
-    //             },
-    //         success:function(response){
-    //             if(response.status == 'Available') {
-    //                 console.log(response.status);
-    //             } else {
-    //                 console.log(response.status);
-    //             }
-                
-    //         },
-    //         error:function (request, error) {
-    //             // console.log('date not available');
-    //         }
-    //     }); 
-    // });
    
     let actpicker = new Litepicker({
         element: document.getElementById('frm_act_tgl'),
@@ -482,9 +448,6 @@
 
                         },
                     success:function(response){
-                        // if(response.status === 'Terkirim') {
-                        //         validatorServerSide.errorTrigger($('[name=frm_act_tgl]'), response.message);
-                        // }
                         $('#btn-act-send').html('Kirim');
                         $('#modal-act-report').modal('hide');
                         $('#frm_act_tgl').removeClass('is-valid');

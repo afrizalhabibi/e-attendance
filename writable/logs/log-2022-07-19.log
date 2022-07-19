@@ -1,0 +1,394 @@
+ERROR - 2022-07-19 12:01:59 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 12:01:59 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(280): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 13:55:06 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 13:55:06 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(280): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 13:56:40 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 13:56:40 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(280): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:00:50 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:00:50 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(280): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:01:55 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:01:55 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(280): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:02:24 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:02:24 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:03:10 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:03:10 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->Presensiall()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:03:18 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:03:18 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->Presensiall()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:04:22 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:04:22 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->Presensiall()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:06:57 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:06:57 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:08:08 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:08:08 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:08:43 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:08:43 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:12:09 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:12:09 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:12:40 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:12:40 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:14:10 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:14:10 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:18:23 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:18:23 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:21:43 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:21:43 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAllPegawai()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:22:58 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:22:58 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAllPegawai()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:23:51 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:23:51 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAllPegawai()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:24:04 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:24:04 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAllPegawai()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:25:23 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:25:23 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAllPegawai()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:27:23 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:27:23 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(282): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAllPegawai()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:31:52 --> Unknown column 'homebase.nama' in 'field list'
+CRITICAL - 2022-07-19 14:31:52 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(282): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiAllPegawai()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:34:56 --> Unknown column 'homebase.hmb_nama' in 'field list'
+CRITICAL - 2022-07-19 14:34:56 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiPegawaiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:35:31 --> Unknown column 'homebase.hmb_nama' in 'field list'
+CRITICAL - 2022-07-19 14:35:31 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiPegawaiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:37:08 --> Unknown column 'pegawai.hmb_name' in 'field list'
+CRITICAL - 2022-07-19 14:37:08 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiPegawaiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:37:40 --> Unknown column 'pegawai.hmb_name' in 'field list'
+CRITICAL - 2022-07-19 14:37:40 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiPegawaiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+ERROR - 2022-07-19 14:37:48 --> Unknown column 'pegawai.hmb_name' in 'field list'
+CRITICAL - 2022-07-19 14:37:48 --> Call to a member function getResult() on bool
+#0 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#1 D:\Aplikasi\github\e-attendance\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(173): Hermawan\DataTables\DataTableQuery->getDataResult()
+#2 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(281): Hermawan\DataTables\DataTable->toJson(true)
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->PresensiPegawaiAll()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#8 {main}
+CRITICAL - 2022-07-19 14:51:46 --> Invalid argument supplied for foreach()
+#0 D:\Aplikasi\github\e-attendance\app\Views\_admin\_admkehadiran.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'D:\\Aplikasi\\git...', 73, Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\Aplikasi\\git...')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('_admin/_admkeha...', Array, true)
+#4 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(52): view('_admin/_admkeha...', Array)
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->presensi_all()
+#6 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#10 {main}
+CRITICAL - 2022-07-19 14:52:08 --> tests is not a valid database connection group.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Model.php(97): CodeIgniter\Database\Config::connect('tests')
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\Factories.php(110): CodeIgniter\Model->__construct(NULL)
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(780): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#3 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Config\Services.php(27): model('Myth\\Auth\\Model...')
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(248): Myth\Auth\Config\Services::authentication('local', NULL, NULL, false)
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('authentication', Array)
+#6 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Config\Services.php(24): CodeIgniter\Config\BaseService::getSharedInstance('authentication', 'local', NULL, NULL)
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(248): Myth\Auth\Config\Services::authentication()
+#8 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(929): CodeIgniter\Config\BaseService::__callStatic('authentication', Array)
+#9 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Filters\RoleFilter.php(37): service('authentication')
+#10 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#11 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('admin/presensi', 'before')
+#12 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#15 {main}
+CRITICAL - 2022-07-19 14:52:47 --> tests is not a valid database connection group.
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Model.php(97): CodeIgniter\Database\Config::connect('tests')
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\Factories.php(110): CodeIgniter\Model->__construct(NULL)
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(780): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#3 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Config\Services.php(27): model('Myth\\Auth\\Model...')
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(248): Myth\Auth\Config\Services::authentication('local', NULL, NULL, false)
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('authentication', Array)
+#6 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Config\Services.php(24): CodeIgniter\Config\BaseService::getSharedInstance('authentication', 'local', NULL, NULL)
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Config\BaseService.php(248): Myth\Auth\Config\Services::authentication()
+#8 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(929): CodeIgniter\Config\BaseService::__callStatic('authentication', Array)
+#9 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Filters\RoleFilter.php(37): service('authentication')
+#10 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#11 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('admin/presensi', 'before')
+#12 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#15 {main}
+ERROR - 2022-07-19 14:53:15 --> Error connecting to the database: Class 'SQLite3' not found
+CRITICAL - 2022-07-19 14:53:15 --> Unable to connect to the database.
+Main connection [SQLite3]: Class 'SQLite3' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '5')
+#4 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Authentication\AuthenticationBase.php(137): CodeIgniter\BaseModel->find('5')
+#5 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Authentication\LocalAuthenticator.php(70): Myth\Auth\Authentication\AuthenticationBase->isLoggedIn()
+#6 D:\Aplikasi\github\e-attendance\app\ThirdParty\myth-auth\src\Filters\RoleFilter.php(40): Myth\Auth\Authentication\LocalAuthenticator->check()
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Filters\Filters.php(173): Myth\Auth\Filters\RoleFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), Array)
+#8 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->run('admin/presensi', 'before')
+#9 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#12 {main}
+CRITICAL - 2022-07-19 14:53:38 --> Undefined variable: homebase
+#0 D:\Aplikasi\github\e-attendance\app\Views\_admin\_admkehadiran.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Aplikasi\\git...', 73, Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\Aplikasi\\git...')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('_admin/_admkeha...', Array, true)
+#4 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(52): view('_admin/_admkeha...', Array)
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->presensi_all()
+#6 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#10 {main}
+CRITICAL - 2022-07-19 14:54:05 --> Undefined variable: st
+#0 D:\Aplikasi\github\e-attendance\app\Views\_admin\_admkehadiran.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Aplikasi\\git...', 74, Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\Aplikasi\\git...')
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('_admin/_admkeha...', Array, true)
+#4 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(52): view('_admin/_admkeha...', Array)
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->presensi_all()
+#6 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#10 {main}

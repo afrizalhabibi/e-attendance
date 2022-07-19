@@ -12,7 +12,7 @@
           Record
         </div>
         <h2 class="page-title">
-          Data Kehadiran
+          Data Presensi
         </h2>
       </div>
       <!-- Page title actions -->
@@ -241,7 +241,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Detail Kehadiran</h5>
+            <h5 class="modal-title">Detail Presensi</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -275,9 +275,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Status</div>
-              <span id="absenstatus" class="status ">
-                -
-              </span>
+                <div id="absenstatus"></div>
             </div>
             <div class="col-md-4 col-sm-6">
               <div class="subheader mb-2">Kegiatan Harian</div>
