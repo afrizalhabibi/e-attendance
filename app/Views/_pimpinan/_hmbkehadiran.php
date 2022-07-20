@@ -114,6 +114,8 @@
                       <th>No.</th>
                       <th>Tanggal</th>
                       <th>Nama</th>
+                      <th>Jabatan</th>
+                      <th>Status Pegawai</th>
                       <th>Jam Datang</th>
                       <th>Jam Pulang</th>
                       <th>Total Jam Kerja</th>

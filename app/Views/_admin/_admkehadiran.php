@@ -32,7 +32,7 @@
                 </div>
                 <div class="col">
                   <div class="row">
-                    <div class="col">
+                    <div class="col mb-2">
                       <button class="btn float-end" id="_exportXLS">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -43,7 +43,7 @@
                         Download XLS
                       </button>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                     <div class="input-icon mb-3">
                       <input type="text" value="" class="form-control" id="newSearch" placeholder="Cari…">
                       <span class="input-icon-addon">
@@ -65,7 +65,7 @@
  
             <div class="col-md-3">
               <div class="input-icon mb-3">
-                <input class="form-control" placeholder="Pilih tanggal"  id="date-val" value=""/>
+                <input class="form-control" placeholder="Pilih tanggal"  id="date-val" value="" autocomplete="off"/>
                 <span class="input-icon-addon">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="4" y="5" width="16" height="16" rx="2" /><line x1="16" y1="3" x2="16" y2="7" /><line x1="8" y1="3" x2="8" y2="7" /><line x1="4" y1="11" x2="20" y2="11" /><line x1="11" y1="15" x2="12" y2="15" /><line x1="12" y1="15" x2="12" y2="18" /></svg>
                 </span>
@@ -132,6 +132,8 @@
                       <th>Tanggal</th>
                       <th>Nama</th>
                       <th>Homebase</th>
+                      <th>Jabatan</th>
+                      <th>Status Pegawai</th>
                       <th>Jam Datang</th>
                       <th>Jam Pulang</th>
                       <th>Total Jam Kerja</th>
@@ -217,6 +219,89 @@
           </div> <!--end modal body -->
           <div class="modal-footer">
             <button type="button" class="btn me-auto" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-blur fade" id="modal-absedit" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Presensi Pegawai</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          <form role="form" class="validator-edit" method="POST" id="ajaxPresensi" accept-charset="utf-8">
+            <div class="row">
+            <input id="frm_abs_id" type="hidden" value="">
+              <div class="col-lg-4 form-group">
+                <label class="form-label">Tanggal</label>
+                <div class="input-icon mb-3">
+                  <span class="input-icon-addon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                      stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <rect x="4" y="5" width="16" height="16" rx="2" />
+                      <line x1="16" y1="3" x2="16" y2="7" />
+                      <line x1="8" y1="3" x2="8" y2="7" />
+                      <line x1="4" y1="11" x2="20" y2="11" />
+                      <line x1="11" y1="15" x2="12" y2="15" />
+                      <line x1="12" y1="15" x2="12" y2="18" /></svg>
+                  </span>
+                  <input type="text" readonly autocomplete="off" class="form-control" placeholder="" id="frm_abs_tgl" title=" " value="" required>
+                </div>
+              </div>
+              <div class="col-lg-8 form-group">
+                <div class="mb-3">
+                  <label class="form-label">Nama</label>
+                  <input id="frm_abs_nama" type="text" readonly title=" " class="form-control" required>
+                </div>
+              </div>
+              <div class="col-lg-4 form-group">
+                <div class="mb-3">
+                  <label class="form-label">NIP/NIK</label>
+                  <input type="text" readonly id="frm_abs_pgwid" name="frm_abs_pgwid" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-lg-4 form-group">
+                <div class="mb-3">
+                  <label class="form-label">Jam Datang</label>
+                  <input type="time" step="1" id="frm_abs_jamdatang" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-lg-4 form-group">
+                <div class="mb-3">
+                  <label class="form-label">Jam Pulang</label>
+                  <input type="time" step="1" id="frm_abs_jampulang" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-lg-4 form-group">
+                <div class="mb-3">
+                <label class="form-label">Status Presensi</label>
+                  <select id="frm_abs_status" class="form-select">
+                    <option value="Cuti">Cuti</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Bekerja">Bekerja</option>
+                    <option value="Dinas Luar">Dinas Luar</option>
+                    <option value="Tanpa Keterangan">Tanpa Keterangan</option>
+                    <option value="Hari Libur">Hari Libur</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-8 form-group">
+                <div class="mb-3">
+                <label class="form-label">Keterangan</label>
+                  <textarea id="frm_abs_ket" class="form-control" required></textarea>
+                </div>
+              </div>
+              </div>
+            </div>
+            </form>
+            <div class="modal-footer">
+            <button type="submit" id="btn-absedit-send" class="btn btn-blue ms-auto w-100">
+                Kirim
+            </button>
           </div>
         </div>
       </div>

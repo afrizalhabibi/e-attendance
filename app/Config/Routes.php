@@ -54,7 +54,7 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/kinerja', 'Activity::Recordkinerja');
     $routes->get('/recordkinerja', 'Activity::AjaxReadKinerja');
     $routes->get('/actdetails/(:any)', 'Activity::ActDetails/$1');
-    $routes->post('/editkinerja', 'Activity::EdtActivity');
+    $routes->post('/doupdatekinerja', 'Activity::EdtActivity');
     $routes->post('/checkavailabledate', 'Activity::docheckDate');
 
     //monitoring presensi homebase
@@ -66,8 +66,10 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/recordkinerjahomebase', 'Activity::AjaxReadKinerjaHomebase');
 
     //monitoring presensi all
-    $routes->get('/admin/presensi', 'Presensi::presensi_all', ['filter' => 'role:appadmin']);
+    $routes->get('/admin/presensiall', 'Presensi::presensi_all', ['filter' => 'role:appadmin']);
     $routes->get('/presensipegawaiallajax', 'Presensi::PresensiPegawaiAll');
+    $routes->post('/admin/doupdatepresensi', 'Presensi::EdtPresensi');
+
 
     
 });

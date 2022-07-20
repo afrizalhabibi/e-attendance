@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Models\PresensiModel;
 use \Hermawan\DataTables\DataTable;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Presensi extends BaseController
 {
@@ -16,6 +18,7 @@ class Presensi extends BaseController
     public function DoPresensi()
     {
         $PresensiModel = new PresensiModel();
+        $data['title'] = 'Halaman Presensi';
         $data['dataabsen'] = $PresensiModel->getfirstAbsen()->getRow();
         $data['userdata'] = $PresensiModel->getuserdata()->getRow();
         $data['chartStatus'] = $PresensiModel->getChartStatus()->getResultArray();
@@ -26,6 +29,7 @@ class Presensi extends BaseController
 
     public function presensi_pegawai() {
         $PresensiModel = new PresensiModel();
+        $data['title'] = 'Presensi Pegawai';
         $data['status'] = $PresensiModel->getStatus()->getResultArray();
         $data['userdata'] = $PresensiModel->getuserdata()->getRow();
         $data['countbekerja'] = $PresensiModel->getCountBekerja();
@@ -39,6 +43,7 @@ class Presensi extends BaseController
 
     public function presensi_homebase() {
         $PresensiModel = new PresensiModel();
+        $data['title'] = 'Per Homebase';
         $data['status'] = $PresensiModel->getStatus()->getResultArray();
         $data['userdata'] = $PresensiModel->getuserdata()->getRow(1);
         return view('_pimpinan/_hmbkehadiran', $data);
@@ -46,6 +51,7 @@ class Presensi extends BaseController
     }
     public function presensi_all() {
         $PresensiModel = new PresensiModel();
+        $data['title'] = 'Semua Pegawai';
         $data['status'] = $PresensiModel->getStatus()->getResultArray();
         $data['homebase'] = $PresensiModel->getHomebase()->getResultArray();
         $data['userdata'] = $PresensiModel->getuserdata()->getRow(1);
@@ -159,6 +165,26 @@ class Presensi extends BaseController
         return $this->response->setJSON($output);
     }
 
+    public function EdtPresensi() 
+    {
+        helper(['form', 'url']);
+        $db = db_connect();
+        $PresensiModel = new PresensiModel();
+        $id =  $this->request->getPost("presensi_abs_id");
+        $data = [
+            'abs_datang' => $this->request->getPost("presensi_abs_datang"),
+            'abs_pulang' => $this->request->getPost("presensi_abs_pulang"),
+            'abs_status' => $this->request->getPost("presensi_abs_status"),
+            'abs_ket'    => $this->request->getPost("presensi_abs_ket"),
+        ];
+
+        $PresensiModel->update($id, $data);
+
+        $output = array('status' => 'Terkirim', 'data' => $data);
+
+        return $this->response->setJSON($output);
+    }
+
     public function ReadAbsen() {
         $PresensiModel = new PresensiModel();
         $data['allabsen'] = $PresensiModel->getAbsen();
@@ -228,7 +254,7 @@ class Presensi extends BaseController
         $db = db_connect();
         
         $builder = $db->table('absensi')
-                      ->select('absensi.pgw_id, abs_id, abs_tgl, abs_datang, abs_pulang, abs_hari, abs_status, abs_jamkerja, abs_ket, act_id, pegawai.nama')
+                      ->select('absensi.pgw_id, abs_id, abs_tgl, abs_datang, abs_pulang, abs_hari, abs_status, abs_jamkerja, abs_ket, act_id, pegawai.nama, pegawai.status_peg')
                       ->join('pegawai', 'absensi.pgw_id = pegawai.pgw_id')
                       ->where('pegawai.hmb_id', $userdata->hmb_id);
 
@@ -257,7 +283,7 @@ class Presensi extends BaseController
         $db = db_connect();
         
         $builder = $db->table('absensi')
-                      ->select('absensi.pgw_id, abs_id, abs_tgl, abs_datang, abs_pulang, abs_hari, abs_status, abs_jamkerja, abs_ket, act_id, pegawai.nama, pegawai.hmb_id, homebase.hmb_name')
+                      ->select('absensi.pgw_id, abs_id, abs_tgl, abs_datang, abs_pulang, abs_hari, abs_status, abs_jamkerja, abs_ket, act_id, pegawai.nama, pegawai.hmb_id, homebase.hmb_name, pegawai.jabatan, pegawai.status_peg')
                       ->join('pegawai', 'absensi.pgw_id = pegawai.pgw_id')
                       ->join('homebase', 'pegawai.hmb_id = homebase.hmb_id');
                       //->where('pegawai.hmb_id', $userdata->hmb_id);
@@ -265,14 +291,26 @@ class Presensi extends BaseController
         return DataTable::of($builder)
                ->addNumbering('no')
                ->filter(function($builder, $request){
-                 if ($request->status && !$request->datemin && !$request->datemax) {
+                 if ($request->status && !$request->datemin && !$request->datemax && !$request->homebase) {
                     $builder->where('abs_status', $request->status);
                  }
                  elseif ($request->homebase && !$request->status && !$request->datemin && !$request->datemax){
                     $builder->where('homebase.hmb_id', $request->homebase);
                  }
-                 elseif ($request->datemin && $request->datemax &&!$request->status){
+                 elseif ($request->datemin && $request->datemax &&!$request->status && !$request->homebase){
                     $builder->where("abs_tgl BETWEEN '$request->datemin' AND '$request->datemax'", NULL, FALSE);
+                 }
+                 elseif($request->datemin && $request->datemax &&!$request->status && $request->homebase) {
+                    $builder->where("abs_tgl BETWEEN '$request->datemin' AND '$request->datemax'");
+                    $builder->where('homebase.hmb_id', $request->homebase);
+                 }
+                 elseif($request->datemin && $request->datemax &&$request->status && !$request->homebase) {
+                    $builder->where("abs_tgl BETWEEN '$request->datemin' AND '$request->datemax'");
+                    $builder->where('abs_status', $request->status);
+                 }
+                 elseif(!$request->datemin && !$request->datemax &&$request->status && $request->homebase) {
+                    $builder->where('homebase.hmb_id', $request->homebase);
+                    $builder->where('abs_status', $request->status);
                  }
                  elseif ($request->datemin && $request->datemax && $request->status && $request->homebase){
                     $builder->where("abs_tgl BETWEEN '$request->datemin' AND '$request->datemax'");
@@ -281,9 +319,45 @@ class Presensi extends BaseController
                  }
                })
                ->add('action', function($row){
-                return '<button class="btn btn-outline-blue btn-md" id="btnabsdetail" data-id="'.$row->abs_id.'">Detail</button>';
+                return '<div class="float-end"><button class="btn btn-outline-blue btn-md me-2" id="btnabsdetail" data-id="'.$row->abs_id.'">Detail</button>
+                <button class="btn btn-outline-orange btn-md" id="btnabsedit" data-id="'.$row->abs_id.'">Edit</button></div>';
                })
                ->toJson(true);
+    }
+
+    public function monthlyReport()
+    {
+        $PresensiModel = new PresensiModel();
+        $spreadsheet = new Spreadsheet();
+        $sheet = $spreadsheet->getActiveSheet();
+
+        $sheet->setCellValue('A1', 'No');
+        $sheet->setCellValue('B1', 'NIP/NIK');
+        $sheet->setCellValue('C1', 'Status Kepegawaian');
+        $sheet->setCellValue('D1', 'Nama');
+
+        $prsreport = $PresensiModel->getPresensiReport()->getResult();
+        // d($prsreport);
+        $no = 1;
+        $x = 2;
+        foreach($prsreport as $row)
+        {
+            $sheet->setCellValue('A'.$x, $no++);
+            $sheet->setCellValue('B'.$x, $row->pgw_id);
+            $sheet->setCellValue('C'.$x, $row->status_peg);
+            $sheet->setCellValue('D'.$x, $row->nama);
+            $x++;
+        
+        }
+        $writer = new Xlsx($spreadsheet);
+        $filename = 'Laporan-presensi-bulanan';
+
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename='. $filename .'.xlsx'); 
+        header('Cache-Control: max-age=0');
+
+        $writer->save('php://output');
+
     }
 
     

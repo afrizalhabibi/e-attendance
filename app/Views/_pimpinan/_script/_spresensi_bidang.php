@@ -33,6 +33,7 @@ $(document).ready(function() {
                     return '<div class="d-flex align-items-center"><span class="avatar avatar-sm me-2 avatar-rounded" style="background-image: url(/assets/static/avatars/avatar-14.png)"></span> ' + row.nama + '</div>'
                 }
             },
+            {data: 'status_peg'},
             {data: 'abs_datang', orderable:false},
             {data: 'abs_pulang', orderable:false},
             {data: 'abs_jamkerja', orderable:false,

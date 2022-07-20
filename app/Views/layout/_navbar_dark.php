@@ -99,7 +99,7 @@
                         </a>
                         <?php endif ?>
                         <?php if(in_groups('appadmin')) : ?>
-                        <a class="dropdown-item" href="<?=base_url()?>/admin/presensi" >
+                        <a class="dropdown-item" href="<?=base_url()?>/admin/presensiall" >
                           Presensi Seluruh Pegawai
                         </a>
                         <?php endif ?>

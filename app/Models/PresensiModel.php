@@ -15,14 +15,13 @@ class PresensiModel extends Model
     protected $allowedFields = ['abs_id','act_id','pgw_id','abs_datang','abs_pulang','abs_status','abs_hari','abs_jamkerja','abs_long','abs_lat','abs_ket','abs_terlambat','abs_img'];
 
 
-    public function getAbsen() 
+    public function getPresensiReport() 
     {
         return $this->db->table('absensi')
         ->join('pegawai', 'absensi.pgw_id = pegawai.pgw_id')
-        ->where('absensi.pgw_id',user()->getpgwId())
-        ->orderBy('abs_tgl','desc')
-        ->limit(10)
-        ->get()->getResultArray();
+        ->join('homebase', 'pegawai.hmb_id = homebase.hmb_id')
+        ->orderBy('abs_tgl','asc')
+        ->get();
     }
 
     public function getfirstAbsen()

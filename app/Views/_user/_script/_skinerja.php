@@ -171,7 +171,7 @@ $(document).ready(function() {
                 alert('Error get data from ajax');
             }
         });
-});
+    });
 
         // edit
 
@@ -187,7 +187,7 @@ $(document).ready(function() {
                 console.log(act_id);
 
                 $.ajax({
-                    url:'/editkinerja',
+                    url:'/doupdatekinerja',
                     method:'post',
                     data:
                         {

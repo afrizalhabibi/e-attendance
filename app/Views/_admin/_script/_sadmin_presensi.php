@@ -1,5 +1,11 @@
 <script type="text/javascript"> 
 $(document).ready(function() {
+    // let validator = $('form.validator-edit').jbvalidator({
+    //         errorMessage: true,
+    //         successClass: false,
+    //         language: "/assets/dist/libs/jbvalidator/lang/en.json",
+    // });
+
     table_absen = $('#tb_kehadiran').DataTable({
         processing: true,
         serverSide: true,
@@ -35,6 +41,8 @@ $(document).ready(function() {
                 }
             },
             {data: 'hmb_name'},
+            {data: 'jabatan'},
+            {data: 'status_peg'},
             {data: 'abs_datang', orderable:false},
             {data: 'abs_pulang', orderable:false},
             {data: 'abs_jamkerja', orderable:false,
@@ -136,7 +144,87 @@ $(document).ready(function() {
             }
         });
     });
+    
     // edit
+    $(document).on('click','#btnabsedit',function(){ 
+       
+        let id = $(this).attr('data-id');
+        
+        $.ajax({
+            url : "/abs-details/" + id,
+            type: "GET",
+            dataType: "JSON",
+            success: function(data)
+            {
+                
+                $('#frm_abs_id').val(data.abs_id);
+                $('#frm_abs_tgl').val(data.abs_tgl);
+                $('#frm_abs_nama').val(data.nama);
+                $('#frm_abs_pgwid').val(data.pgw_id);
+                $('#frm_abs_jamdatang').val(data.abs_datang);
+                $('#frm_abs_jampulang').val(data.abs_pulang);
+                $('#frm_abs_status').val(data.abs_status);
+                $('#frm_abs_ket').val(data.abs_ket);
+                
+                
+                $('#modal-absedit').modal('show');
+                
+                $('.modal-title').text('Edit Presensi Pegawai');
+    
+            },
+            error: function (jqXHR, textStatus, errorThrown)
+            {
+                console.log(jqXHR);
+                alert('Error get data from ajax');
+            }
+        });
+    });
+
+    $(document).on('click','#btn-absedit-send',function(e){
+
+        var abs_id = $('#frm_abs_id').val();
+        var abs_datang = $('#frm_abs_jamdatang').val();
+        var abs_pulang = $('#frm_abs_jampulang').val();
+        var abs_status = $('#frm_abs_status').val();
+        var abs_ket = $('#frm_abs_ket').val();
+
+
+        $.ajax({
+            url:'/admin/doupdatepresensi',
+            method:'post',
+            data:
+                {
+                    presensi_abs_id:abs_id,
+                    presensi_abs_datang:abs_datang,
+                    presensi_abs_pulang:abs_pulang,
+                    presensi_abs_status:abs_status,
+                    presensi_abs_ket:abs_ket,
+
+
+                },
+            success:function(response){
+                $('#modal-absedit').modal('hide');
+                $('#modal-absedit').find("input,textarea,select").val('');
+                
+                table_absen.ajax.reload();     
+
+                Swal.fire(
+                    'Berhasil',
+                    'Presensi berhasil diedit',
+                    'success'
+                )
+            },
+            error:function (request, error) {
+                Swal.fire(
+                    'Gagal',
+                    'Presensi gagal diedit',
+                    'error'
+                )
+            }
+        }); 
+    });
+
+
     $('.dt-buttons').hide();
     $("#_exportXLS").click(function(event) {
         $(".buttons-excel").trigger("click");
@@ -149,13 +237,13 @@ $(document).ready(function() {
     });
     $('#btnreset').click(function(event) {
         $('#filterStatus').val("");
-        
         picker.clearSelection(); 
-        table_absen.ajax.reload();
+        el.clear();
         if($('#newSearch').val() != "") {
             $('#newSearch').val("");
             table_absen.search($(this).val()).draw();
         }
+        table_absen.ajax.reload();
     });
 });
 </script>
@@ -191,7 +279,7 @@ $(document).ready(function() {
     });
 
 
-    let el = new TomSelect(document.getElementById('filterHomebase'), {
+    let el = new TomSelect("#filterHomebase", {
     		copyClassesToDropdown: false,
     		dropdownClass: 'dropdown-menu',
     		optionClass:'dropdown-item',
@@ -210,6 +298,6 @@ $(document).ready(function() {
     				return '<div>' + escape(data.text) + '</div>';
     			},
     		},
-    	}));
+    	});
 </script>
 
