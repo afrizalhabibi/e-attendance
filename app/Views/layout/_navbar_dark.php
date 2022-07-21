@@ -7,7 +7,7 @@
           </button>
           <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
             <a href=".">
-              <img src="<?= base_url()?>/assets/static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+              <img src="/assets/static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
             </a>
           </h1>
           <div class="navbar-nav flex-row order-md-last">
@@ -48,6 +48,7 @@
                   </div>
                 </div>
               </a>
+              
               <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                 <a href="#" class="dropdown-item">Set status</a>
                 <a href="#" class="dropdown-item">Profile & account</a>

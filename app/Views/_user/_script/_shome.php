@@ -70,8 +70,8 @@
         var abs_id = $('#txt_abs_id').val();
         var pgw_id = $('#txt_pgw_id').val();
         var abs_datang =  $('#txt_abs_datang').val();
-        var abs_long =  '114.7666395';
-        var abs_lat = '-3.7533148';
+        var abs_long =  null;
+        var abs_lat = null;
         var abs_status = 0;
         var abs_img = $('#image-tag').val();
         $.ajax({
@@ -252,7 +252,7 @@
     {
     
 	$.ajax({
-		url:'<?= site_url('chartstatus') ?>',
+		url:'<?= site_url('chartstatusperbulan') ?>',
 		method:'get',
 		success:function(response){
             var nama_status = [];

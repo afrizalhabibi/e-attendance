@@ -20,7 +20,17 @@ class PresensiModel extends Model
         return $this->db->table('absensi')
         ->join('pegawai', 'absensi.pgw_id = pegawai.pgw_id')
         ->join('homebase', 'pegawai.hmb_id = homebase.hmb_id')
+        ->like('abs_tgl', date('Y-m'))
+        ->groupBy('nama','asc')
         ->orderBy('abs_tgl','asc')
+        ->get();
+    }
+    public function getPegawaiforreport() 
+    {
+        return $this->db->table('pegawai')
+        ->join('homebase', 'pegawai.hmb_id = homebase.hmb_id')
+        ->orderBy('nama','asc')
+        ->distinct()
         ->get();
     }
 
@@ -149,8 +159,19 @@ class PresensiModel extends Model
                 ->get();
         return $result;
     }
+    public function getChartStatusTahun()
+    {
+        $result = $this->db->table('absensi')
+                ->select('abs_status')
+                ->select("count(*) AS total")
+                ->where('pgw_id', user()->getpgwId())
+                ->like('abs_tgl',date('Y'))
+                ->groupBy('abs_status')
+                ->get();
+        return $result;
+    }
 
-    public function getChartJamKerja()
+    public function getChartJamKerjaBulan()
     {
         $result = $this->db->table('absensi')
                 ->select('abs_jamkerja, abs_tgl')

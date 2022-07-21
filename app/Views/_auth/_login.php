@@ -52,7 +52,7 @@ echo view('/layout/_header.php');
 <?php endif; ?>
 
             <div class="form-footer">
-              <button type="submit" class="btn btn-blue w-100"><?=lang('Auth.loginAction')?></button>
+              <button type="submit" class="btn btn-primary w-100"><?=lang('Auth.loginAction')?></button>
             </div>
           </div>
          

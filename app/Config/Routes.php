@@ -36,6 +36,7 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/', 'Presensi::DoPresensi');
 
     //presensi pegawai
+    // $routes->get('/login', 'Presensi::Index');
     $routes->get('/presensi', 'Presensi::DoPresensi');
     $routes->get('/presensi-pegawai', 'Presensi::presensi_pegawai');
     $routes->get('/monitoring', 'Presensi::monitorKehadiran');
@@ -44,8 +45,9 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/fetch-absen', 'Presensi::ReadAbsen');
     $routes->get('/ajax-readabsen', 'Presensi::AjaxReadAbsen');
     $routes->get('/fetch-firstabsen', 'Presensi::Readfirstabsen');
-    $routes->get('/chartstatus', 'Presensi::Ajaxchartstatus');
-    $routes->get('/chartjamkerja', 'Presensi::Ajaxchartjamkerja');
+    $routes->get('/chartstatusperbulan', 'Presensi::Ajaxchartstatus');
+    $routes->get('/chartstatuspertahun', 'Presensi::AjaxchartstatusPertahun');
+    $routes->get('/chartjamkerjaperbulan', 'Presensi::Ajaxchartjamkerja');
     $routes->get('/batch-row', 'Presensi::BatchRow');
     $routes->get('/abs-details/(:any)', 'Presensi::AbsDetails/$1');
 
@@ -56,6 +58,7 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/actdetails/(:any)', 'Activity::ActDetails/$1');
     $routes->post('/doupdatekinerja', 'Activity::EdtActivity');
     $routes->post('/checkavailabledate', 'Activity::docheckDate');
+    $routes->get('/chartkinerjaperbulan', 'Activity::Ajaxchartkinerja');
 
     //monitoring presensi homebase
     $routes->get('/presensi-homebase', 'Presensi::presensi_homebase', ['filter' => 'role:pimpinan']);

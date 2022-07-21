@@ -76,3 +76,113 @@ CRITICAL - 2022-07-20 15:38:03 --> Undefined property: mysqli::$pgw_id
 #4 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
 #6 {main}
+CRITICAL - 2022-07-20 15:50:44 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 15:50:45 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 15:51:02 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 15:51:03 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 15:51:09 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 15:53:40 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 15:53:40 --> Uncaught ErrorException: Cannot modify header information - headers already sent in D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Aplikasi\\git...', 112, Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-20 15:54:00 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 15:54:00 --> Uncaught ErrorException: Cannot modify header information - headers already sent in D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Debug\Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\Aplikasi\\git...', 112, Array)
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Debug\Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-20 15:54:28 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 15:54:31 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 15:56:40 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 15:56:46 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 16:16:49 --> Class 'App\Controllers\IOFactory' not found
+#0 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#5 {main}
+CRITICAL - 2022-07-20 16:31:22 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::distinc()
+#0 D:\Aplikasi\github\e-attendance\app\Controllers\Presensi.php(340): App\Models\PresensiModel->getPresensiReport()
+#1 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Presensi->monthlyReport()
+#2 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#3 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Aplikasi\github\e-attendance\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Aplikasi\github\e-attendance\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\Aplikasi\\git...')
+#6 {main}

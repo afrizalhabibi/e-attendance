@@ -43,5 +43,18 @@ class ActivityModel extends Model
       }
     }
 
+    public function getChartKinerjaBulan()
+    {
+        $result = $this->db->table('activity')
+                ->select('act_qty, act_tgl')
+                ->where('pgw_id', user()->getpgwId())
+                // ->notLike('abs_jamkerja', '%-')
+                ->like('act_tgl',date('Y-m'))
+                ->orderBy('act_tgl', 'asc')
+                ->groupBy('act_tgl')
+                ->get();
+        return $result;
+    }
+
 }
 ?>

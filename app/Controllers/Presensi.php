@@ -12,7 +12,9 @@ class Presensi extends BaseController
     
     public function index()
     {
-        return view('_auth/_login');
+        $data['title'] = 'Login';
+        d($data);
+        return view('_auth/_login', $data);
     }
 
     public function DoPresensi()
@@ -242,9 +244,14 @@ class Presensi extends BaseController
         $data['chartstatus'] = $PresensiModel->getChartStatus()->getResult();
         return $this->response->setJSON($data);
     }
+    public function AjaxchartstatusPertahun() {
+        $PresensiModel = new PresensiModel();
+        $data['chartstatus'] = $PresensiModel->getChartStatusTahun()->getResult();
+        return $this->response->setJSON($data);
+    }
     public function Ajaxchartjamkerja() {
         $PresensiModel = new PresensiModel();
-        $data['chartjamkerja'] = $PresensiModel->getChartJamKerja()->getResult();
+        $data['chartjamkerja'] = $PresensiModel->getChartJamKerjaBulan()->getResult();
         return $this->response->setJSON($data);
     }
 
@@ -335,28 +342,35 @@ class Presensi extends BaseController
         $sheet->setCellValue('B1', 'NIP/NIK');
         $sheet->setCellValue('C1', 'Status Kepegawaian');
         $sheet->setCellValue('D1', 'Nama');
+        $sheet->setCellValue('E1', 'Bulan');
+        // $sheet->setCellValue('E2', 'Tanggal');
 
+        $pgwreport = $PresensiModel->getPegawaiforreport()->getResult();
         $prsreport = $PresensiModel->getPresensiReport()->getResult();
         // d($prsreport);
         $no = 1;
         $x = 2;
-        foreach($prsreport as $row)
+        foreach($pgwreport as $row)
         {
             $sheet->setCellValue('A'.$x, $no++);
             $sheet->setCellValue('B'.$x, $row->pgw_id);
             $sheet->setCellValue('C'.$x, $row->status_peg);
             $sheet->setCellValue('D'.$x, $row->nama);
+            $sheet->setCellValue('E'.$x, $row->abs_tgl);
             $x++;
-        
         }
-        $writer = new Xlsx($spreadsheet);
-        $filename = 'Laporan-presensi-bulanan';
 
+        $writer = new Xlsx($spreadsheet);
+        $filename = 'Laporanpresensibulanan';
+
+        ob_clean();
         header('Content-Type: application/vnd.ms-excel');
         header('Content-Disposition: attachment;filename='. $filename .'.xlsx'); 
         header('Cache-Control: max-age=0');
 
+        // $writer = IOFactory::createWriter($spreadsheet, 'CSV');
         $writer->save('php://output');
+        die();
 
     }
 
