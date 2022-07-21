@@ -273,7 +273,7 @@
               <div class="col-lg-4 form-group">
                 <div class="mb-3">
                   <label class="form-label">Jam Pulang</label>
-                  <input type="time" step="1" id="frm_abs_jampulang" class="form-control" required>
+                  <input type="time" step="1" id="frm_abs_jampulang" class="form-control" pattern="([1]?[0-9]|2[0-3]):[0-5][0-9]" required>
                 </div>
               </div>
               <div class="col-lg-4 form-group">

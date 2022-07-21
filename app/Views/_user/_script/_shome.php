@@ -297,7 +297,7 @@
                 grid: {
                     strokeDashArray: 4,
                 },
-                colors: ["#2489FF", "#FFC149", "#d2e1f3", "#e9ecf1"], 
+                colors: ["#2489FF", "#0DCB86", "#FFC149", "#d2e1f3", "#FF555F", "#e9ecf1"], 
                 legend: {
                     show: true,
                     position: 'bottom',

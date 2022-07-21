@@ -1,5 +1,6 @@
 <script type="text/javascript">
 $(document).ready(function(){
+	moment.locale('id');
     jamkerjaLineBulan();
 
 	$.ajax({
@@ -48,7 +49,7 @@ $(document).ready(function(){
 				grid: {
 					strokeDashArray: 4,
 				},
-				colors: ["#2489FF", "#FFC149", "#d2e1f3", "#e9ecf1"], 
+				colors: ["#2489FF", "#0DCB86", "#FFC149", "#d2e1f3", "#FF555F", "#e9ecf1"], 
 				legend: {
 					show: true,
 					position: 'bottom',
@@ -128,10 +129,33 @@ $(document).ready(function(){
               tanggal.push(value['act_tgl']);
               jumlah.push(parseInt(value['act_qty']));
 			});
-			console.log(tanggal);
-			console.log(jumlah);
+			// console.log(tanggal);
+			// console.log(jumlah);
+	
 			var options = {
+		
 				chart: {
+				locales: [{
+				"name": "id",
+				"options": {
+					"months": ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+					"shortMonths": ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
+					"days": ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"],
+					"shortDays": ["Ming", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+					"toolbar": {
+						"exportToSVG": "Download SVG",
+						"exportToPNG": "Download PNG",
+						"menu": "Menu",
+						"selection": "Selection",
+						"selectionZoom": "Selection Zoom",
+						"zoomIn": "Zoom In",
+						"zoomOut": "Zoom Out",
+						"pan": "Panning",
+						"reset": "Reset Zoom"
+					}
+				}
+				}],
+				defaultLocale: "id",
 				type: "line",
 				fontFamily: 'inherit',
 				height: 240,
@@ -173,8 +197,9 @@ $(document).ready(function(){
 				xaxis: {
 					labels: {
 						// formatter: value => {
-						// return moment(new Date(value)).format('D MMM')
+						// return moment(new Date(value)).format('DD MMMM')
 						// },
+						
 						padding: 0,
 					},
 					tooltip: {
@@ -184,17 +209,35 @@ $(document).ready(function(){
 				},
 				yaxis: {
 					labels: {
-						// formatter: value => {
-						// return moment(new Date(value)).format('hh:mm:ss')
-						// },
-						padding: 3
+						rotate: 0,
+							rotateAlways: false,
+							formatter: function (val) {
+								return val.toFixed(0);
+							},
+						padding: 3,
+						
 					},
+					decimalsInFloat: 0,
 				},
 				labels: tanggal,
-				colors: ["#FFC149", "#d2e1f3", "#e9ecf1"],
+				colors: ["#2489FF"],
 				legend: {
-					show: false,
+					show: true,
+					position: 'bottom',
+					offsetY: 12,
+					markers: {
+						width: 10,
+						height: 10,
+						radius: 100,
+					},
+					itemMargin: {
+						horizontal: 8,
+						vertical: 8
+					},
 				},
+				tooltip: {
+					fillSeriesColor: false
+				}
 			};  
 			var chartpertahun = new ApexCharts(document.getElementById('chart-kinerja'), options);
 			chartpertahun.render();
@@ -215,7 +258,10 @@ $(document).ready(function(){
 			$.each(response.chartjamkerja,function(key, value){
                 if (value['abs_jamkerja'].indexOf("-") > -1) {
                     value['abs_jamkerja'] = '00:00:00'
-                }
+                } 
+				if (value['abs_datang'] === '00:00:00') {
+                    value['abs_jamkerja'] = '00:00:00';
+				}
               tanggal.push(value['abs_tgl']);
               jamkerja.push(value['abs_jamkerja']);
               
@@ -224,6 +270,27 @@ $(document).ready(function(){
             // console.log(tanggal);
             var jamkerjaLine = new ApexCharts(document.getElementById('chart-jamkerja'), {
       		chart: {
+				locales: [{
+				"name": "id",
+				"options": {
+					"months": ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+					"shortMonths": ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
+					"days": ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"],
+					"shortDays": ["Ming", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+					"toolbar": {
+						"exportToSVG": "Download SVG",
+						"exportToPNG": "Download PNG",
+						"menu": "Menu",
+						"selection": "Selection",
+						"selectionZoom": "Selection Zoom",
+						"zoomIn": "Zoom In",
+						"zoomOut": "Zoom Out",
+						"pan": "Panning",
+						"reset": "Reset Zoom"
+					}
+				}
+				}],
+				defaultLocale: "id",
       			type: "line",
       			fontFamily: 'inherit',
       			height: 240,
@@ -265,10 +332,11 @@ $(document).ready(function(){
       		},
       		xaxis: {
       			labels: {
+					
                     // formatter: value => {
-                    // return moment(new Date(value)).format('D MMM')
+                    // return moment(new Date(value)).format('DD MMMM')
                     // },
-      				padding: 0,
+      				padding: 2,
       			},
       			tooltip: {
       				enabled: false
@@ -276,15 +344,14 @@ $(document).ready(function(){
       			type: 'datetime',
       		},
       		yaxis: {
+
       			labels: {
-                    // formatter: value => {
-                    // return moment(new Date(value)).format('hh:mm:ss')
-                    // },
+
       				padding: 3
       			},
       		},
       		labels: tanggal,
-      		colors: ["#FFC149", "#d2e1f3", "#e9ecf1"],
+      		colors: ["#FF555F"],
       		legend: {
       			show: false,
       		},
@@ -292,17 +359,6 @@ $(document).ready(function(){
         } 
         });
     }
-
-	// $(document).on('click','#btnfilterBulan',function(){
-	// 	$('apexcharts-canvas').remove();
-	// 	$('chart-status').replaceWith('');
-	// 	statusperBulan();
-	// });
-	// $(document).on('click','#btnfilterTahun',function(){
-	// 	$('apexcharts-canvas').remove();
-	// 	$('chart-status').replaceWith('');
-	// 	statusperTahun();
-	// });
 });
 </script>
 

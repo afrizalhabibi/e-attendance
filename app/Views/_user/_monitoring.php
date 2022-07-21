@@ -27,6 +27,7 @@
           <div class="card-body">
           <div class="d-flex">
             <h3 class="card-title">Status Presensi</h3>
+            
             <div class="ms-auto">
               <div class="dropdown">
                 <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter</a>
@@ -59,8 +60,8 @@
               <div class="dropdown">
                 <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter</a>
                 <div class="dropdown-menu dropdown-menu-end">
-                  <a class="dropdown-item" href="#" id="btnfilterBulan">Per Bulan <?php echo bulan(date('m')); ?></a>
-                  <a class="dropdown-item" href="#" id="btnfilterTahun">Per Tahun</a>
+                  <a class="dropdown-item" href="#" id="btnfilterkinerjaBulan">Per Bulan <?php echo bulan(date('m')); ?></a>
+                  <a class="dropdown-item" href="#" id="btnfilterkinerjaTahun">Per Tahun</a>
                 </div>
               </div>
             </div>

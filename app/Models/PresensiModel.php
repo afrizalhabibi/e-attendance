@@ -174,9 +174,11 @@ class PresensiModel extends Model
     public function getChartJamKerjaBulan()
     {
         $result = $this->db->table('absensi')
-                ->select('abs_jamkerja, abs_tgl')
+                ->select('abs_datang,abs_jamkerja, abs_tgl')
                 ->where('pgw_id', user()->getpgwId())
+                // ->where('abs_datang !=', '00:00:00')
                 ->where('abs_status !=', 'Hari Libur')
+                ->where('abs_status', 'Bekerja')
                 // ->notLike('abs_jamkerja', '%-')
                 ->like('abs_tgl',date('Y-m'))
                 ->orderBy('abs_tgl', 'asc')

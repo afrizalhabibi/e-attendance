@@ -88,11 +88,11 @@
                   <div class="dropdown-menu">
                     <div class="dropdown-menu-columns">
                       <div class="dropdown-menu-column">
-                        <a class="dropdown-item" href="<?=base_url()?>/presensi-pegawai" >
+                        <a class="dropdown-item" href="/presensi-pegawai" >
                           Data Presensi
                         </a>
                         <?php if(in_groups('pimpinan')) : ?>
-                        <a class="dropdown-item" href="<?=base_url()?>/presensi-homebase" >
+                        <a class="dropdown-item" href="/presensi-homebase" >
                         Data Presensi
                           <?php if(isset($userdata->hmb_name)) :
                               echo $userdata->hmb_name;
@@ -100,13 +100,10 @@
                         </a>
                         <?php endif ?>
                         <?php if(in_groups('appadmin')) : ?>
-                        <a class="dropdown-item" href="<?=base_url()?>/admin/presensiall" >
+                        <a class="dropdown-item" href="/admin/presensiall" >
                           Presensi Seluruh Pegawai
                         </a>
                         <?php endif ?>
-                        <a class="dropdown-item" href="<?=base_url()?>/monitoring" >
-                          Monitoring
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -123,11 +120,11 @@
                   <div class="dropdown-menu">
                     <div class="dropdown-menu-columns">
                       <div class="dropdown-menu-column">
-                        <a class="dropdown-item" href="<?=base_url()?>/kinerja" >
+                        <a class="dropdown-item" href="/kinerja" >
                           Laporan Kinerja
                         </a>
                         <?php if(in_groups('pimpinan')) : ?>
-                        <a class="dropdown-item" href="<?=base_url()?>/kinerja-homebase" >
+                        <a class="dropdown-item" href="/kinerja-homebase" >
                           Laporan Kinerja
                           <?php if(isset($userdata->hmb_name)) :
                               echo $userdata->hmb_name;
@@ -137,6 +134,16 @@
                       </div>
                     </div>
                   </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/monitoring" >
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-infographic" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>    <circle cx="7" cy="7" r="4"></circle>    <path d="M7 3v4h4"></path>    <line x1="9" y1="17" x2="9" y2="21"></line>    <line x1="17" y1="14" x2="17" y2="21"></line>    <line x1="13" y1="13" x2="13" y2="21"></line>    <line x1="21" y1="12" x2="21" y2="21"></line> </svg>
+                    </span>
+                    <span class="nav-link-title">
+                      Monitoring
+                    </span>
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./docs/index.html" >
