@@ -187,5 +187,18 @@ class PresensiModel extends Model
         return $result;
     }
 
+    public function getChartLaporan()
+    {
+        $result = $this->db->table('absensi')
+                ->select('act_id')
+                ->select("count(act_id) AS total")
+                ->where('pgw_id', user()->getpgwId())
+                ->where('abs_status', 'Bekerja')
+                ->like('abs_tgl',date('Y-m'))
+                ->groupBy('abs_tgl')
+                ->get();
+        return $result;
+    }
+
 }
 ?>

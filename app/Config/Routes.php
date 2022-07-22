@@ -48,6 +48,7 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/chartstatusperbulan', 'Presensi::Ajaxchartstatus');
     $routes->get('/chartstatuspertahun', 'Presensi::AjaxchartstatusPertahun');
     $routes->get('/chartjamkerjaperbulan', 'Presensi::Ajaxchartjamkerja');
+    $routes->get('/chartlapkinerja', 'Presensi::AjaxchartLaporan');
     $routes->get('/batch-row', 'Presensi::BatchRow');
     $routes->get('/abs-details/(:any)', 'Presensi::AbsDetails/$1');
 
@@ -59,6 +60,7 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->post('/doupdatekinerja', 'Activity::EdtActivity');
     $routes->post('/checkavailabledate', 'Activity::docheckDate');
     $routes->get('/chartkinerjaperbulan', 'Activity::Ajaxchartkinerja');
+    $routes->get('/chartkinerjapertigabulan', 'Activity::Ajaxchartkinerjatiga');
 
     //monitoring presensi homebase
     $routes->get('/presensi-homebase', 'Presensi::presensi_homebase', ['filter' => 'role:pimpinan']);
@@ -73,7 +75,8 @@ $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('/presensipegawaiallajax', 'Presensi::PresensiPegawaiAll');
     $routes->post('/admin/doupdatepresensi', 'Presensi::EdtPresensi');
 
-
+    //pegawai
+    $routes->get('/profil/detail', 'Pegawai::Infopegawai');
     
 });
 

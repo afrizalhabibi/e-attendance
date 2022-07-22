@@ -49,7 +49,7 @@ $(document).ready(function(){
 				grid: {
 					strokeDashArray: 4,
 				},
-				colors: ["#2489FF", "#0DCB86", "#FFC149", "#d2e1f3", "#FF555F", "#e9ecf1"], 
+				colors: ["#2489FF", "#FFC149", "#FF555F", "#d2e1f3", "#e9ecf1"], 
 				legend: {
 					show: true,
 					position: 'bottom',
@@ -127,7 +127,7 @@ $(document).ready(function(){
             
 			$.each(response.chartkinerja,function(key, value){
               tanggal.push(value['act_tgl']);
-              jumlah.push(parseInt(value['act_qty']));
+              jumlah.push(value['act_qty']);
 			});
 			// console.log(tanggal);
 			// console.log(jumlah);
@@ -228,7 +228,7 @@ $(document).ready(function(){
 					markers: {
 						width: 10,
 						height: 10,
-						radius: 100,
+						radius: 80,
 					},
 					itemMargin: {
 						horizontal: 8,
@@ -239,8 +239,68 @@ $(document).ready(function(){
 					fillSeriesColor: false
 				}
 			};  
-			var chartpertahun = new ApexCharts(document.getElementById('chart-kinerja'), options);
-			chartpertahun.render();
+			var chartkinerja = new ApexCharts(document.getElementById('chart-kinerja'), options);
+			chartkinerja.render();
+
+			function updateChartOptionsBulan() {
+				$.ajax({
+					url:'/chartkinerjaperbulan',
+					method:'get',
+					success:function(response){
+						var tanggal = [];
+						let jumlah = [];
+						
+						$.each(response.chartkinerja,function(key, value){
+						tanggal.push(value['act_tgl']);
+						jumlah.push(value['act_qty']);
+						});
+						chartkinerja.updateOptions({
+							data: jumlah,
+							labels: tanggal,
+						});
+					} 
+				});
+			}
+			function updateChartOptionsTiga() {
+				$.ajax({
+					url:'/chartkinerjapertigabulan',
+					method:'get',
+					success:function(response){
+						var tanggal = [];
+						let jumlah = [];
+						
+						$.each(response.chartkinerja,function(key, value){
+						tanggal.push(value['act_tgl']);
+						jumlah.push(value['act_qty']);
+						});
+						console.log(tanggal);
+						console.log(jumlah);
+						chartkinerja.updateOptions({
+							data: jumlah,
+							labels: tanggal,
+							width: '400%',
+							legend: {
+								show: true,
+								position: 'bottom',
+								offsetY: 12,
+								markers: {
+									size: 2
+								},
+								itemMargin: {
+									horizontal: 2,
+									vertical: 8
+								},
+							},
+						});
+					} 
+				});
+			}
+			$(document).on('click','#btnfilterkinerjaBulan',function(){
+				updateChartOptionsBulan();
+			});
+			$(document).on('click','#btnfilterkinerjaTiga',function(){
+				updateChartOptionsTiga();
+			});
         } 
 	});
 
@@ -359,6 +419,90 @@ $(document).ready(function(){
         } 
         });
     }
+
+	$.ajax({
+		url:'/chartlapkinerja',
+		method:'get',
+		success:function(response){
+            let mengisi = 0;
+            let belum = 0;
+			$.each(response.chartlaporan,function(key, value){
+				if(value['act_id'] != null) {
+					mengisi+=1;
+				} else if (value['act_id'] === null) {
+					belum+=1;
+				}
+			console.log(mengisi);
+			console.log(value['act_id']);
+			});
+			var options = {
+				chart: {
+					type: "donut",
+					fontFamily: 'inherit',
+					height: 260,
+					sparkline: {
+						enabled: true
+					},
+					animations: {
+						enabled: true
+					},
+				},
+				fill: {
+					opacity: 1,
+				},
+
+				plotOptions: {
+					pie: {
+					donut: {
+						labels: {
+						show: true,
+						total: {
+							showAlways: true,
+							show: true
+						}
+						}
+					}
+					}
+				},
+				series: [mengisi,belum],
+				labels: ["Melaporkan","Belum Melaporkan"],
+
+				grid: {
+					strokeDashArray: 4,
+				},
+				colors: ["#2489FF", "rgba(36, 137, 255, 0.1)"], 
+				// colors: ["#2489FF", "#0DCB86", "#FFC149", "#d2e1f3", "#FF555F", "#"], 
+
+				legend: {
+					show: true,
+					position: 'bottom',
+					offsetY: 12,
+					markers: {
+						width: 10,
+						height: 10,
+						radius: 100,
+					},
+					itemMargin: {
+						horizontal: 8,
+						vertical: 8
+					},
+				},
+				tooltip: {
+					fillSeriesColor: false
+				}
+			};  
+			var chartlaporan = new ApexCharts(document.getElementById('chart-laporan'), options);
+			chartlaporan.render();
+
+
+			$(document).on('click','#btnfilterBulan',function(){
+				updateChartOptionsBulan();
+			});
+			$(document).on('click','#btnfilterTahun',function(){
+				updateChartOptionsTahun();
+			});
+        } 
+	});
 });
 </script>
 

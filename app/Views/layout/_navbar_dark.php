@@ -28,7 +28,7 @@
               <div class="dropdown-menu dropdown-menu-end dropdown-menu-card">
                 <div class="card">
                   <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad amet consectetur exercitationem fugiat in ipsa ipsum, natus odio quidem quod repudiandae sapiente. Amet debitis et magni maxime necessitatibus ullam.
+                    Fitur notifikasi masih dalam tahap development, harap bersabar :) ☕
                   </div>
                 </div>
               </div>
@@ -50,12 +50,10 @@
               </a>
               
               <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <a href="#" class="dropdown-item">Set status</a>
-                <a href="#" class="dropdown-item">Profile & account</a>
-                <a href="#" class="dropdown-item">Feedback</a>
+
+                <a href="/profil/detail" class="dropdown-item">Profil Saya</a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">Settings</a>
-                <a href="<?=base_url()?>/logout" class="dropdown-item">Logout</a>
+                <a href="/logout" class="dropdown-item text-red">Logout</a>
               </div>
             </div>
           </div>

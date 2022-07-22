@@ -55,6 +55,17 @@ class ActivityModel extends Model
                 ->get();
         return $result;
     }
+    public function getChartKinerjatigaBulan()
+    {
+        $result = $this->db->table('activity')
+                ->select('act_qty, act_tgl')
+                ->where('pgw_id', user()->getpgwId())
+                ->where('act_tgl BETWEEN "' . date('Y-m-d', strtotime('-3 Months')) . '" AND "' .date('Y-m-d').'"')
+                ->orderBy('act_tgl', 'asc')
+                ->groupBy('act_tgl')
+                ->get();
+        return $result;
+    }
 
 }
 ?>

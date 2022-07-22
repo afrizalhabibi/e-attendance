@@ -10,7 +10,6 @@
     
     // displayabsen();
     firstabsen();
-    chartStatus();
     // validateKinerja();
     // timedate liveticking
     function timestamp() {
@@ -92,9 +91,7 @@
                 $('#confirm-absen-datang').modal('hide');
                 $('#tableAbsen').html('');
                 $('#btn-datang').hide();
-                // displayabsen();
                 firstabsen();
-                chartStatus();
                 Swal.fire(
                     'Berhasil',
                     'Presensi datang berhasil',
@@ -128,9 +125,7 @@
                 $('#confirm-absen-pulang').modal('hide');
                 $('#tableAbsen').html('');
                 $('#btn-pulang').hide();
-                // displayabsen();
                 firstabsen();
-                chartStatus();
                 Swal.fire(
                     'Berhasil',
                     'Presensi pulang berhasil',
@@ -247,79 +242,6 @@
         });
     }
     // end display latest presence
-
-    function chartStatus()
-    {
-    
-	$.ajax({
-		url:'<?= site_url('chartstatusperbulan') ?>',
-		method:'get',
-		success:function(response){
-            var nama_status = [];
-            let jumlah = [];
-            
-			$.each(response.chartstatus,function(key, value){
-              nama_status.push(value['abs_status']);
-              jumlah.push(parseInt(value['total']));
-			});
-            var chartperbulan = new ApexCharts(document.getElementById('chart-status'), {
-                chart: {
-                    type: "donut",
-                    fontFamily: 'inherit',
-                    height: 260,
-                    sparkline: {
-                        enabled: true
-                    },
-                    animations: {
-                        enabled: true
-                    },
-                },
-                fill: {
-                    opacity: 1,
-                },
-
-                plotOptions: {
-                    pie: {
-                    donut: {
-                        labels: {
-                        show: true,
-                        total: {
-                            showAlways: true,
-                            show: true
-                        }
-                        }
-                    }
-                    }
-                },
-                series: jumlah,
-                labels: nama_status,
-        
-                grid: {
-                    strokeDashArray: 4,
-                },
-                colors: ["#2489FF", "#0DCB86", "#FFC149", "#d2e1f3", "#FF555F", "#e9ecf1"], 
-                legend: {
-                    show: true,
-                    position: 'bottom',
-                    offsetY: 12,
-                    markers: {
-                        width: 10,
-                        height: 10,
-                        radius: 100,
-                    },
-                    itemMargin: {
-                        horizontal: 8,
-                        vertical: 8
-                    },
-                },
-                tooltip: {
-                    fillSeriesColor: false
-                },
-            }).render();
-        } 
-        });
-    }
-
 
     //* Activity Section
     var startDate = moment().add(1, 'days').format("MM/DD/YYYY");
@@ -474,6 +396,99 @@
                 }); 
             }
         });
+    });
+
+    $.ajax({
+		url:'<?= site_url('chartstatusperbulan') ?>',
+		method:'get',
+		success:function(response){
+            var nama_status = [];
+            let jumlah = [];
+            
+			$.each(response.chartstatus,function(key, value){
+              nama_status.push(value['abs_status']);
+              jumlah.push(parseInt(value['total']));
+			});
+            var options = {
+                chart: {
+                    type: "donut",
+                    fontFamily: 'inherit',
+                    height: 260,
+                    sparkline: {
+                        enabled: true
+                    },
+                    animations: {
+                        enabled: true
+                    },
+                },
+                fill: {
+                    opacity: 1,
+                },
+
+                plotOptions: {
+                    pie: {
+                    donut: {
+                        labels: {
+                        show: true,
+                        total: {
+                            showAlways: true,
+                            show: true
+                        }
+                        }
+                    }
+                    }
+                },
+                series: jumlah,
+                labels: nama_status,
+        
+                grid: {
+                    strokeDashArray: 4,
+                },
+                colors: ["#2489FF", "#FFC149", "#0DCB86", "#d2e1f3", "#FF555F", "#e9ecf1"], 
+                legend: {
+                    show: true,
+                    position: 'bottom',
+                    offsetY: 12,
+                    markers: {
+                        width: 10,
+                        height: 10,
+                        radius: 100,
+                    },
+                    itemMargin: {
+                        horizontal: 8,
+                        vertical: 8
+                    },
+                },
+                tooltip: {
+                    fillSeriesColor: false
+                }
+            }
+            var chartperbulan = new ApexCharts(document.getElementById('chart-status'), options);
+			chartperbulan.render();
+
+            function updateChartOptionsBulan() {
+				$.ajax({
+					url:'/chartstatusperbulan',
+					method:'get',
+					success:function(response){
+						var nama_status = [];
+						let jumlah = [];
+						
+						$.each(response.chartstatus,function(key, value){
+						nama_status.push(value['abs_status']);
+						jumlah.push(parseInt(value['total']));
+						});
+						chartperbulan.updateOptions({
+							series: jumlah,
+							labels: nama_status,
+						});
+					} 
+				});
+			}
+            $(document).on('click','#btn-datang-confirm',function(){
+				updateChartOptionsBulan();
+			});
+        } 
     });
 });
 

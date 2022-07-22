@@ -254,6 +254,11 @@ class Presensi extends BaseController
         $data['chartjamkerja'] = $PresensiModel->getChartJamKerjaBulan()->getResult();
         return $this->response->setJSON($data);
     }
+    public function AjaxchartLaporan() {
+        $PresensiModel = new PresensiModel();
+        $data['chartlaporan'] = $PresensiModel->getChartLaporan()->getResult();
+        return $this->response->setJSON($data);
+    }
 
     public function PresensiHomebase() {
         $PresensiModel = new PresensiModel();

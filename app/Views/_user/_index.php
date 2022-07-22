@@ -41,7 +41,7 @@
           <div class="btn-list">
             <a href="#" class="btn btn-primary btn-transition d-none d-sm-inline-block" data-bs-toggle="modal"
               data-bs-target="#modal-act-report">
-              Laporan Kegiatan
+              Laporan Kinerja
             </a>
             <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-act-report"
               aria-label="Create new report">
@@ -224,7 +224,7 @@
                   </div>
                 </div> -->
                 <div class="datagrid-item">
-                  <div class="datagrid-title">Kegiatan Harian</div>
+                  <div class="datagrid-title">Laporan Kinerja Harian</div>
                   <div class="datagrid-content" id="kegiatan">
                     
                     -
@@ -270,7 +270,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Buat Laporan Kegiatan Harian</h5>
+        <h5 class="modal-title">Buat Laporan Kinerja Harian</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

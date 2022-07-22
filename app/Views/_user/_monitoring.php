@@ -32,8 +32,8 @@
               <div class="dropdown">
                 <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter</a>
                 <div class="dropdown-menu dropdown-menu-end">
-                  <a class="dropdown-item" href="#" id="btnfilterBulan">Per Bulan <?php echo bulan(date('m')); ?></a>
-                  <a class="dropdown-item" href="#" id="btnfilterTahun">Per Tahun <?php echo date('Y'); ?></a>
+                  <button class="dropdown-item" id="btnfilterBulan">Bulan <?php echo bulan(date('m')); ?></button>
+                  <button class="dropdown-item" id="btnfilterTahun">Tahun <?php echo date('Y'); ?></button>
                 </div>
               </div>
             </div>
@@ -60,8 +60,8 @@
               <div class="dropdown">
                 <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter</a>
                 <div class="dropdown-menu dropdown-menu-end">
-                  <a class="dropdown-item" href="#" id="btnfilterkinerjaBulan">Per Bulan <?php echo bulan(date('m')); ?></a>
-                  <a class="dropdown-item" href="#" id="btnfilterkinerjaTahun">Per Tahun</a>
+                  <button class="dropdown-item" id="btnfilterkinerjaBulan">Per Bulan <?php echo bulan(date('m')); ?></button>
+                  <button class="dropdown-item" id="btnfilterkinerjaTiga">Per Tiga Bulan</button>
                 </div>
               </div>
             </div>
@@ -74,8 +74,8 @@
       <div class="col-sm-12 col-lg-4">
         <div class="card">
           <div class="card-body">
-          <h3 class="card-title">Jam Kerja</h3>
-            <div id="chart-status2"></div>
+          <h3 class="card-title">Laporan Kegiatan</h3>
+            <div id="chart-laporan"></div>
           </div>
         </div>
       </div>

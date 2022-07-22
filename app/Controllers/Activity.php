@@ -159,6 +159,11 @@ class Activity extends BaseController
         $data['chartkinerja'] = $ActivityModel->getChartKinerjaBulan()->getResult();
         return $this->response->setJSON($data);
     }
+    public function Ajaxchartkinerjatiga() {
+        $ActivityModel = new ActivityModel();
+        $data['chartkinerja'] = $ActivityModel->getChartKinerjatigaBulan()->getResult();
+        return $this->response->setJSON($data);
+    }
 }
 
 ?>
